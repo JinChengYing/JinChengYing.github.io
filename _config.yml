@@ -1,8 +1,8 @@
 name: "JinCheng Ying's blog"
 description: "应锦程的个人博客"
 
-avatar: https://pianfan.github.io/images/avatar.jpg
-favicon: https://pianfan.github.io/images/favicon.ico
+avatar:  https://JinChengYing.github.io/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241018213036.jpg  
+favicon: https://JinChengYing.github.io/images/R-C.jpg 
 
 navigation:
   - name: 首页
@@ -17,17 +17,17 @@ paginate: 8
 excerpt_separator: <!-- more -->
 
 footer-links:
-  zhihu: 
-  email: xiongyunhan@outlook.com
+  zhihu: Ecthelion
+  email: Yingjc5521@mails.jlu.edu.cn
   facebook:
-  github: pianfan
+  github: JinChengYing
   rss: # just type anything here for a working RSS icon
   twitter: 
   youtube:
 
-footer-text: Copyright (c) 2024 Pianfan
+footer-text: Copyright (c) 2024 JinChengYing
 
-url: https://pianfan.github.io
+url: https://JinChengYing.github.io
 
 permalink: /:title/
 paginate_path: /page:num/
