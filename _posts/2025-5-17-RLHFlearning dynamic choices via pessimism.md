@@ -35,11 +35,11 @@ author: Jincheng Ying
 
 2. 通过最小化Bellman均方误差(上一步学到的价值函数),恢复环境Reward函数
 
-   ![image-20250516202622193](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250516202622193.png)
+ ![](https://JinChengYing.github.io/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-05-16%20202618.png)
 
 3. 将上一步学到的Reward代入RL.通过悲观价值迭代得到近乎最优的策略
 
-![image-20250516202641246](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250516202641246.png)
+![](https://JinChengYing.github.io/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-05-16%20202639.png)
 
 #### 结论
 
