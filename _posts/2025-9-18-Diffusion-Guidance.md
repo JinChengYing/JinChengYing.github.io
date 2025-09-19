@@ -63,35 +63,35 @@ author: Jincheng Ying
 
 1. 先参数化策略为内积
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918123914715.png" alt="image-20250918123914715" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918123914715.png" alt="image-20250918123914715" style="zoom:50%;" />
 
 ​    一方面 当f对于A来说非负且单调增的,则上述内积对于初始的reference policy是提升的, 另一方面,可以对f加幂次实现策略的提升, 但是会导致过度调整,偏离reference policy
 
-![image-20250918125320507](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918125320507.png)
+![image-20250918125320507](https://JinChengYing.github.io/images/image-20250918125320507.png)
 
-![image-20250918125327304](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918125327304.png)
+![image-20250918125327304](https://JinChengYing.github.io/images/image-20250918125327304.png)
 
 上面说明存在一种权衡:即最大化回报和不偏离reference policy, 并且可以用KL的正则化目标理解这种权衡.
 
-![image-20250918125602625](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918125602625.png)
+![image-20250918125602625](https://JinChengYing.github.io/images/image-20250918125602625.png)
 
 2. diffusion guidance通过得分函数学习内积 策略
 
-   在二分类<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918133837781.png" alt="image-20250918133837781" style="zoom: 33%;" />的情况下考虑策略, 其似然可以通过f写为<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918133859606.png" alt="image-20250918133859606" style="zoom:50%;" />
+   在二分类<img src="https://JinChengYing.github.io/images/image-20250918133837781.png" alt="image-20250918133837781" style="zoom: 33%;" />的情况下考虑策略, 其似然可以通过f写为<img src="https://JinChengYing.github.io/images/image-20250918133859606.png" alt="image-20250918133859606" style="zoom:50%;" />
 
-   Z是所有动作的积分,是正则化项(概率化处理后,得分函数可以考虑成两个分布的得分函数相加),因此(5)的内积策略等价于<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918134015815.png" alt="image-20250918134015815" style="zoom:50%;" />
+   Z是所有动作的积分,是正则化项(概率化处理后,得分函数可以考虑成两个分布的得分函数相加),因此(5)的内积策略等价于<img src="https://JinChengYing.github.io/images/image-20250918134015815.png" alt="image-20250918134015815" style="zoom:50%;" />
 
    扩散模型 通过学习score function 学到上面内积策略的分布, 注意这里存在的可加性
 
-   <img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918134147859.png" alt="image-20250918134147859" style="zoom:50%;" />
+   <img src="https://JinChengYing.github.io/images/image-20250918134147859.png" alt="image-20250918134147859" style="zoom:50%;" />
 
    利用贝叶斯公式,则 optimality-conditioned policy的得分函数为
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918171459253.png" alt="image-20250918171459253" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918171459253.png" alt="image-20250918171459253" style="zoom:50%;" />
 
 3. 在策略提升方面, diffusion guidance 控制最优性的衰减,即可以控制f的幂次,去权衡偏离度和策略更新速度.
 
-   得到的新得分函数为:<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918134604676.png" alt="image-20250918134604676" style="zoom:67%;" />
+   得到的新得分函数为:<img src="https://JinChengYing.github.io/images/image-20250918134604676.png" alt="image-20250918134604676" style="zoom:67%;" />
 
 只需要在test时用一个神经网络控制w即可权衡.
 
@@ -103,17 +103,17 @@ author: Jincheng Ying
 
 3. 用CFGRL训练与采样(采用flow matching)
 
-![image-20250918123259845](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918123259845.png)
+![image-20250918123259845](https://JinChengYing.github.io/images/image-20250918123259845.png)
 
 
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918172604925.png" alt="image-20250918172604925" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918172604925.png" alt="image-20250918172604925" style="zoom:50%;" />
 
 对状态动作对数据集加噪, 学习基于reference的score function的速度场函数,再逆向从正态分布结合权重w采样出提升后策略的分布,o=1保证了策略的提升
 
 训练目标如下
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918162448281.png" alt="image-20250918162448281" style="zoom:80%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918162448281.png" alt="image-20250918162448281" style="zoom:80%;" />
 
 
 
@@ -121,11 +121,11 @@ author: Jincheng Ying
 
 #### CFGRL改进了离线RL中对加权策略的提取
 
-传统的advantage-weighted regression (AWR)方法<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918170717680.png" alt="image-20250918170717680" style="zoom:50%;" />
+传统的advantage-weighted regression (AWR)方法<img src="https://JinChengYing.github.io/images/image-20250918170717680.png" alt="image-20250918170717680" style="zoom:50%;" />
 
 损失容易集中在少数异常的状态动作对,导致权重集中异常,实际利用数据很少.
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918170829874.png" alt="image-20250918170829874" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918170829874.png" alt="image-20250918170829874" style="zoom:50%;" />
 
 CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权重相似,AWR的温度参数必须提前制定,用在整体训练目标里. 但CFGRL中,注意到reference 策略和optimality-conditioned policy是分离的,只在采样时结合用于更新速度场进行生成. 更方便进行权衡
 
@@ -154,7 +154,7 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
 针对难以权衡的问题, 一个思路是生成未见过的经验,实现在分布外样本的优化, 提高了样本覆盖率,但不能保证合成经验轨迹的最优性,因此需要保守的off policy技术去学习(依赖于已有的行为策略去做价值评估). 可以想象成盲人摸象, 只是在摸索, 通过探索摸索出分布外的情况, 而直接学习到目标分布,可以保证知道分布(大象)的轮廓,再由分布生成高质量的轨迹,并且保证了轨迹质量不断提升(如何量化轨迹质量:在测试集上得到了更高的return,并且return的方差更低)
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250919115235398.png" alt="image-20250919115235398" style="zoom:67%;" />
+<img src="https://JinChengYing.github.io/images/image-20250919115235398.png" alt="image-20250919115235398" style="zoom:67%;" />
 
 #### 工作:
 
@@ -178,9 +178,9 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
    方法的有效性取决于参数化轨迹分布的方式
 
-   **对自回归生成:<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215809726.png" alt="image-20250918215809726" style="zoom: 50%;" />**
+   **对自回归生成:<img src="https://JinChengYing.github.io/images/image-20250918215809726.png" alt="image-20250918215809726" style="zoom: 50%;" />**
 
-   训练一个单步转移model<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215041569.png" alt="image-20250918215041569" style="zoom: 50%;" />
+   训练一个单步转移model<img src="https://JinChengYing.github.io/images/image-20250918215041569.png" alt="image-20250918215041569" style="zoom: 50%;" />
 
     从离线数据集初始化一个状态$s_0$,从目标策略迭代采样动作，并使用所学的动力学模型近似环境转移
 
@@ -188,19 +188,19 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
 而从在数据集中任意时间t采样获得k个步长的轨迹片段,都可以去近似如下的子轨迹分布
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215229689.png" alt="image-20250918215229689" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918215229689.png" alt="image-20250918215229689" style="zoom:50%;" />
 
 使用如下函数族去近似上面的分布(离线分布的p替代了目标分布p)
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215526853.png" alt="image-20250918215526853" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918215526853.png" alt="image-20250918215526853" style="zoom:50%;" />
 
 条件子轨迹分布可以写成
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215447822.png" alt="image-20250918215447822" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918215447822.png" alt="image-20250918215447822" style="zoom:50%;" />
 
 
 
-![image-20250918215927708](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215927708.png)
+![image-20250918215927708](https://JinChengYing.github.io/images/image-20250918215927708.png)
 
 当从该分布生成轨迹时，\(p_{\text{target}}(s_t)\)与\(p_{\text{off}}(s_t)\)之间的差异会使推演的起始偏向行为策略所访问的状态。此外，我们仍需要k较小以避免复合误差。综合来看，从离线数据集采样会将合成推演 “锚定” 到离线数据集中的状态，而截断推演又阻止合成轨迹远离这一锚点
 
@@ -214,9 +214,9 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
 
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918215835736.png" alt="image-20250918215835736" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918215835736.png" alt="image-20250918215835736" style="zoom:50%;" />
 
-使用了重要性采样:<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918221101883.png" alt="image-20250918221101883" style="zoom:50%;" />
+使用了重要性采样:<img src="https://JinChengYing.github.io/images/image-20250918221101883.png" alt="image-20250918221101883" style="zoom:50%;" />
 
 
 
@@ -232,21 +232,21 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
 基于直接生成的思路, 训练学习轨迹分布的扩散模型.
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918212500811.png" alt="image-20250918212500811" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918212500811.png" alt="image-20250918212500811" style="zoom:50%;" />
 
 目标分布怎么来的?
 
 **能直接学习行为分布下的噪声条件得分函数** \(\nabla_{\hat{\tau}} \log p_{\text{off}}(\hat{\tau}; \sigma)\), 所以是先建模行为分布下的score function 再通过下面的公式近似得到噪声条件下的得分函数\(\nabla_{\hat{\tau}} \log p_{\text{target}}(\hat{\tau}; \sigma)\)
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918223032296.png" alt="image-20250918223032296" style="zoom:50%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918223032296.png" alt="image-20250918223032296" style="zoom:50%;" />
 
-噪声趋于0时,可以用<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918223413119.png" alt="image-20250918223413119" style="zoom: 50%;" />替代<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918223434054.png" alt="image-20250918223434054" style="zoom:50%;" />上式可重新逼近为:
+噪声趋于0时,可以用<img src="https://JinChengYing.github.io/images/image-20250918223413119.png" alt="image-20250918223413119" style="zoom: 50%;" />替代<img src="https://JinChengYing.github.io/images/image-20250918223434054.png" alt="image-20250918223434054" style="zoom:50%;" />上式可重新逼近为:
 
-![image-20250918223446789](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918223446789.png)
+![image-20250918223446789](https://JinChengYing.github.io/images/image-20250918223446789.png)
 
 形式如下:
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250918223653527.png" alt="image-20250918223653527" style="zoom: 67%;" />
+<img src="https://JinChengYing.github.io/images/image-20250918223653527.png" alt="image-20250918223653527" style="zoom: 67%;" />
 
 
 
@@ -254,14 +254,14 @@ CFGRL解决了这个问题. 因为AWR的温度参数与CFGRL的reference的权�
 
 在guidance term里加入guidance coefficients是分类器guidance diffusion的标准技术, 应用在PGD里增强guidance有如下形式: 
 
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250919110616448.png" alt="image-20250919110616448" style="zoom: 67%;" />
+<img src="https://JinChengYing.github.io/images/image-20250919110616448.png" alt="image-20250919110616448" style="zoom: 67%;" />
 
 实际是加上了guidance coefficients $\lambda$作为控制目标轨迹分布的幂次, 取对数后作为乘积系数,起到插值的作用, 控制了朝向目标策略的引导强度.
 
 当噪声趋近于0, 即接近目标分布时,采样的分布可以变换为:
-<img src="C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250919110843356.png" alt="image-20250919110843356" style="zoom:67%;" />
+<img src="https://JinChengYing.github.io/images/image-20250919110843356.png" alt="image-20250919110843356" style="zoom:67%;" />
 
-![image-20250919111057115](C:\Users\33702\AppData\Roaming\Typora\typora-user-images\image-20250919111057115.png)
+![image-20250919111057115](https://JinChengYing.github.io/images/image-20250919111057115.png)
 
 
 
