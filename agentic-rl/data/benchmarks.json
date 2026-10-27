@@ -1,0 +1,111 @@
+[
+  {
+    "id": "alfworld",
+    "name": "ALFWorld",
+    "environment_type": "Text-based household interaction",
+    "modality": "Text actions",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Task completion",
+    "source_url": "https://github.com/alfworld/alfworld",
+    "code_url": "https://github.com/alfworld/alfworld",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "scienceworld",
+    "name": "ScienceWorld",
+    "environment_type": "Interactive science tasks",
+    "modality": "Text actions",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Task completion",
+    "source_url": "https://github.com/allenai/ScienceWorld",
+    "code_url": "https://github.com/allenai/ScienceWorld",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "webshop",
+    "name": "WebShop",
+    "environment_type": "Simulated online shopping",
+    "modality": "Web interaction",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Task completion",
+    "source_url": "https://github.com/princeton-nlp/WebShop",
+    "code_url": "https://github.com/princeton-nlp/WebShop",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "webarena",
+    "name": "WebArena",
+    "environment_type": "Websites",
+    "modality": "Browser interaction",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Task completion",
+    "source_url": "https://webarena.dev/",
+    "code_url": null,
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "browsergym",
+    "name": "BrowserGym",
+    "environment_type": "Browser agent environment",
+    "modality": "Browser interaction",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": null,
+    "source_url": "https://github.com/ServiceNow/BrowserGym",
+    "code_url": "https://github.com/ServiceNow/BrowserGym",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "osworld",
+    "name": "OSWorld",
+    "environment_type": "Computer desktop",
+    "modality": "GUI interaction",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Task completion",
+    "source_url": "https://os-world.github.io/",
+    "code_url": null,
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "gaia",
+    "name": "GAIA",
+    "environment_type": "General assistant tasks",
+    "modality": "Mixed",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": "Answer evaluation",
+    "source_url": "https://arxiv.org/abs/2311.12983",
+    "code_url": null,
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "swebench",
+    "name": "SWE-bench",
+    "environment_type": "Software repositories",
+    "modality": "Code editing",
+    "task_horizon": null,
+    "stateful": true,
+    "evaluation": "Tests",
+    "source_url": "https://www.swebench.com/",
+    "code_url": null,
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "taubench",
+    "name": "τ-bench",
+    "environment_type": "Simulated user and tool API workflows",
+    "modality": "Conversation + API calls",
+    "task_horizon": "Multi-turn (exact horizon varies by task)",
+    "stateful": true,
+    "evaluation": "Final database state versus annotated goal state",
+    "source_url": "https://arxiv.org/abs/2406.12045",
+    "code_url": "https://github.com/sierra-research/tau-bench",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  }
+]

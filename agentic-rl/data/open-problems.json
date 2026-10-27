@@ -1,0 +1,206 @@
+[
+  {
+    "id": "causal-credit",
+    "title": "Causal credit assignment for long-horizon agents",
+    "definition": "Which earlier actions actually changed the chance of eventual success?",
+    "motivation": "Terminal rewards conflate useful actions with later failures.",
+    "related_paper_ids": [
+      "arxiv-2604.09459",
+      "entry-15",
+      "arxiv-2505.10978"
+    ],
+    "existing_limitations": "Explicit action-level counterfactuals are difficult when environment state cannot be restored.",
+    "possible_approaches": [
+      "Compare matched restarts where feasible; otherwise report identification limits."
+    ],
+    "suggested_benchmark_ids": [
+      "alfworld",
+      "webshop"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Environment replay fidelity may dominate the estimate."
+    ]
+  },
+  {
+    "id": "adaptive-granularity",
+    "title": "Adaptive credit assignment granularity",
+    "definition": "When should credit be assigned by token, turn, tool call, or milestone?",
+    "motivation": "Fine-grained evaluation is costly; coarse reward can obscure useful behavior.",
+    "related_paper_ids": [
+      "arxiv-2604.09459",
+      "entry-15",
+      "arxiv-2505.10978"
+    ],
+    "existing_limitations": "Existing methods make different granularity choices under different assumptions.",
+    "possible_approaches": [
+      "Allocate evaluator calls to uncertain segments; compare equal-budget baselines."
+    ],
+    "suggested_benchmark_ids": [
+      "alfworld",
+      "taubench"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Verifier cost and bias may erase the gain."
+    ]
+  },
+  {
+    "id": "uncertainty-advantage",
+    "title": "Uncertainty-aware advantage estimation",
+    "definition": "Can advantage estimates expose uncertainty from sparse or noisy feedback?",
+    "motivation": "A single scalar advantage can hide uncertainty about causal contribution.",
+    "related_paper_ids": [
+      "arxiv-2604.09459"
+    ],
+    "existing_limitations": "The survey identifies weak intermediate verifiability and partial observability.",
+    "possible_approaches": [
+      "Estimate intervals from repeated rollouts and calibrate against held-out outcomes."
+    ],
+    "suggested_benchmark_ids": [
+      "taubench",
+      "scienceworld"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Repeated rollouts may not be independent."
+    ]
+  },
+  {
+    "id": "memory-credit",
+    "title": "Memory credit across sessions",
+    "definition": "How should a policy credit a memory write that helps much later?",
+    "motivation": "The reward may arrive after many sessions and retrieval decisions.",
+    "related_paper_ids": [
+      "entry-18",
+      "entry-19"
+    ],
+    "existing_limitations": "Legacy memory entries await source verification; the link is a research lead.",
+    "possible_approaches": [
+      "Track write, retrieval and outcome provenance across session boundaries."
+    ],
+    "suggested_benchmark_ids": [
+      "gaia",
+      "taubench"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Cross-session evaluation protocols may be unstable."
+    ]
+  },
+  {
+    "id": "memory-policy",
+    "title": "Memory-to-policy consolidation",
+    "definition": "When should learned experience become a policy update rather than stored memory?",
+    "motivation": "Retrieval and parameter updates have different cost and adaptation behavior.",
+    "related_paper_ids": [
+      "entry-18",
+      "entry-22"
+    ],
+    "existing_limitations": "Legacy related-work mapping awaits verification.",
+    "possible_approaches": [
+      "Compare frozen-policy memory use with controlled fine-tuning under equal budgets."
+    ],
+    "suggested_benchmark_ids": [
+      "alfworld",
+      "taubench"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Separating consolidation effects from extra training is hard."
+    ]
+  },
+  {
+    "id": "nonstationary-tools",
+    "title": "Non-stationary tools and environments",
+    "definition": "How can an agent detect and recover from changed tools or environment rules?",
+    "motivation": "Deployment interfaces and transition rules can drift.",
+    "related_paper_ids": [
+      "arxiv-2406.12045"
+    ],
+    "existing_limitations": "Existing benchmark work mainly evaluates a specified tool and policy setting.",
+    "possible_approaches": [
+      "Version tools and inject controlled API failures or rule changes."
+    ],
+    "suggested_benchmark_ids": [
+      "taubench",
+      "browsergym"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Synthetic shifts may not represent real change."
+    ]
+  },
+  {
+    "id": "reward-verifiability",
+    "title": "Reward verifiability for open-ended tasks",
+    "definition": "What evidence makes a success signal trustworthy in open-ended work?",
+    "motivation": "A plausible answer may fail task constraints or leave state incorrect.",
+    "related_paper_ids": [
+      "arxiv-2406.12045"
+    ],
+    "existing_limitations": "Final-state checks cover some tool tasks but not every open-ended objective.",
+    "possible_approaches": [
+      "Compare state-based checks, expert review and process checks on the same tasks."
+    ],
+    "suggested_benchmark_ids": [
+      "taubench",
+      "gaia"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Human labels and automated checks can disagree."
+    ]
+  },
+  {
+    "id": "budget-exploration",
+    "title": "Budget-aware agent exploration",
+    "definition": "How should an agent trade success probability against token, tool and latency cost?",
+    "motivation": "More search can improve decisions but consumes resources.",
+    "related_paper_ids": [
+      "arxiv-2305.10601"
+    ],
+    "existing_limitations": "Tree search illustrates multiple reasoning paths; explicit resource policies remain a separate question.",
+    "possible_approaches": [
+      "Evaluate adaptive search against fixed-budget search at matched total cost."
+    ],
+    "suggested_benchmark_ids": [
+      "webshop",
+      "scienceworld"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Cost accounting differs across providers and tools."
+    ]
+  },
+  {
+    "id": "active-perception",
+    "title": "Active perception and adaptive planning",
+    "definition": "When should an agent observe again rather than act from stale context?",
+    "motivation": "Extra observations can correct beliefs but add latency and cost.",
+    "related_paper_ids": [
+      "arxiv-2509.02547"
+    ],
+    "existing_limitations": "The survey highlights partial observability, but this specific tradeoff needs targeted study.",
+    "possible_approaches": [
+      "Randomize observation budget and measure errors under hidden-state changes."
+    ],
+    "suggested_benchmark_ids": [
+      "browsergym",
+      "osworld"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate, not measured.",
+    "risks": [
+      "Observability controls may be hard to standardize."
+    ]
+  }
+]

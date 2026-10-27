@@ -1,0 +1,35 @@
+{
+  "capabilities": [
+    "Planning",
+    "Tool Use",
+    "Memory",
+    "Reasoning",
+    "Perception / Multimodal",
+    "Self-Evolution",
+    "Multi-Agent Collaboration"
+  ],
+  "rl_topics": [
+    "Policy Optimization",
+    "Reward Modeling",
+    "Credit Assignment",
+    "Exploration",
+    "Long-Horizon RL",
+    "Multi-Turn RL",
+    "Hierarchical RL",
+    "POMDP / Belief Modeling",
+    "Environment Dynamics",
+    "Model-Based RL",
+    "Efficient Training",
+    "Safety / Trustworthiness",
+    "Continual Learning"
+  ],
+  "domains": [
+    "Code Agents",
+    "Web / GUI Agents",
+    "Search and Deep Research Agents",
+    "Mathematical Reasoning",
+    "Embodied Agents",
+    "Scientific Agents",
+    "Multi-Agent Systems"
+  ]
+}

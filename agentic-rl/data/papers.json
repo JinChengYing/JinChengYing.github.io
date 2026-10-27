@@ -1,0 +1,695 @@
+[
+  {
+    "id": "arxiv-2210.03629",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "authors": [
+      "Shunyu Yao",
+      "Jeffrey Zhao",
+      "Dian Yu",
+      "Nan Du",
+      "Izhak Shafran",
+      "Karthik Narasimhan",
+      "Yuan Cao"
+    ],
+    "year": 2022,
+    "date": "2022-10-06",
+    "venue": "ICLR 2023",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2210.03629",
+    "paper_url": "https://arxiv.org/abs/2210.03629",
+    "code_url": "https://github.com/ysymyth/ReAct",
+    "project_url": null,
+    "capabilities": [
+      "Reasoning",
+      "Tool Use",
+      "Planning"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Web / GUI Agents",
+      "Embodied Agents"
+    ],
+    "summary": "Interleaves reasoning traces with task actions and environment feedback.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Planning"
+    ],
+    "legacy_note": "Reasoning interleaved with environment actions",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2305.10601",
+    "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "authors": [
+      "Shunyu Yao",
+      "Dian Yu",
+      "Jeffrey Zhao",
+      "Izhak Shafran",
+      "Thomas L. Griffiths",
+      "Yuan Cao",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "date": "2023-05-17",
+    "venue": "NeurIPS 2023",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2305.10601",
+    "paper_url": "https://arxiv.org/abs/2305.10601",
+    "code_url": "https://github.com/princeton-nlp/tree-of-thought-llm",
+    "project_url": null,
+    "capabilities": [
+      "Planning",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Exploration"
+    ],
+    "domains": [
+      "Mathematical Reasoning"
+    ],
+    "summary": "Explores and evaluates multiple intermediate reasoning paths with lookahead and backtracking.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Planning"
+    ],
+    "legacy_note": "Search through intermediate reasoning states",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2310.04406",
+    "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
+    "authors": [],
+    "year": 2023,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2310.04406",
+    "paper_url": "https://arxiv.org/abs/2310.04406",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Planning"
+    ],
+    "legacy_note": "Tree search with environmental feedback",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2302.04761",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "authors": [],
+    "year": 2023,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2302.04761",
+    "paper_url": "https://arxiv.org/abs/2302.04761",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Tool Use"
+    ],
+    "legacy_note": "Self-supervised external API use",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2307.16789",
+    "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+    "authors": [],
+    "year": 2023,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2307.16789",
+    "paper_url": "https://arxiv.org/abs/2307.16789",
+    "code_url": "https://github.com/OpenBMB/ToolBench",
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Tool Use"
+    ],
+    "legacy_note": "Large-scale tools dataset and evaluation",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2406.12045",
+    "title": "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+    "authors": [
+      "Shunyu Yao",
+      "Noah Shinn",
+      "Pedram Razavi",
+      "Karthik Narasimhan"
+    ],
+    "year": 2024,
+    "date": "2024-06-17",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2406.12045",
+    "paper_url": "https://arxiv.org/abs/2406.12045",
+    "code_url": "https://github.com/sierra-research/tau-bench",
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Evaluates simulated user conversations with API tools and policy guidelines by comparing final database state with goal state.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Tool Use"
+    ],
+    "legacy_note": "Stateful tool and user interactions",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2303.11366",
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "authors": [],
+    "year": 2023,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2303.11366",
+    "paper_url": "https://arxiv.org/abs/2303.11366",
+    "code_url": "https://github.com/noahshinn/reflexion",
+    "project_url": null,
+    "capabilities": [
+      "Self-Evolution"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Self-Evolution"
+    ],
+    "legacy_note": "Verbal self-reflection and feedback",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2305.16291",
+    "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "authors": [],
+    "year": 2023,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2305.16291",
+    "paper_url": "https://arxiv.org/abs/2305.16291",
+    "code_url": "https://github.com/MineDojo/Voyager",
+    "project_url": null,
+    "capabilities": [
+      "Self-Evolution"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Self-Evolution"
+    ],
+    "legacy_note": "Embodied agent skill learning",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2401.10020",
+    "title": "Self-Rewarding Language Models",
+    "authors": [],
+    "year": 2024,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2401.10020",
+    "paper_url": "https://arxiv.org/abs/2401.10020",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Reward Modeling"
+    ],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Reward"
+    ],
+    "legacy_note": "Model-generated preference feedback",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2509.02547",
+    "title": "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey",
+    "authors": [],
+    "year": 2025,
+    "date": "2025-09-02",
+    "venue": "Transactions on Machine Learning Research",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2509.02547",
+    "paper_url": "https://arxiv.org/abs/2509.02547",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Surveys agentic RL through temporally extended, partially observable interaction and a capability-oriented taxonomy.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "legacy_note": "Broad survey of agentic reinforcement learning",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2604.09459",
+    "title": "From Reasoning to Agentic: Credit Assignment in Reinforcement Learning for Large Language Models",
+    "authors": [
+      "Chenchen Zhang"
+    ],
+    "year": 2026,
+    "date": "2026-04-10",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2604.09459",
+    "paper_url": "https://arxiv.org/abs/2604.09459",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment"
+    ],
+    "domains": [],
+    "summary": "Surveys credit assignment from reasoning to agentic RL, including sparse rewards and heterogeneous actions.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "legacy_note": "Token, turn and multi-agent reward attribution",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "entry-15",
+    "title": "Milestone-Guided Policy Learning for Long-Horizon Language Agents",
+    "authors": [
+      "Zixuan Wang",
+      "Yuchen Yan",
+      "Hongxing Li",
+      "Teng Pan",
+      "Dingming Li",
+      "Ruiqing Zhang",
+      "Weiming Lu",
+      "Jun Xiao",
+      "Yueting Zhuang",
+      "Yongliang Shen"
+    ],
+    "year": 2026,
+    "date": null,
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/wang26jm.html",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "Uses milestone boundaries, segment-level reward shaping and dual-scale advantage estimates for long-horizon agent training.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment"
+    ],
+    "legacy_note": "Milestone-guided advantage estimation",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2607.13988",
+    "title": "TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2607.13988",
+    "paper_url": "https://arxiv.org/abs/2607.13988",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment"
+    ],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment"
+    ],
+    "legacy_note": "Turn-level reward attribution",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2605.20061",
+    "title": "Rewarding Beliefs, Not Actions: Consistency-Guided Credit Assignment for Long-Horizon Agents",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2605.20061",
+    "paper_url": "https://arxiv.org/abs/2605.20061",
+    "code_url": "https://github.com/Fateyetian/Rebel",
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment"
+    ],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment"
+    ],
+    "legacy_note": "Belief-aware credit assignment",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-18",
+    "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": null,
+    "paper_url": "https://aclanthology.org/2026.acl-long.981/",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory"
+    ],
+    "legacy_note": "RL for memory read, write, summarize and discard",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-19",
+    "title": "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/he26am.html",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory"
+    ],
+    "legacy_note": "Memory across interdependent sessions",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-20",
+    "title": "AMA-Bench",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/zhao26bs.html",
+    "code_url": "https://ama-bench.github.io/",
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory"
+    ],
+    "legacy_note": "Long-horizon memory evaluation",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-21",
+    "title": "Mem2ActBench: A Benchmark for Evaluating Long-Term Memory Utilization in Task-Oriented Autonomous Agents",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": null,
+    "paper_url": "https://aclanthology.org/2026.acl-long.370/",
+    "code_url": "https://github.com/Cantaloupe-M/Mem2ActBench",
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory"
+    ],
+    "legacy_note": "Long-term memory use in agent actions",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-22",
+    "title": "Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic–Procedural Memory",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/li26bn.html",
+    "code_url": "https://github.com/LISijia-dev/H-EPM",
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory"
+    ],
+    "legacy_note": "Hybrid episodic and procedural memory",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2608.10357",
+    "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks",
+    "authors": [],
+    "year": 2026,
+    "date": null,
+    "venue": null,
+    "publication_status": "unverified",
+    "arxiv_id": "2608.10357",
+    "paper_url": "https://arxiv.org/abs/2608.10357",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Efficient Training"
+    ],
+    "domains": [],
+    "summary": null,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Efficiency"
+    ],
+    "legacy_note": "Efficient long-horizon tool-use RL",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "arxiv-2505.10978",
+    "title": "Group-in-Group Policy Optimization for LLM Agent Training",
+    "authors": [
+      "Lang Feng",
+      "Zhenghai Xue",
+      "Tingcong Liu",
+      "Bo An"
+    ],
+    "year": 2025,
+    "date": "2025-05-16",
+    "venue": "NeurIPS 2025",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2505.10978",
+    "paper_url": "https://arxiv.org/abs/2505.10978",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Credit Assignment",
+      "Long-Horizon RL",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Embodied Agents",
+      "Web / GUI Agents"
+    ],
+    "summary": "Introduces episode-level and anchor-state step-level relative advantage estimates for multi-turn agent training.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "GiGPO"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2508.03680",
+    "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+    "authors": [
+      "Xufang Luo",
+      "Yuge Zhang",
+      "Zhiyuan He",
+      "Zilong Wang",
+      "Siyun Zhao",
+      "Dongsheng Li",
+      "Luna K. Qiu",
+      "Yuqing Yang"
+    ],
+    "year": 2025,
+    "date": "2025-08-05",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2508.03680",
+    "paper_url": "https://arxiv.org/abs/2508.03680",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Credit Assignment",
+      "Hierarchical RL",
+      "Efficient Training"
+    ],
+    "domains": [
+      "Search and Deep Research Agents",
+      "Mathematical Reasoning",
+      "Multi-Agent Systems"
+    ],
+    "summary": "Proposes an agent-training interface that separates agent execution from RL training and decomposes trajectories into training transitions.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Frameworks"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  }
+]

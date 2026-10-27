@@ -1,0 +1,42 @@
+[
+  {
+    "id": "entry-10",
+    "title": "RAGEN / StarPO",
+    "year": 2025,
+    "description": "Training multi-turn RL language agents",
+    "source_url": "https://github.com/RAGEN-AI/RAGEN",
+    "code_url": "https://github.com/RAGEN-AI/RAGEN",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-11",
+    "title": "VAGEN",
+    "year": 2025,
+    "description": "Visual multi-turn RL framework",
+    "source_url": "https://github.com/RAGEN-AI/VAGEN",
+    "code_url": "https://github.com/RAGEN-AI/VAGEN",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-12",
+    "title": "Agent-R1",
+    "year": 2026,
+    "description": "Agent RL training implementation",
+    "source_url": "https://github.com/AgentR1/Agent-R1",
+    "code_url": "https://github.com/AgentR1/Agent-R1",
+    "verification_status": "unverified",
+    "verified_at": null
+  },
+  {
+    "id": "entry-24",
+    "title": "BrowserGym",
+    "year": 2024,
+    "description": "Web agent training environment",
+    "source_url": "https://github.com/ServiceNow/BrowserGym",
+    "code_url": "https://github.com/ServiceNow/BrowserGym",
+    "verification_status": "unverified",
+    "verified_at": null
+  }
+]

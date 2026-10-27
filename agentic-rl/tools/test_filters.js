@@ -1,0 +1,17 @@
+"use strict";
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const { filterPapers } = require("../assets/js/filters.js");
+const papers = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/papers.json"), "utf8"));
+assert.equal(filterPapers(papers, {}).length, papers.length);
+assert.equal(filterPapers(papers, { query: "gIgPo" }).length, 1);
+assert.equal(filterPapers(papers, { query: "unlikely-nonexistent-phrase" }).length, 0);
+const matched = filterPapers(papers, { capability: "Tool Use", rlTopic: "Credit Assignment", year: 2025 });
+assert(matched.some(p => p.id === "arxiv-2505.10978"));
+assert(matched.every(p => p.capabilities.includes("Tool Use") && p.rl_topics.includes("Credit Assignment") && p.year === 2025));
+const oldest = filterPapers(papers, { sort: "oldest" });
+assert.equal(oldest[0].id, "arxiv-2210.03629");
+const alphabetic = filterPapers(papers, { sort: "title" });
+assert(alphabetic.every((p, i) => i === 0 || alphabetic[i-1].title.localeCompare(p.title) <= 0));
+console.log("Filter checks passed.");
