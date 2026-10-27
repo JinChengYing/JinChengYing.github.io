@@ -1,7 +1,7 @@
 "use strict";
 const isZh = document.documentElement.lang.toLowerCase().startsWith("zh");
 const t = (en, zh) => isZh ? zh : en;
-const atlasBase = new URL("../../", document.querySelector('script[src$="assets/js/app.js"]').src);
+const atlasBase = new URL("../../", document.querySelector('script[src*="assets/js/app.js"]').src);
 let localization = {};
 const term = value => isZh ? (localization.taxonomy?.[value] || value) : value;
 const byId = id => document.getElementById(id);
