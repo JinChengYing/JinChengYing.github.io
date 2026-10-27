@@ -7,6 +7,13 @@ const papers = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/papers.j
 assert.equal(filterPapers(papers, {}).length, papers.length);
 assert.equal(filterPapers(papers, { query: "gIgPo" }).length, 1);
 assert.equal(filterPapers(papers, { query: "unlikely-nonexistent-phrase" }).length, 0);
+const surveys = filterPapers(papers, { collection: "surveys" });
+assert.equal(surveys.length, 6);
+assert(surveys.every(p => p.tags.includes("Surveys")));
+const credit = filterPapers(papers, { collection: "credit" });
+assert(credit.some(p => p.id === "arxiv-2610.15840"));
+assert(credit.every(p => p.rl_topics.includes("Credit Assignment")));
+assert.equal(filterPapers(papers, { collection: "surveys", year: 2026 }).length, 4);
 const matched = filterPapers(papers, { capability: "Tool Use", rlTopic: "Credit Assignment", year: 2025 });
 assert(matched.some(p => p.id === "arxiv-2505.10978"));
 assert(matched.every(p => p.capabilities.includes("Tool Use") && p.rl_topics.includes("Credit Assignment") && p.year === 2025));

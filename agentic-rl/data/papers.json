@@ -931,5 +931,550 @@
     ],
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2503.12434",
+    "title": "A Survey on the Optimization of Large Language Model-based Agents",
+    "authors": [
+      "Shangheng Du",
+      "Jiabao Zhao",
+      "Jinxin Shi",
+      "Zhentao Xie",
+      "Xin Jiang",
+      "Yanhong Bai",
+      "Liang He"
+    ],
+    "year": 2025,
+    "date": "2025-03-16",
+    "venue": "ACM Computing Surveys 58(9), Article 223 (2026)",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2503.12434",
+    "paper_url": "https://arxiv.org/abs/2503.12434",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning",
+      "Tool Use"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Reward Modeling"
+    ],
+    "domains": [],
+    "summary": "Surveys parameter-driven and parameter-free agent optimization, including reinforcement learning, trajectory construction, reward design, prompting, and retrieval.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2601.12538",
+    "title": "A Survey of Agentic Reasoning for Large Language Models: Towards Recursively Self-Improving and Collective Agents",
+    "authors": [
+      "Tianxin Wei",
+      "Ting-Wei Li",
+      "Zhining Liu",
+      "et al."
+    ],
+    "year": 2026,
+    "date": "2026-01-18",
+    "venue": "Transactions on Machine Learning Research",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2601.12538",
+    "paper_url": "https://arxiv.org/abs/2601.12538",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning",
+      "Self-Evolution",
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Continual Learning"
+    ],
+    "domains": [],
+    "summary": "Organizes agentic reasoning into foundational, self-evolving, and collective layers, and distinguishes test-time orchestration from RL and supervised post-training.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2602.06052",
+    "title": "A Survey of Agent Memory in the Second Half: Towards Self-Evolving and Long-Horizon Agents",
+    "authors": [
+      "Wei-Chieh Huang",
+      "Weizhi Zhang",
+      "Yueqing Liang",
+      "et al."
+    ],
+    "year": 2026,
+    "date": "2026-01-14",
+    "venue": "Transactions on Machine Learning Research",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2602.06052",
+    "paper_url": "https://arxiv.org/abs/2602.06052",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory",
+      "Self-Evolution"
+    ],
+    "rl_topics": [
+      "Long-Horizon RL",
+      "Continual Learning"
+    ],
+    "domains": [],
+    "summary": "Surveys memory substrates, cognitive mechanisms, and memory subjects; reviews learned memory-operation policies and evaluation of memory utility.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2608.06663",
+    "title": "The Horizon Gap: Planning, Memory, Execution, Training, and Evaluation for Long-Horizon LLM Agents",
+    "authors": [
+      "Mingguang Chen",
+      "Licheng Wang",
+      "Bo Qu"
+    ],
+    "year": 2026,
+    "date": "2026-08-07",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2608.06663",
+    "paper_url": "https://arxiv.org/abs/2608.06663",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning",
+      "Memory"
+    ],
+    "rl_topics": [
+      "Long-Horizon RL",
+      "Credit Assignment"
+    ],
+    "domains": [],
+    "summary": "Surveys long-horizon agents across planning, memory, execution, training, evaluation, and foundations, emphasizing the limits of outcome-only signals.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2602.16165",
+    "title": "HiPER: Hierarchical Reinforcement Learning with Explicit Credit Assignment for Large Language Model Agents",
+    "authors": [
+      "Jiangweizhi Peng",
+      "Yuanxin Liu",
+      "Ruida Zhou",
+      "Charles Fleming",
+      "Zhaoran Wang",
+      "Alfredo Garcia",
+      "Mingyi Hong"
+    ],
+    "year": 2026,
+    "date": "2026-02-18",
+    "venue": "ICML 2026",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2602.16165",
+    "paper_url": "https://arxiv.org/abs/2602.16165",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning"
+    ],
+    "rl_topics": [
+      "Credit Assignment",
+      "Hierarchical RL",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "Separates high-level subgoal planning from multi-step execution and estimates advantages at both levels.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Hierarchical"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2603.08754",
+    "title": "Hindsight Credit Assignment for Long-Horizon LLM Agents",
+    "authors": [
+      "Hui-Ze Tan",
+      "Xiao-Wen Yang",
+      "Hao Chen",
+      "Jie-Jing Shao",
+      "Yi Wen",
+      "Yuteng Shen",
+      "Weihong Luo",
+      "Xiku Du",
+      "Lan-Zhe Guo",
+      "Yu-Feng Li"
+    ],
+    "year": 2026,
+    "date": "2026-03-07",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2603.08754",
+    "paper_url": "https://arxiv.org/abs/2603.08754",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "HCAPO uses the LLM as a post-hoc critic to refine step-level Q-values and combines advantages at multiple scales.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Hindsight"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2605.21768",
+    "title": "Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents",
+    "authors": [
+      "Sikuan Yan",
+      "Ahmed Bahloul",
+      "Ercong Nie",
+      "Susanna Schwarzmann",
+      "Riccardo Trivisonno",
+      "Volker Tresp",
+      "Yunpu Ma"
+    ],
+    "year": 2026,
+    "date": "2026-05-20",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2605.21768",
+    "paper_url": "https://arxiv.org/abs/2605.21768",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL",
+      "Continual Learning"
+    ],
+    "domains": [],
+    "summary": "Compares local rerollouts from the same intermediate memory state while retaining a global long-horizon objective for memory operations.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Memory"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2608.08255",
+    "title": "Learning from Environmental Feedback: Credit Assignment across Multiple Timescales for Agentic Reinforcement Learning",
+    "authors": [
+      "Yifu Huo",
+      "Shunjie Xing",
+      "Chenglong Wang",
+      "Peinan Feng",
+      "Qiaozhi He",
+      "Yan Ding",
+      "Anxiang Ma",
+      "Yuxin Gao",
+      "Tongran Liu",
+      "Tong Xiao",
+      "Jingbo Zhu"
+    ],
+    "year": 2026,
+    "date": "2026-08-08",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2608.08255",
+    "paper_url": "https://arxiv.org/abs/2608.08255",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL",
+      "Environment Dynamics"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "EFCA reweights returns using short-term action feedback and medium-term state history alongside long-term outcomes.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Environmental Feedback"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2609.12424",
+    "title": "Granularity-Adaptive Credit Assignment for Long-Horizon LLM Agent Reinforcement Learning",
+    "authors": [
+      "Taoran Liang",
+      "Yang Liu",
+      "Shang Luo",
+      "et al."
+    ],
+    "year": 2026,
+    "date": "2026-09-11",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2609.12424",
+    "paper_url": "https://arxiv.org/abs/2609.12424",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL",
+      "Efficient Training"
+    ],
+    "domains": [],
+    "summary": "GACA uses a decision criticality score from rollout token log-probabilities to adaptively mix episode- and step-level credit without extra rollouts.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Adaptive Granularity"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2609.36178",
+    "title": "Targeting Pivotal Decisions for Credit Assignment in Agentic Reinforcement Learning",
+    "authors": [
+      "Dongwon Jung",
+      "Hemanth Neelgund Ramesh",
+      "Yifan Wang",
+      "Xiaomin Li",
+      "Yuexing Hao",
+      "Yu Hu",
+      "Muhao Chen",
+      "Varun Chandrasekaran",
+      "Andrzej Banburski-Fahey",
+      "Jaron Lanier"
+    ],
+    "year": 2026,
+    "date": "2026-09-28",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2609.36178",
+    "paper_url": "https://arxiv.org/abs/2609.36178",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "ProVer selects potentially pivotal segments by comparing successful and failed trajectories, then estimates local advantage from sampled continuations before and after each segment.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Segment-Level"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2610.00838",
+    "title": "SHARPO: Segment-Level Credit Assignment for Agentic Reinforcement Learning",
+    "authors": [
+      "Xinchen Du",
+      "Zhengze Zhou",
+      "Wenhui Zhu",
+      "Han Yu",
+      "Sen Na",
+      "Rohit Jain",
+      "Alborz Geramifard"
+    ],
+    "year": 2026,
+    "date": "2026-09-30",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2610.00838",
+    "paper_url": "https://arxiv.org/abs/2610.00838",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "SHARPO uses teacher-student log-probability gaps to reweight GRPO advantages at environment-facing segment granularity.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Segment-Level"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2610.03372",
+    "title": "SCAD: Structured Credit Assignment and Distillation for Long-Horizon Agents",
+    "authors": [
+      "Shangyang Wu",
+      "Shuai Zhao",
+      "Ziyue Zhu",
+      "Jinyang Wu",
+      "Anh Tuan Luu",
+      "Haoran Luo"
+    ],
+    "year": 2026,
+    "date": "2026-10-02",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2610.03372",
+    "paper_url": "https://arxiv.org/abs/2610.03372",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning"
+    ],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "SCAD separates planning from bounded subtask execution, combining cross-rollout prefix-tree planning credit with local teacher-guided execution distillation.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Distillation"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2610.08402",
+    "title": "VETTA: Coordinating Turn- and Token-Level Credit Assignment for Multi-Turn LLM Agents",
+    "authors": [
+      "Jiaju Chen",
+      "Min Yang",
+      "Jinghua Piao",
+      "Xiaochong Lan",
+      "Xu Xia",
+      "Xiangnan He",
+      "Yong Li"
+    ],
+    "year": 2026,
+    "date": "2026-10-06",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2610.08402",
+    "paper_url": "https://arxiv.org/abs/2610.08402",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Multi-Turn RL",
+      "Efficient Training"
+    ],
+    "domains": [],
+    "summary": "VETTA estimates turn- and token-level advantages with two heads on a shared lightweight critic for PPO updates.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Turn-Level",
+      "Token-Level"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2610.15840",
+    "title": "LLM Value Functions for Credit Assignment in Agentic RL",
+    "authors": [
+      "Kaijie Zhu",
+      "Weixiang Yan",
+      "Omar Attia",
+      "Abbas Kazerouni",
+      "Alexander Toshev",
+      "Andrew Szot"
+    ],
+    "year": 2026,
+    "date": "2026-10-11",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2610.15840",
+    "paper_url": "https://arxiv.org/abs/2610.15840",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL",
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Code Agents"
+    ],
+    "summary": "LVRL estimates policy-aware state values with a pretrained LLM, deriving step-level credit from value differences without fitting a separate critic.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Credit Assignment",
+      "Value Function"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   }
 ]

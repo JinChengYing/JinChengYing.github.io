@@ -27,6 +27,7 @@ const add = (parent, ...children) => children.filter(Boolean).forEach(child => p
 const shown = value => value === null || value === undefined || value === "" ? t("Not documented","未记录") : String(value);
 const labelStatus = item => item.verification_status === "source_checked" ? t("Source checked","来源已核对") : t("Pending verification","待核验");
 let papers = [], benchmarks = [], problems = [], taxonomy = {}, frameworks = [];
+let activeCollection = "";
 function options(id, values, translate = false) {
   const select = byId(id);
   values.forEach(value => select.add(new Option(translate ? term(value) : value, value)));
@@ -37,7 +38,14 @@ function setupFilters() {
   options("domain", taxonomy.domains, true);
   options("year", [...new Set(papers.map(p => p.year))].sort((a,b) => b-a));
   ["query","capability","rl-topic","domain","year","sort"].forEach(id => byId(id).addEventListener(id === "query" ? "input" : "change", drawPapers));
+  document.querySelectorAll("[data-collection]").forEach(button => button.addEventListener("click", () => {
+    activeCollection = activeCollection === button.dataset.collection ? "" : button.dataset.collection;
+    document.querySelectorAll("[data-collection]").forEach(item => item.setAttribute("aria-pressed", String(item.dataset.collection === activeCollection)));
+    drawPapers();
+  }));
   byId("reset-filters").addEventListener("click", () => {
+    activeCollection = "";
+    document.querySelectorAll("[data-collection]").forEach(item => item.setAttribute("aria-pressed", "false"));
     ["query","capability","rl-topic","domain","year"].forEach(id => byId(id).value = "");
     byId("sort").value = "newest";
     drawPapers();
@@ -54,7 +62,7 @@ function paperCard(p) {
   const description = p.summary || t("Summary pending source verification.","摘要待来源核验。");
   add(card,el("p","description",description));
   const tags = el("div","tag-list");
-  [...p.capabilities,...p.rl_topics,...p.domains].forEach(tag => add(tags,el("span","tag",term(tag))));
+  [...p.tags,...p.capabilities,...p.rl_topics,...p.domains].forEach(tag => add(tags,el("span","tag",tag === "Surveys" ? t("Survey","综述") : term(tag))));
   add(card,tags);
   const details = el("details");
   const detailText = p.verification_status === "source_checked"
@@ -70,6 +78,7 @@ function paperCard(p) {
 }
 function drawPapers() {
   const list = AtlasFilters.filterPapers(papers, {
+    collection: activeCollection,
     query: byId("query").value, capability: byId("capability").value,
     rlTopic: byId("rl-topic").value, domain: byId("domain").value,
     year: byId("year").value, sort: byId("sort").value

@@ -16,6 +16,8 @@ A `source_checked` paper has a primary abstract or proceedings page reviewed for
 
 The verified source set now also includes [SHADOW](https://ojs.aaai.org/index.php/AAAI/article/view/39570), [ΔBelief-RL](https://proceedings.mlr.press/v306/auzina26a.html), [TRACE](https://arxiv.org/abs/2607.13988), [ReBel](https://arxiv.org/abs/2605.20061), [AgeMem](https://aclanthology.org/2026.acl-long.981/), [MemoryArena](https://proceedings.mlr.press/v306/he26am.html), [AMA-Bench](https://proceedings.mlr.press/v306/zhao26bs.html), [Mem2ActBench](https://aclanthology.org/2026.acl-long.370/), [H-EPM](https://proceedings.mlr.press/v306/li26bn.html), [SINKFLEX-RL](https://arxiv.org/abs/2608.10357), and [Agent Lightning v1.0](https://arxiv.org/abs/2608.17528). Scientific results in those sources are reported by their authors; this atlas has not reproduced them. The 2026 credit-assignment survey's current arXiv v3 abstract reports 69 related papers, including 56 core methods. Earlier counts should not be presented as current.
 
+On 2026-10-27 the library expanded from 25 to 39 records with four further surveys and ten credit-assignment methods. The source-reviewed batch and its Chinese summaries are recorded in `tools/expand_literature_2026_10.py`; each arXiv identifier links to the abstract used for the displayed metadata and short summary. The added October preprints are not independently reproduced or treated as peer-reviewed. The page offers exact shortcuts for survey records and the `Credit Assignment` RL topic.
+
 ## Add or revise a paper
 
 1. Read the primary paper abstract or proceedings record. Confirm the identifier, title, authors, submission date and venue before filling them. Do not infer a venue from the year.

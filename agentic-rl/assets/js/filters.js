@@ -7,6 +7,9 @@
         ...(paper.tags || []), ...(paper.capabilities || []), ...(paper.rl_topics || []),
         ...(paper.domains || []), paper.search_terms].filter(Boolean).join(" ").toLocaleLowerCase();
       return (!query || haystack.includes(query)) &&
+        (!criteria.collection || (criteria.collection === "surveys"
+          ? (paper.tags || []).includes("Surveys")
+          : criteria.collection === "credit" ? (paper.rl_topics || []).includes("Credit Assignment") : true)) &&
         (!criteria.capability || (paper.capabilities || []).includes(criteria.capability)) &&
         (!criteria.rlTopic || (paper.rl_topics || []).includes(criteria.rlTopic)) &&
         (!criteria.domain || (paper.domains || []).includes(criteria.domain)) &&
