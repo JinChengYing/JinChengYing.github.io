@@ -1,30 +1,29 @@
-name: Build and Test
+name: Build blog
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-      
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4.0.1
-      with:
-        node-version: 20
-        
-    - run: npm install -g bats
-    
-    - run: bats -v
-      
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.0
-      with:
-        name: 'my-blog'
-        path: '_site'
-        
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check new posts
+        run: python scripts/posts.py check
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-site
+          path: _site

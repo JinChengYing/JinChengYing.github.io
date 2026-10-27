@@ -1,50 +1,9 @@
 ---
 layout: default
 ---
-
-<article class="posts">
-  
-  <h1>{{ page.title }}</h1>
-
-  <div clsss="meta">
-    <span class="date">
-      {{ page.date | date: "%Y-%m-%d" }}
-    </span>
-
-    <ul class="tag">
-      {% for tag in page.tags %}
-      <li>
-        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-          {{ tag }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  {% include disqus.html %}
-  {% include gitalk.html %}
+<article class="article-page">
+  <header class="article-header"><a class="back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a><div class="eyebrow">研究笔记 / {{ page.date | date: '%Y.%m.%d' }}</div><h1>{{ page.title | escape }}</h1>{% if page.description %}<p class="article-deck">{{ page.description | escape }}</p>{% endif %}<div class="article-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y 年 %m 月 %d 日' }}</time>{% if page.author %}<span>· {{ page.author | escape }}</span>{% endif %}</div>{% if page.tags.size > 0 %}<div class="tag-list">{% for tag in page.tags %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag | escape }}</a>{% endfor %}</div>{% endif %}</header>
+  <div class="article-body prose">{{ content }}</div>
+  <nav class="post-neighbors" aria-label="相邻文章">{% if page.previous.url %}<a href="{{ page.previous.url | relative_url }}"><small>上一篇</small><strong>{{ page.previous.title | escape }}</strong></a>{% endif %}{% if page.next.url %}<a href="{{ page.next.url | relative_url }}"><small>下一篇</small><strong>{{ page.next.title | escape }}</strong></a>{% endif %}</nav>
+  {% include disqus.html %}{% include gitalk.html %}
 </article>
-
-<div class="pagination">
-  {% if page.previous.url %}
-    <span class="prev" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-        ← 上一篇
-      </a>
-    </span>
-  {% endif %}
-  {% if page.next.url %}
-    <span class="next" >
-      <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-        下一篇 →
-      </a>
-    </span>
-  {% endif %}
-</div>
