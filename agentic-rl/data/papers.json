@@ -2375,5 +2375,567 @@
     ],
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2408.07199",
+    "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
+    "authors": [
+      "Pranav Putta",
+      "Edmund Mills",
+      "Naman Garg",
+      "Sumeet Motwani",
+      "Chelsea Finn",
+      "Divyansh Garg",
+      "Rafael Rafailov"
+    ],
+    "year": 2024,
+    "date": "2024-08-13",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2408.07199",
+    "paper_url": "https://arxiv.org/abs/2408.07199",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning",
+      "Self-Evolution"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Exploration"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Combines guided tree search, self-critique and off-policy preference optimization to learn from successful and failed web-agent trajectories.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Agent Q",
+      "MCTS"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2406.11896",
+    "title": "DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning",
+    "authors": [
+      "Hao Bai",
+      "Yifei Zhou",
+      "Mert Cemri",
+      "Jiayi Pan",
+      "Alane Suhr",
+      "Sergey Levine",
+      "Aviral Kumar"
+    ],
+    "year": 2024,
+    "date": "2024-06-14",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2406.11896",
+    "paper_url": "https://arxiv.org/abs/2406.11896",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Perception / Multimodal"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Environment Dynamics"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Trains a vision-language device-control policy with offline RL followed by offline-to-online RL in an Android environment.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "DigiRL",
+      "Android"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2502.18449",
+    "title": "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution",
+    "authors": [
+      "Yuxiang Wei",
+      "Olivier Duchenne",
+      "Jade Copet",
+      "Quentin Carbonneaux",
+      "Lingming Zhang",
+      "Daniel Fried",
+      "Gabriel Synnaeve",
+      "Rishabh Singh",
+      "Sida I. Wang"
+    ],
+    "year": 2025,
+    "date": "2025-02-25",
+    "venue": "NeurIPS 2025",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2502.18449",
+    "paper_url": "https://arxiv.org/abs/2502.18449",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Reward Modeling"
+    ],
+    "domains": [
+      "Code Agents"
+    ],
+    "summary": "Uses rule-based rewards over open-source software evolution data to train a code-reasoning model for engineering tasks.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "SWE-RL"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2502.10325",
+    "title": "Process Reward Models for LLM Agents: Practical Framework and Directions",
+    "authors": [
+      "Sanjiban Choudhury"
+    ],
+    "year": 2025,
+    "date": "2025-02-14",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2502.10325",
+    "paper_url": "https://arxiv.org/abs/2502.10325",
+    "code_url": "https://github.com/sanjibanc/agent_prm",
+    "project_url": null,
+    "capabilities": [
+      "Planning"
+    ],
+    "rl_topics": [
+      "Reward Modeling",
+      "Credit Assignment"
+    ],
+    "domains": [
+      "Embodied Agents"
+    ],
+    "summary": "Introduces AgentPRM, which estimates process rewards from agent rollouts, and InversePRM, which learns them from demonstrations.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "AgentPRM",
+      "InversePRM"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2503.09516",
+    "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+    "authors": [
+      "Bowen Jin",
+      "Hansi Zeng",
+      "Zhenrui Yue",
+      "Jinsung Yoon",
+      "Sercan Arik",
+      "Dong Wang",
+      "Hamed Zamani",
+      "Jiawei Han"
+    ],
+    "year": 2025,
+    "date": "2025-03-12",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2503.09516",
+    "paper_url": "https://arxiv.org/abs/2503.09516",
+    "code_url": "https://github.com/PeterGriffinJin/Search-R1",
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Trains multi-turn query generation during reasoning with live retrieval, outcome rewards and masking of retrieved tokens.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Search-R1"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2504.03160",
+    "title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments",
+    "authors": [
+      "Yuxiang Zheng",
+      "Dayuan Fu",
+      "Xiangkun Hu",
+      "Xiaojie Cai",
+      "Lyumanshan Ye",
+      "Pengrui Lu",
+      "Pengfei Liu"
+    ],
+    "year": 2025,
+    "date": "2025-04-04",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2504.03160",
+    "paper_url": "https://arxiv.org/abs/2504.03160",
+    "code_url": "https://github.com/GAIR-NLP/DeepResearcher",
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Planning"
+    ],
+    "rl_topics": [
+      "Long-Horizon RL",
+      "Environment Dynamics"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Trains research agents end to end with reinforcement learning over authentic web-search interactions rather than a fixed retrieval corpus.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "DeepResearcher"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2504.11536",
+    "title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+    "authors": [
+      "Jiazhan Feng",
+      "Shijue Huang",
+      "Xingwei Qu",
+      "Ge Zhang",
+      "Yujia Qin",
+      "Baoquan Zhong",
+      "Chengquan Jiang",
+      "Jinxin Chi",
+      "Wanjun Zhong"
+    ],
+    "year": 2025,
+    "date": "2025-04-15",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2504.11536",
+    "paper_url": "https://arxiv.org/abs/2504.11536",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Mathematical Reasoning"
+    ],
+    "summary": "Uses outcome-driven RL over multi-turn code execution to teach a reasoning model when and how to call a code interpreter.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "ReTool",
+      "Code Interpreter"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2505.01441",
+    "title": "Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning",
+    "authors": [
+      "Joykirat Singh",
+      "Raghav Magazine",
+      "Yash Pandya",
+      "Akshay Nambi"
+    ],
+    "year": 2025,
+    "date": "2025-04-28",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2505.01441",
+    "paper_url": "https://arxiv.org/abs/2505.01441",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Mathematical Reasoning"
+    ],
+    "summary": "ARTIST uses outcome-based RL to train tool choice and invocation inside multi-turn reasoning without step-level supervision.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "ARTIST"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2505.04588",
+    "title": "ZeroSearch: Incentivize the Search Capability of LLMs without Searching",
+    "authors": [
+      "Hao Sun",
+      "Zile Qiao",
+      "Jiayan Guo",
+      "Xuanbo Fan",
+      "Yingyan Hou",
+      "Yong Jiang",
+      "Pengjun Xie",
+      "Yan Zhang",
+      "Fei Huang",
+      "Jingren Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-05-07",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2505.04588",
+    "paper_url": "https://arxiv.org/abs/2505.04588",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Efficient Training",
+      "Environment Dynamics"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Replaces live search calls during RL training with a learned retrieval simulator and a curriculum of increasingly noisy documents.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "ZeroSearch",
+      "Search Simulation"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2505.16421",
+    "title": "WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning",
+    "authors": [
+      "Zhepei Wei",
+      "Wenlin Yao",
+      "Yao Liu",
+      "Weizhi Zhang",
+      "Qin Lu",
+      "Liang Qiu",
+      "Changlong Yu",
+      "Puyang Xu",
+      "Chao Zhang",
+      "Bing Yin",
+      "Hyokun Yun",
+      "Lihong Li"
+    ],
+    "year": 2025,
+    "date": "2025-05-22",
+    "venue": "EMNLP 2025",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2505.16421",
+    "paper_url": "https://arxiv.org/abs/2505.16421",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Planning"
+    ],
+    "rl_topics": [
+      "Multi-Turn RL",
+      "Long-Horizon RL"
+    ],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Trains web agents with asynchronous online trajectories and binary task-success rewards across multi-turn interactions.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "WebAgent-R1"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2505.22648",
+    "title": "WebDancer: Towards Autonomous Information Seeking Agency",
+    "authors": [
+      "Jialong Wu",
+      "Baixuan Li",
+      "Runnan Fang",
+      "Wenbiao Yin",
+      "Liwen Zhang",
+      "Zhengwei Tao",
+      "Dingchu Zhang",
+      "Zekun Xi",
+      "Gang Fu",
+      "Yong Jiang",
+      "Pengjun Xie",
+      "Fei Huang",
+      "Jingren Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-05-28",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2505.22648",
+    "paper_url": "https://arxiv.org/abs/2505.22648",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Planning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Long-Horizon RL"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Builds an information-seeking web agent through browsing data, trajectory sampling, supervised cold start and reinforcement learning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "WebDancer"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2507.02592",
+    "title": "WebSailor: Navigating Super-human Reasoning for Web Agent",
+    "authors": [
+      "Kuan Li",
+      "Zhongwang Zhang",
+      "Huifeng Yin",
+      "Liwen Zhang",
+      "Litu Ou",
+      "Jialong Wu",
+      "Wenbiao Yin",
+      "Baixuan Li",
+      "Zhengwei Tao",
+      "Xinyu Wang",
+      "Weizhou Shen",
+      "Junkai Zhang",
+      "Dingchu Zhang",
+      "Xixi Wu",
+      "Yong Jiang",
+      "Ming Yan",
+      "Pengjun Xie",
+      "Fei Huang",
+      "Jingren Zhou"
+    ],
+    "year": 2025,
+    "date": "2025-07-03",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2507.02592",
+    "paper_url": "https://arxiv.org/abs/2507.02592",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use",
+      "Planning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Exploration"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Combines high-uncertainty task construction, a supervised cold start and DUPO reinforcement learning for complex web information seeking.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "WebSailor",
+      "DUPO"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2508.19828",
+    "title": "Memory-R1: Enhancing Large Language Model Agents to Manage and Utilize Memories via Reinforcement Learning",
+    "authors": [
+      "Sikuan Yan",
+      "Xiufeng Yang",
+      "Zuchao Huang",
+      "Ercong Nie",
+      "Zifeng Ding",
+      "Zonggen Li",
+      "Xiaowen Ma",
+      "Jinhe Bi",
+      "Kristian Kersting",
+      "Jeff Z. Pan",
+      "Hinrich Schütze",
+      "Volker Tresp",
+      "Yunpu Ma"
+    ],
+    "year": 2025,
+    "date": "2025-08-27",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2508.19828",
+    "paper_url": "https://arxiv.org/abs/2508.19828",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Long-Horizon RL"
+    ],
+    "domains": [],
+    "summary": "Trains a memory manager for add, update, delete and no-op actions alongside an answer agent that selects relevant memories.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Memory-R1",
+      "Memory Management"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   }
 ]

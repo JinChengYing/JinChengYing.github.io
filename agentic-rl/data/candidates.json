@@ -1,23 +1,322 @@
 {
   "papers": [
-    {"area_en":"Policy optimization","area_zh":"策略优化","names":["REINFORCE","VinePPO","VAPO","LitePPO","PF-PPO","PSGPO","IPO","SimPO","KTO","ORPO","Step-DPO","β-DPO","LCPO","Dr.GRPO","GSPO","GMPO","ProRL","Posterior-GRPO","Step-GRPO","SRPO","GRESO","GHPO","ASPO","TreePO","EDGE-GRPO","DARS","PAPO","CHORD"]},
-    {"area_en":"Planning","area_zh":"规划","names":["Planning without Search","Learning When to Plan","MAPF-DT","Modular Agentic Planner","ETO","Agent Q","Learning to Plan with RL"]},
-    {"area_en":"Tool use","area_zh":"工具使用","names":["FireAct","AgentTuning","AgentFLAN","APIBank","AgentBank","ToolRL","ReTool","ARTIST","ToRL","AutoTIR","OTC-PO","VTool-R1","DeepEyes","Pixel-Reasoner","Agentic Reasoning","ASPO","ZeroTIR","SpaRL"]},
-    {"area_en":"Memory","area_zh":"记忆","names":["MemoryBank","Memory-R1","Prospect","Mem-α","Memory-as-Action","MemAgent","MEM1","Memory Token","ReSum","Context Folding","MemoryLLM","M+","IMM","MemGen","Zep","A-MEM","G-Memory","Mem0"]},
-    {"area_en":"Self-improvement","area_zh":"自我改进","names":["Chain-of-Verification","Self-Debugging","UALA","If-or-Else","Luban","KnowSelf","Reflection-DPO","DuPo","SWEET-RL","ACC-Collab","R-Zero","Self-Evolving Curriculum","TTRL","ISC","ALAS","SiriuS","MALT"]},
-    {"area_en":"Reasoning and perception","area_zh":"推理与感知","names":["Chain-of-Thought Prompting","Self-Consistency","Graph of Thoughts","Process Reward Models","Best-of-N","OpenAI o1","rStar-Math","Macro-o1","HuatuoGPT-o1","HiICL-MCTS","LLaVA-CoT","ReasonFlux","Latent-space Reasoning","Visual-RFT","R1-V","Skywork R1V2","Video-R1","VideoRFT","GUI-R1","UI-R1","AgentCPM-GUI"]},
-    {"area_en":"Multi-turn learning","area_zh":"多轮与长程学习","names":["EPO","ThinkRM","SPO","AgentPRM","RLVMR","Segment-level DPO","SpaRL"]},
-    {"area_en":"Search and research","area_zh":"搜索与深度研究","names":["DeepRetrieval","Search-R1","R1-Searcher","R1-Searcher++","ReSearch","StepSearch","DeepResearcher","WebDancer","WebThinker","WebSailor","WebWatcher","WebShaper","ASearcher","Atom-Searcher","SimpleDeepResearcher","MiroMind Open Deep Research","SFR-DeepResearch","AWorld","ZeroSearch","SSRL"]},
-    {"area_en":"Code and software engineering","area_zh":"代码与软件工程","names":["RLTF","AceCoder","DeepCoder-14B","CURE","Re:Form","Qwen2.5-Coder RL","StepCoder","CodeBoost","PRLCoder","o1-Coder","Policy Filtration","CodeFavor","Focused-DPO","RLEF","μCode","R1-Code-Interpreter","IterPref","LeDex","CTRL","ReVeal","DeepSWE","SWE-RL","Satori-SWE","RLCoder","Qwen3-Coder","ML-Agent","OS-R1","SWEET-RL","Code World Models","Code Simulation"]},
-    {"area_en":"Mathematical agents","area_zh":"数学智能体","names":["ARTIST","ToRL","ZeroTIR","ReTool","RENT","rStar-Math","DeepSeek-Prover","DeepSeek-Prover-V1.5","DeepSeek-Prover-V2","Kimina-Prover","Seed-Prover","Seed-Geometry","Leanabell-Prover-V2","ProofNet++","STP","LeanWorkbook","Mathlib4"]},
-    {"area_en":"GUI, vision and embodied","area_zh":"GUI、视觉与具身","names":["InFiGUI-R1","UI-Venus","SeeAct","MM-Navigator","InfiGUIAgent","TongUI","UI-AGILE","WebAgent-R1","UI-TARS","DiGiRL","ZeroGUI","MobileGUI-RL","ComputerRL","Web RL under Realistic Page Dynamics","VLN-R1","OctoNav-R1","S2E","RLVLA","VLA-RL","TGRPO","SimpleVLA-RL","VIKI-R"]},
-    {"area_en":"Multi-agent systems","area_zh":"多智能体系统","names":["CAMEL","MetaGPT","Multi-Agent Debate","Mixture-of-Agents","AFlow","GPTSwarm","MaAS","G-Designer","Multi-agent Credit Assignment","Cooperative Reward Shaping","Learned Communication Policies"]},
-    {"area_en":"Other domains","area_zh":"其他领域","names":["Time-R1","TimeMaster","L-Zero","Sotopia-RL","AMPO","PaperBench","MLE-Dojo","MedAgentGym","SecRepoBench"]}
+    {
+      "area_en": "Policy optimization",
+      "area_zh": "策略优化",
+      "names": [
+        "REINFORCE",
+        "VinePPO",
+        "VAPO",
+        "LitePPO",
+        "PF-PPO",
+        "PSGPO",
+        "IPO",
+        "SimPO",
+        "KTO",
+        "ORPO",
+        "Step-DPO",
+        "β-DPO",
+        "LCPO",
+        "Dr.GRPO",
+        "GSPO",
+        "GMPO",
+        "ProRL",
+        "Posterior-GRPO",
+        "Step-GRPO",
+        "SRPO",
+        "GRESO",
+        "GHPO",
+        "ASPO",
+        "TreePO",
+        "EDGE-GRPO",
+        "DARS",
+        "PAPO",
+        "CHORD"
+      ]
+    },
+    {
+      "area_en": "Planning",
+      "area_zh": "规划",
+      "names": [
+        "Planning without Search",
+        "Learning When to Plan",
+        "MAPF-DT",
+        "Modular Agentic Planner",
+        "ETO",
+        "Learning to Plan with RL"
+      ]
+    },
+    {
+      "area_en": "Tool use",
+      "area_zh": "工具使用",
+      "names": [
+        "FireAct",
+        "AgentTuning",
+        "AgentFLAN",
+        "APIBank",
+        "AgentBank",
+        "ToolRL",
+        "ToRL",
+        "AutoTIR",
+        "OTC-PO",
+        "VTool-R1",
+        "DeepEyes",
+        "Pixel-Reasoner",
+        "Agentic Reasoning",
+        "ASPO",
+        "ZeroTIR",
+        "SpaRL"
+      ]
+    },
+    {
+      "area_en": "Memory",
+      "area_zh": "记忆",
+      "names": [
+        "MemoryBank",
+        "Prospect",
+        "Mem-α",
+        "Memory-as-Action",
+        "MemAgent",
+        "MEM1",
+        "Memory Token",
+        "ReSum",
+        "Context Folding",
+        "MemoryLLM",
+        "M+",
+        "IMM",
+        "MemGen",
+        "Zep",
+        "A-MEM",
+        "G-Memory",
+        "Mem0"
+      ]
+    },
+    {
+      "area_en": "Self-improvement",
+      "area_zh": "自我改进",
+      "names": [
+        "Chain-of-Verification",
+        "Self-Debugging",
+        "UALA",
+        "If-or-Else",
+        "Luban",
+        "KnowSelf",
+        "Reflection-DPO",
+        "SWEET-RL",
+        "ACC-Collab",
+        "R-Zero",
+        "Self-Evolving Curriculum",
+        "TTRL",
+        "ISC",
+        "ALAS",
+        "SiriuS",
+        "MALT"
+      ]
+    },
+    {
+      "area_en": "Reasoning and perception",
+      "area_zh": "推理与感知",
+      "names": [
+        "Chain-of-Thought Prompting",
+        "Self-Consistency",
+        "Graph of Thoughts",
+        "Process Reward Models",
+        "Best-of-N",
+        "OpenAI o1",
+        "rStar-Math",
+        "Macro-o1",
+        "HuatuoGPT-o1",
+        "HiICL-MCTS",
+        "LLaVA-CoT",
+        "ReasonFlux",
+        "Latent-space Reasoning",
+        "Visual-RFT",
+        "R1-V",
+        "Skywork R1V2",
+        "Video-R1",
+        "VideoRFT",
+        "GUI-R1",
+        "UI-R1",
+        "AgentCPM-GUI"
+      ]
+    },
+    {
+      "area_en": "Multi-turn learning",
+      "area_zh": "多轮与长程学习",
+      "names": [
+        "EPO",
+        "ThinkRM",
+        "SPO",
+        "RLVMR",
+        "Segment-level DPO",
+        "SpaRL"
+      ]
+    },
+    {
+      "area_en": "Search and research",
+      "area_zh": "搜索与深度研究",
+      "names": [
+        "DeepRetrieval",
+        "R1-Searcher",
+        "R1-Searcher++",
+        "ReSearch",
+        "StepSearch",
+        "WebThinker",
+        "WebWatcher",
+        "WebShaper",
+        "ASearcher",
+        "Atom-Searcher",
+        "SimpleDeepResearcher",
+        "MiroMind Open Deep Research",
+        "SFR-DeepResearch",
+        "AWorld",
+        "SSRL"
+      ]
+    },
+    {
+      "area_en": "Code and software engineering",
+      "area_zh": "代码与软件工程",
+      "names": [
+        "RLTF",
+        "AceCoder",
+        "DeepCoder-14B",
+        "CURE",
+        "Re:Form",
+        "Qwen2.5-Coder RL",
+        "StepCoder",
+        "CodeBoost",
+        "PRLCoder",
+        "o1-Coder",
+        "Policy Filtration",
+        "CodeFavor",
+        "Focused-DPO",
+        "RLEF",
+        "μCode",
+        "R1-Code-Interpreter",
+        "IterPref",
+        "LeDex",
+        "CTRL",
+        "ReVeal",
+        "DeepSWE",
+        "Satori-SWE",
+        "RLCoder",
+        "Qwen3-Coder",
+        "ML-Agent",
+        "OS-R1",
+        "SWEET-RL",
+        "Code World Models",
+        "Code Simulation"
+      ]
+    },
+    {
+      "area_en": "Mathematical agents",
+      "area_zh": "数学智能体",
+      "names": [
+        "ToRL",
+        "ZeroTIR",
+        "RENT",
+        "rStar-Math",
+        "DeepSeek-Prover",
+        "DeepSeek-Prover-V1.5",
+        "DeepSeek-Prover-V2",
+        "Kimina-Prover",
+        "Seed-Prover",
+        "Seed-Geometry",
+        "Leanabell-Prover-V2",
+        "ProofNet++",
+        "STP",
+        "LeanWorkbook",
+        "Mathlib4"
+      ]
+    },
+    {
+      "area_en": "GUI, vision and embodied",
+      "area_zh": "GUI、视觉与具身",
+      "names": [
+        "InFiGUI-R1",
+        "UI-Venus",
+        "SeeAct",
+        "MM-Navigator",
+        "InfiGUIAgent",
+        "TongUI",
+        "UI-AGILE",
+        "UI-TARS",
+        "ZeroGUI",
+        "MobileGUI-RL",
+        "ComputerRL",
+        "Web RL under Realistic Page Dynamics",
+        "VLN-R1",
+        "OctoNav-R1",
+        "S2E",
+        "RLVLA",
+        "VLA-RL",
+        "TGRPO",
+        "SimpleVLA-RL",
+        "VIKI-R"
+      ]
+    },
+    {
+      "area_en": "Multi-agent systems",
+      "area_zh": "多智能体系统",
+      "names": [
+        "CAMEL",
+        "MetaGPT",
+        "Multi-Agent Debate",
+        "Mixture-of-Agents",
+        "AFlow",
+        "GPTSwarm",
+        "MaAS",
+        "G-Designer",
+        "Multi-agent Credit Assignment",
+        "Cooperative Reward Shaping",
+        "Learned Communication Policies"
+      ]
+    },
+    {
+      "area_en": "Other domains",
+      "area_zh": "其他领域",
+      "names": [
+        "Time-R1",
+        "TimeMaster",
+        "L-Zero",
+        "Sotopia-RL",
+        "AMPO",
+        "PaperBench",
+        "MLE-Dojo",
+        "MedAgentGym",
+        "SecRepoBench"
+      ]
+    }
   ],
   "benchmarks": [
-    {"area_en":"Benchmark candidates","area_zh":"基准候选","names":["SWE-bench Verified","MiniWob++","WorkArena","LMRL-Gym","BabyAI","MiniGrid","Minecraft / MineDojo","xBench","PaperBench","Code World Models Benchmark"]}
+    {
+      "area_en": "Benchmark candidates",
+      "area_zh": "基准候选",
+      "names": [
+        "SWE-bench Verified",
+        "MiniWob++",
+        "WorkArena",
+        "LMRL-Gym",
+        "BabyAI",
+        "MiniGrid",
+        "Minecraft / MineDojo",
+        "xBench",
+        "PaperBench",
+        "Code World Models Benchmark"
+      ]
+    }
   ],
   "frameworks": [
-    {"area_en":"Infrastructure candidates","area_zh":"基建候选","names":["VerlTool","AgentRL","AWorld","ROLL","SLiMe"]}
+    {
+      "area_en": "Infrastructure candidates",
+      "area_zh": "基建候选",
+      "names": [
+        "VerlTool",
+        "AgentRL",
+        "AWorld",
+        "ROLL",
+        "SLiMe"
+      ]
+    }
   ]
 }
