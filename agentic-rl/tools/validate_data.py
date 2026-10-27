@@ -27,6 +27,7 @@ papers = read("papers.json")
 benchmarks = read("benchmarks.json")
 frameworks = read("frameworks.json")
 problems = read("open-problems.json")
+zh = read("zh.json")
 ids: set[str] = set()
 canonical: set[str] = set()
 for index, paper in enumerate(papers):
@@ -85,6 +86,24 @@ for index, problem in enumerate(problems):
     for benchmark_id in problem["suggested_benchmark_ids"]:
         if benchmark_id not in benchmark_ids:
             fail(f"{where}: unknown benchmark id {benchmark_id}")
+for key, values in taxonomy.items():
+    for value in values:
+        if value not in zh["taxonomy"]:
+            fail(f"zh.taxonomy: missing {value}")
+for item in benchmarks:
+    if item["id"] not in zh["benchmarks"]:
+        fail(f"zh.benchmarks: missing {item['id']}")
+for item in problems:
+    translated = zh["problems"].get(item["id"])
+    if not translated:
+        fail(f"zh.problems: missing {item['id']}")
+        continue
+    for key in ("title", "definition", "motivation", "existing_limitations", "possible_approaches", "risks"):
+        if not translated.get(key):
+            fail(f"zh.problems.{item['id']}: missing {key}")
+for item in papers:
+    if item["verification_status"] == "source_checked" and not zh["papers"].get(item["id"], {}).get("summary"):
+        fail(f"zh.papers: missing checked summary for {item['id']}")
 if errors:
     print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)

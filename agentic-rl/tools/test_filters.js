@@ -14,4 +14,11 @@ const oldest = filterPapers(papers, { sort: "oldest" });
 assert.equal(oldest[0].id, "arxiv-2210.03629");
 const alphabetic = filterPapers(papers, { sort: "title" });
 assert(alphabetic.every((p, i) => i === 0 || alphabetic[i-1].title.localeCompare(p.title) <= 0));
+const zh = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/zh.json"), "utf8"));
+const localized = papers.map(p => ({
+  ...p, ...zh.papers[p.id],
+  search_terms: [...p.capabilities,...p.rl_topics,...p.domains].map(term => zh.taxonomy[term] || term).join(" ")
+}));
+assert(filterPapers(localized, { query: "信用分配" }).some(p => p.id === "arxiv-2505.10978"));
+assert(filterPapers(localized, { query: "里程碑" }).some(p => p.id === "entry-15"));
 console.log("Filter checks passed.");

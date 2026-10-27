@@ -2,6 +2,8 @@
 
 A static research section of the existing JinChengYing GitHub Pages site. The public path remains `/agentic-rl/`. HTML, CSS, JavaScript and JSON live entirely in this directory; no root Jekyll templates or blog files need changes.
 
+The Chinese version is at `/agentic-rl/zh/`. Both language versions share the same research records and rendering code. `data/zh.json` supplies Chinese summaries for checked papers, benchmark descriptions, taxonomy labels and open-problem text. Original paper titles and source URLs remain unchanged.
+
 ## Data model and evidence
 
 - `data/papers.json`: paper records with bibliographic fields, three independent taxonomy axes, source URLs, and verification state.
@@ -33,6 +35,8 @@ python -m http.server 8000
 ```
 
 Open `http://localhost:8000/agentic-rl/`. Opening `index.html` directly as a file may block JSON `fetch` calls. A full Jekyll build is useful for final site integration, but the atlas itself has no build dependencies and uses relative asset URLs.
+
+The Chinese preview is `http://localhost:8000/agentic-rl/zh/`.
 
 ## Current limits
 

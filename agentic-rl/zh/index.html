@@ -1,0 +1,84 @@
+---
+layout: null
+permalink: /agentic-rl/zh/
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向语言智能体强化学习的可溯源研究图谱。">
+  <link rel="alternate" hreflang="en" href="../">
+  <title>Agentic RL 研究图谱 · JinChengYing</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/filters.js" defer></script>
+  <script src="../assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Agentic RL 研究图谱首页"><span aria-hidden="true">◈</span> Agentic RL 研究图谱</a>
+      <nav aria-label="主导航">
+        <a href="/">个人主页</a><a href="#start">入门导览</a><a href="#papers">论文</a><a href="#taxonomy">研究分类</a><a href="#benchmarks">基准环境</a><a href="#problems">开放问题</a><a href="../" lang="en">English</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">研究图谱 / 2026 年 10 月更新</div>
+        <h1 id="hero-title"><em>Agentic RL</em> 研究导航</h1>
+        <p>梳理强化学习如何支持语言智能体的规划、工具使用、记忆、反馈学习与环境适应。每条记录均显示来源和核验状态。</p>
+        <div class="hero-actions"><a class="button primary" href="#papers">浏览论文库 <span aria-hidden="true">↗</span></a><a class="button secondary" href="#problems">探索研究问题 <span aria-hidden="true">→</span></a></div>
+      </section>
+      <section class="overview" aria-label="图谱概览">
+        <div class="metric"><strong id="paper-total">—</strong><span>篇论文记录</span></div>
+        <div class="metric"><strong id="checked-total">—</strong><span>条来源已核对</span></div>
+        <div class="metric"><strong id="benchmark-total">—</strong><span>项基准环境</span></div>
+        <div class="metric"><strong id="problem-total">—</strong><span>个研究问题</span></div>
+      </section>
+      <section id="start" class="section start" aria-labelledby="start-title">
+        <div class="section-heading"><div><span class="eyebrow">01 / 入门导览</span><h2 id="start-title">从这里开始</h2></div><p>Agentic RL 关注智能体如何从连续决策、观察与反馈中学习。综述将其刻画为跨时间、通常部分可观测的环境交互。</p></div>
+        <div class="start-grid">
+          <article class="feature"><span class="feature-number">01</span><h3>建立全局认识</h3><p>先读领域综述，了解智能体能力、环境类型与研究假设。</p><a href="https://arxiv.org/abs/2509.02547" target="_blank" rel="noopener noreferrer">领域综述 · arXiv:2509.02547 ↗</a></article>
+          <article class="feature"><span class="feature-number">02</span><h3>观察交互过程</h3><p>ReAct 展示推理与环境动作交替进行的过程。它是提示方法，并非强化学习训练算法。</p><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener noreferrer">阅读 ReAct · arXiv:2210.03629 ↗</a></article>
+          <article class="feature"><span class="feature-number">03</span><h3>理解学习信号</h3><p>当奖励晚于多个动作、工具调用或记忆操作出现时，信用分配会更困难。</p><a href="https://arxiv.org/abs/2604.09459" target="_blank" rel="noopener noreferrer">信用分配综述 · arXiv:2604.09459 ↗</a></article>
+        </div>
+      </section>
+      <section id="papers" class="section" aria-labelledby="papers-title">
+        <div class="section-heading"><div><span class="eyebrow">02 / 文献资料库</span><h2 id="papers-title">论文探索器</h2></div><p>可搜索标题、作者、摘要与标签。论文可属于多个类别；在不同轴上选择条件会缩小结果范围。</p></div>
+        <div class="filter-panel">
+          <label class="search-label" for="query">搜索论文</label>
+          <input id="query" type="search" placeholder="标题、作者、方法或基准…" autocomplete="off">
+          <div class="filter-row">
+            <label>智能体能力<select id="capability"><option value="">全部能力</option></select></label>
+            <label>强化学习问题<select id="rl-topic"><option value="">全部 RL 问题</option></select></label>
+            <label>应用领域<select id="domain"><option value="">全部领域</option></select></label>
+            <label>年份<select id="year"><option value="">全部年份</option></select></label>
+            <label>排序<select id="sort"><option value="newest">最新优先</option><option value="oldest">最早优先</option><option value="title">标题 A–Z</option></select></label>
+          </div>
+          <div class="filter-foot"><span id="result-count" role="status" aria-live="polite">正在加载论文库…</span><button type="button" id="reset-filters">清除筛选</button></div>
+        </div>
+        <div id="paper-grid" class="paper-grid"></div>
+      </section>
+      <section id="taxonomy" class="section" aria-labelledby="taxonomy-title">
+        <div class="section-heading"><div><span class="eyebrow">03 / 互补的分类视角</span><h2 id="taxonomy-title">研究分类</h2></div><p>智能体能力、强化学习问题与应用领域是独立标签。点击主题即可查看相关论文。</p></div>
+        <div id="taxonomy-grid" class="taxonomy-grid"></div>
+      </section>
+      <section id="frameworks" class="section" aria-labelledby="frameworks-title">
+        <div class="section-heading"><div><span class="eyebrow">研究软件</span><h2 id="frameworks-title">框架与项目</h2></div><p>保留原版图谱中的项目链接；项目描述与归属仍待核验。</p></div>
+        <div id="framework-grid" class="benchmark-grid"></div>
+      </section>
+      <section id="benchmarks" class="section" aria-labelledby="benchmarks-title">
+        <div class="section-heading"><div><span class="eyebrow">04 / 评测资源</span><h2 id="benchmarks-title">基准与环境</h2></div><p>保留原版图谱收录的代表性环境。未确认的属性明确标注，来源链接可供进一步核查。</p></div>
+        <div id="benchmark-grid" class="benchmark-grid"></div>
+      </section>
+      <section id="problems" class="section" aria-labelledby="problems-title">
+        <div class="section-heading"><div><span class="eyebrow">05 / 研究综合</span><h2 id="problems-title">开放研究问题</h2></div><p>整理与相关工作相连的研究设想和实验思路；成本标签仅为主观规划估计。</p></div>
+        <div id="problem-grid" class="problem-grid"></div>
+      </section>
+      <section class="section method" aria-labelledby="method-title"><span class="eyebrow">关于本站</span><h2 id="method-title">如何理解证据状态</h2><p>“来源已核对”表示已查阅原始摘要或会议论文页面，以确认展示的书目信息与简述。“待核验”表示记录继承自旧版图谱，元数据或描述仍需复核。主题归类与研究问题属于编辑性分析；本站未独立复现论文报告的结果。</p><a href="https://github.com/JinChengYing/JinChengYing.github.io/blob/main/agentic-rl/README.md" target="_blank" rel="noopener noreferrer">数据维护说明（英文） ↗</a></section>
+    </main>
+    <footer>JinChengYing 整理 · 选择性研究导航，并非穷尽文献目录 · <a href="https://github.com/JinChengYing/JinChengYing.github.io/tree/main/agentic-rl" target="_blank" rel="noopener noreferrer">查看源码 ↗</a></footer>
+  </div>
+</body>
+</html>

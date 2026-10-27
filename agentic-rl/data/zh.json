@@ -1,0 +1,214 @@
+{
+  "taxonomy": {
+    "Planning": "规划",
+    "Tool Use": "工具使用",
+    "Memory": "记忆",
+    "Reasoning": "推理",
+    "Perception / Multimodal": "感知／多模态",
+    "Self-Evolution": "自我演化",
+    "Multi-Agent Collaboration": "多智能体协作",
+    "Policy Optimization": "策略优化",
+    "Reward Modeling": "奖励建模",
+    "Credit Assignment": "信用分配",
+    "Exploration": "探索",
+    "Long-Horizon RL": "长时程强化学习",
+    "Multi-Turn RL": "多轮强化学习",
+    "Hierarchical RL": "分层强化学习",
+    "POMDP / Belief Modeling": "POMDP／信念建模",
+    "Environment Dynamics": "环境动力学",
+    "Model-Based RL": "基于模型的强化学习",
+    "Efficient Training": "高效训练",
+    "Safety / Trustworthiness": "安全与可信",
+    "Continual Learning": "持续学习",
+    "Code Agents": "代码智能体",
+    "Web / GUI Agents": "网页／GUI 智能体",
+    "Search and Deep Research Agents": "搜索与深度研究智能体",
+    "Mathematical Reasoning": "数学推理",
+    "Embodied Agents": "具身智能体",
+    "Scientific Agents": "科学智能体",
+    "Multi-Agent Systems": "多智能体系统"
+  },
+  "papers": {
+    "arxiv-2210.03629": {
+      "summary": "交替生成推理轨迹与任务动作，并利用环境反馈推进决策。"
+    },
+    "arxiv-2305.10601": {
+      "summary": "探索并评估多条中间推理路径，支持前瞻与回溯。"
+    },
+    "arxiv-2406.12045": {
+      "summary": "通过模拟用户对话、API 工具与领域规则评测智能体，并比较最终数据库状态与目标状态。"
+    },
+    "arxiv-2509.02547": {
+      "summary": "从跨时间、部分可观测的交互视角梳理 Agentic RL，并提出以能力为核心的分类。"
+    },
+    "arxiv-2604.09459": {
+      "summary": "综述从推理任务到 Agentic RL 的信用分配问题，包括稀疏奖励与异构动作。"
+    },
+    "entry-15": {
+      "summary": "利用里程碑边界、片段内奖励塑形与双尺度优势估计训练长时程智能体。"
+    },
+    "arxiv-2505.10978": {
+      "summary": "为多轮智能体训练提出回合级和基于锚定状态的步骤级相对优势估计。"
+    },
+    "arxiv-2508.03680": {
+      "summary": "提出将智能体执行与强化学习训练分离的接口，并把交互轨迹拆解为训练转移。"
+    }
+  },
+  "benchmarks": {
+    "alfworld": {
+      "environment_type": "文本家庭任务",
+      "modality": "文本动作",
+      "evaluation": "任务完成"
+    },
+    "scienceworld": {
+      "environment_type": "交互式科学任务",
+      "modality": "文本动作",
+      "evaluation": "任务完成"
+    },
+    "webshop": {
+      "environment_type": "模拟在线购物",
+      "modality": "网页交互",
+      "evaluation": "任务完成"
+    },
+    "webarena": {
+      "environment_type": "网站环境",
+      "modality": "浏览器交互",
+      "evaluation": "任务完成"
+    },
+    "browsergym": {
+      "environment_type": "浏览器智能体环境",
+      "modality": "浏览器交互"
+    },
+    "osworld": {
+      "environment_type": "计算机桌面",
+      "modality": "GUI 交互",
+      "evaluation": "任务完成"
+    },
+    "gaia": {
+      "environment_type": "通用助理任务",
+      "modality": "混合模态",
+      "evaluation": "答案评测"
+    },
+    "swebench": {
+      "environment_type": "软件仓库",
+      "modality": "代码编辑",
+      "evaluation": "测试"
+    },
+    "taubench": {
+      "environment_type": "模拟用户与工具 API 工作流",
+      "modality": "对话与 API 调用",
+      "task_horizon": "多轮（具体轮数因任务而异）",
+      "evaluation": "最终数据库状态与标注目标状态的比较"
+    }
+  },
+  "problems": {
+    "causal-credit": {
+      "title": "长时程智能体的因果信用分配",
+      "definition": "哪些早期动作真正改变了最终成功的概率？",
+      "motivation": "终局奖励容易将有用动作与后续失败混为一谈。",
+      "existing_limitations": "环境状态无法恢复时，动作级反事实比较很难成立。",
+      "possible_approaches": [
+        "可行时比较匹配的状态重启；否则明确报告可识别性限制。"
+      ],
+      "risks": [
+        "环境重放的保真度可能主导估计结果。"
+      ]
+    },
+    "adaptive-granularity": {
+      "title": "自适应信用分配粒度",
+      "definition": "何时应按 token、轮次、工具调用或里程碑分配信用？",
+      "motivation": "细粒度评测成本高，粗粒度奖励又可能遮蔽有效行为。",
+      "existing_limitations": "现有方法在不同假设下采用不同粒度，难以直接比较。",
+      "possible_approaches": [
+        "将评测预算分配给高不确定性片段，并与等预算基线比较。"
+      ],
+      "risks": [
+        "核验器成本与偏差可能抵消收益。"
+      ]
+    },
+    "uncertainty-advantage": {
+      "title": "考虑不确定性的优势估计",
+      "definition": "优势估计能否呈现稀疏或噪声反馈带来的不确定性？",
+      "motivation": "单个标量优势值可能隐藏因果贡献的不确定性。",
+      "existing_limitations": "相关综述指出中间步骤难以核验且环境常具有部分可观测性。",
+      "possible_approaches": [
+        "利用重复轨迹估计区间，并用留出结果检验校准程度。"
+      ],
+      "risks": [
+        "重复轨迹可能并不独立。"
+      ]
+    },
+    "memory-credit": {
+      "title": "跨会话记忆的信用分配",
+      "definition": "如何奖励在很久之后才发挥作用的记忆写入？",
+      "motivation": "奖励可能在多次会话和检索决策之后才出现。",
+      "existing_limitations": "相关旧记录仍待来源核验，此处关联仅作为研究线索。",
+      "possible_approaches": [
+        "跨会话追踪写入、检索与结果的来源链。"
+      ],
+      "risks": [
+        "跨会话评测协议可能不稳定。"
+      ]
+    },
+    "memory-policy": {
+      "title": "从记忆到策略的知识固化",
+      "definition": "何时应将经验转为策略更新，而不是继续存储为记忆？",
+      "motivation": "检索与参数更新在成本和适应方式上不同。",
+      "existing_limitations": "与旧记录的相关工作对应关系仍待核验。",
+      "possible_approaches": [
+        "在等预算条件下比较固定策略的记忆使用与受控微调。"
+      ],
+      "risks": [
+        "很难把固化效果与额外训练带来的效果区分开。"
+      ]
+    },
+    "nonstationary-tools": {
+      "title": "非平稳工具与环境",
+      "definition": "工具接口或环境规则变化后，智能体如何发现并恢复？",
+      "motivation": "部署中的接口和状态转移规则可能发生漂移。",
+      "existing_limitations": "现有基准主要评测预先指定的工具与规则设定。",
+      "possible_approaches": [
+        "为工具定义版本，并注入受控 API 故障或规则变化。"
+      ],
+      "risks": [
+        "合成变化未必代表真实漂移。"
+      ]
+    },
+    "reward-verifiability": {
+      "title": "开放任务的奖励可核验性",
+      "definition": "什么证据足以让开放任务的成功信号值得信赖？",
+      "motivation": "看似合理的答案仍可能违反约束，或没有正确改变环境状态。",
+      "existing_limitations": "最终状态检查适用于部分工具任务，但无法覆盖所有开放目标。",
+      "possible_approaches": [
+        "在相同任务上比较状态检查、专家评审和过程检查。"
+      ],
+      "risks": [
+        "人工标注与自动检查可能不一致。"
+      ]
+    },
+    "budget-exploration": {
+      "title": "预算感知的智能体探索",
+      "definition": "如何权衡成功概率与 token、工具和延迟成本？",
+      "motivation": "更多搜索可能改善决策，也会消耗资源。",
+      "existing_limitations": "树搜索展示了多条推理路径，但显式资源决策仍是独立问题。",
+      "possible_approaches": [
+        "在总成本匹配的条件下比较自适应搜索与固定预算搜索。"
+      ],
+      "risks": [
+        "不同模型供应商与工具的成本口径可能不一致。"
+      ]
+    },
+    "active-perception": {
+      "title": "主动感知与自适应规划",
+      "definition": "智能体何时需要重新观察，而不是依赖过时的上下文行动？",
+      "motivation": "额外观察有助于修正信念，也增加延迟和成本。",
+      "existing_limitations": "领域综述强调部分可观测性，但这一具体权衡仍需针对性研究。",
+      "possible_approaches": [
+        "随机控制观察预算，并衡量隐藏状态变化下的错误。"
+      ],
+      "risks": [
+        "可观测性控制可能难以标准化。"
+      ]
+    }
+  }
+}
