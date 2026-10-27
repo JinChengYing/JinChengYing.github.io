@@ -2,6 +2,12 @@
 const isZh = document.documentElement.lang.toLowerCase().startsWith("zh");
 const t = (en, zh) => isZh ? zh : en;
 const atlasBase = new URL("../../", document.querySelector('script[src*="assets/js/app.js"]').src);
+const atlasVersion = new URL(document.querySelector('script[src*="assets/js/app.js"]').src).searchParams.get("v");
+const dataUrl = name => {
+  const url = new URL("data/" + name + ".json", atlasBase);
+  if (atlasVersion) url.searchParams.set("v", atlasVersion);
+  return url;
+};
 let localization = {};
 const term = value => isZh ? (localization.taxonomy?.[value] || value) : value;
 const byId = id => document.getElementById(id);
@@ -198,13 +204,13 @@ function drawProblems() {
 async function load() {
   const files = ["papers","benchmarks","open-problems","taxonomy","frameworks"];
   const data = await Promise.all(files.map(async name => {
-    const response = await fetch(new URL("data/" + name + ".json", atlasBase));
+    const response = await fetch(dataUrl(name));
     if (!response.ok) throw new Error(name + ": HTTP " + response.status);
     return response.json();
   }));
   [papers,benchmarks,problems,taxonomy,frameworks] = data;
   if (isZh) {
-    const response = await fetch(new URL("data/zh.json", atlasBase));
+    const response = await fetch(dataUrl("zh"));
     if (!response.ok) throw new Error("zh: HTTP " + response.status);
     localization = await response.json();
     papers = papers.map(p => ({
