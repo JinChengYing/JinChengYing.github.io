@@ -44,7 +44,7 @@
     "stateful": true,
     "evaluation": "Task completion",
     "source_url": "https://webarena.dev/",
-    "code_url": null,
+    "code_url": "https://github.com/web-arena-x/webarena",
     "verification_status": "source_link_only"
   },
   {
@@ -68,7 +68,7 @@
     "stateful": true,
     "evaluation": "Task completion",
     "source_url": "https://os-world.github.io/",
-    "code_url": null,
+    "code_url": "https://github.com/xlang-ai/OSWorld",
     "verification_status": "source_link_only"
   },
   {
@@ -81,6 +81,7 @@
     "evaluation": "Answer evaluation",
     "source_url": "https://arxiv.org/abs/2311.12983",
     "code_url": null,
+    "huggingface_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
     "verification_status": "source_link_only"
   },
   {
@@ -92,7 +93,8 @@
     "stateful": true,
     "evaluation": "Tests",
     "source_url": "https://www.swebench.com/",
-    "code_url": null,
+    "code_url": "https://github.com/SWE-bench/SWE-bench",
+    "huggingface_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench",
     "verification_status": "source_link_only"
   },
   {

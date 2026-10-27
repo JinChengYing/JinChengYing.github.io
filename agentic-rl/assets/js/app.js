@@ -23,6 +23,41 @@ const safeLink = (url, label) => {
     return link;
   } catch { return null; }
 };
+const sourceHost = url => {
+  try { return new URL(url).hostname.toLowerCase(); } catch { return ""; }
+};
+const sourceLinks = item => {
+  const links = el("div", "source-links");
+  const seen = new Set();
+  const addSource = (url, kind) => {
+    if (!url || seen.has(url)) return;
+    const link = safeLink(url, kind === "github" ? "GitHub" : kind === "huggingface" ? "Hugging Face" : t("Primary source ↗", "原始来源 ↗"));
+    if (!link) return;
+    seen.add(url);
+    link.className = "source-link" + (kind ? " source-link-" + kind : "");
+    if (kind === "github") {
+      const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      icon.setAttribute("viewBox", "0 0 24 24");
+      icon.setAttribute("aria-hidden", "true");
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("fill", "currentColor");
+      path.setAttribute("d", "M12 .297a12 12 0 0 0-3.793 23.385c.6.111.82-.261.82-.577v-2.234c-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.118-3.176 0 0 1.008-.323 3.301 1.23a11.52 11.52 0 0 1 6.006 0c2.292-1.553 3.298-1.23 3.298-1.23.656 1.652.244 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.217.694.825.576A12.001 12.001 0 0 0 12 .297Z");
+      icon.append(path);
+      link.prepend(icon);
+    } else if (kind === "huggingface") {
+      link.prepend(el("span", "huggingface-mark", "🤗"));
+    }
+    links.append(link);
+  };
+  for (const url of [item.source_url, item.code_url]) {
+    const host = sourceHost(url);
+    if (host === "github.com") addSource(url, "github");
+    else if (host === "huggingface.co") addSource(url, "huggingface");
+    else addSource(url, "");
+  }
+  addSource(item.huggingface_url, "huggingface");
+  return links;
+};
 const add = (parent, ...children) => children.filter(Boolean).forEach(child => parent.append(child));
 const shown = value => value === null || value === undefined || value === "" ? t("Not documented","未记录") : String(value);
 const labelStatus = item => item.verification_status === "source_checked" ? t("Source checked","来源已核对") : t("Pending verification","待核验");
@@ -117,7 +152,7 @@ function drawBenchmarks() {
       el("h3",null,b.name));
     const dl = el("dl");
     [[t("Environment","环境类型"),b.environment_type],[t("Modality","交互模态"),b.modality],[t("Horizon","任务跨度"),b.task_horizon],[t("Stateful","有状态"),b.stateful === null ? null : b.stateful ? t("Yes","是") : t("No","否")],[t("Evaluation","评测方式"),b.evaluation]].forEach(([key,value]) => add(dl,el("dt",null,key),el("dd",null,shown(value))));
-    add(card,dl,safeLink(b.source_url,t("Primary source ↗","原始来源 ↗")),safeLink(b.code_url && b.code_url !== b.source_url ? b.code_url : null,t("Code ↗","代码 ↗")));
+    add(card,dl,sourceLinks(b));
     add(grid,card);
   });
 }
@@ -129,7 +164,7 @@ function drawFrameworks() {
     add(card,el("span","badge" + (checked ? "" : " pending"),checked ? t("Project source checked","项目来源已核对") : t("Pending verification","待核验")),el("h3",null,f.title));
     if (f.layer && checked) add(card,el("small","framework-layer",f.layer));
     add(card,el("p",null,checked ? f.description : t("Project description pending source verification.","项目描述待来源核验。")));
-    add(card,safeLink(f.source_url,t("Source / project ↗","来源／项目 ↗")));
+    add(card,sourceLinks(f));
     add(grid,card);
   });
 }

@@ -73,6 +73,9 @@ for index, item in enumerate(benchmarks):
         fail(f"{where}: id, name and source_url required")
     valid_url(item.get("source_url"), f"{where}.source_url")
     valid_url(item.get("code_url"), f"{where}.code_url")
+    valid_url(item.get("huggingface_url"), f"{where}.huggingface_url")
+    if item.get("huggingface_url") and urlparse(item["huggingface_url"]).hostname != "huggingface.co":
+        fail(f"{where}.huggingface_url: expected huggingface.co")
 for index, item in enumerate(frameworks):
     if not item.get("id") or not item.get("source_url"):
         fail(f"frameworks[{index}]: id and source required")
