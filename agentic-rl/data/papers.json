@@ -84,30 +84,41 @@
   {
     "id": "arxiv-2310.04406",
     "title": "Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models",
-    "authors": [],
+    "authors": [
+      "Andy Zhou",
+      "Kai Yan",
+      "Michal Shlapentokh-Rothman",
+      "Haohan Wang",
+      "Yu-Xiong Wang"
+    ],
     "year": 2023,
-    "date": null,
+    "date": "2023-10-06",
     "venue": null,
-    "publication_status": "unverified",
+    "publication_status": "preprint",
     "arxiv_id": "2310.04406",
     "paper_url": "https://arxiv.org/abs/2310.04406",
     "code_url": null,
     "project_url": null,
     "capabilities": [
-      "Planning"
+      "Planning",
+      "Reasoning"
     ],
-    "rl_topics": [],
+    "rl_topics": [
+      "Exploration"
+    ],
     "domains": [],
-    "summary": null,
+    "summary": "LATS combines language-model value estimates and self-reflection with Monte Carlo tree search and environment feedback.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Planning"
+      "LATS",
+      "Search",
+      "Background"
     ],
     "legacy_note": "Tree search with environmental feedback",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2302.04761",
@@ -1473,6 +1484,244 @@
     "tags": [
       "Credit Assignment",
       "Value Function"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-1707.06347",
+    "title": "Proximal Policy Optimization Algorithms",
+    "authors": [
+      "John Schulman",
+      "Filip Wolski",
+      "Prafulla Dhariwal",
+      "Alec Radford",
+      "Oleg Klimov"
+    ],
+    "year": 2017,
+    "date": "2017-07-20",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "1707.06347",
+    "paper_url": "https://arxiv.org/abs/1707.06347",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [],
+    "summary": "Introduces PPO, an online policy-gradient family that reuses sampled data for multiple minibatch optimization epochs.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "PPO"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2305.18290",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "authors": [
+      "Rafael Rafailov",
+      "Archit Sharma",
+      "Eric Mitchell",
+      "Stefano Ermon",
+      "Christopher D. Manning",
+      "Chelsea Finn"
+    ],
+    "year": 2023,
+    "date": "2023-05-29",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2305.18290",
+    "paper_url": "https://arxiv.org/abs/2305.18290",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [],
+    "summary": "Derives a direct classification objective for preference alignment without online sampling during fine-tuning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "DPO",
+      "Preference Optimization"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2305.14992",
+    "title": "Reasoning with Language Model is Planning with World Model",
+    "authors": [
+      "Shibo Hao",
+      "Yi Gu",
+      "Haodi Ma",
+      "Joshua Jiahua Hong",
+      "Zhen Wang",
+      "Daisy Zhe Wang",
+      "Zhiting Hu"
+    ],
+    "year": 2023,
+    "date": "2023-05-24",
+    "venue": "EMNLP 2023",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2305.14992",
+    "paper_url": "https://arxiv.org/abs/2305.14992",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Planning",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Model-Based RL"
+    ],
+    "domains": [],
+    "summary": "RAP uses an LLM as both a reasoning agent and an approximate world model, with tree search guiding planning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "RAP",
+      "Search"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2308.11432",
+    "title": "A Survey on Large Language Model based Autonomous Agents",
+    "authors": [
+      "Lei Wang",
+      "Chen Ma",
+      "Xueyang Feng",
+      "Zeyu Zhang",
+      "Hao Yang",
+      "Jingsen Zhang",
+      "Zhiyuan Chen",
+      "Jiakai Tang",
+      "Xu Chen",
+      "Yankai Lin",
+      "Wayne Xin Zhao",
+      "Zhewei Wei",
+      "Ji-Rong Wen"
+    ],
+    "year": 2023,
+    "date": "2023-08-22",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2308.11432",
+    "paper_url": "https://arxiv.org/abs/2308.11432",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Surveys LLM-based autonomous-agent construction, applications and evaluation; it is background for agent architecture rather than an RL method.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Surveys",
+      "Background"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2402.03300",
+    "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+    "authors": [
+      "Zhihong Shao",
+      "Peiyi Wang",
+      "Qihao Zhu",
+      "Runxin Xu",
+      "Junxiao Song",
+      "Xiao Bi",
+      "Haowei Zhang",
+      "Mingchuan Zhang",
+      "Y.K. Li",
+      "Y. Wu",
+      "Daya Guo"
+    ],
+    "year": 2024,
+    "date": "2024-02-05",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2402.03300",
+    "paper_url": "https://arxiv.org/abs/2402.03300",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Mathematical Reasoning"
+    ],
+    "summary": "Introduces DeepSeekMath and Group Relative Policy Optimization for mathematical reasoning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "GRPO"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "pmlr-zhang26ic",
+    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "authors": [
+      "Haozhen Zhang",
+      "Haodong Yue",
+      "Tao Feng",
+      "Quanyu Long",
+      "Jianzhu Bao",
+      "Bowen Jin",
+      "Weizhi Zhang",
+      "Xiao Li",
+      "Jiaxuan You",
+      "Chengwei Qin",
+      "Wenya Wang"
+    ],
+    "year": 2026,
+    "date": null,
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/zhang26ic.html",
+    "code_url": "https://github.com/ViktorAxelsen/BudgetMem",
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Efficient Training"
+    ],
+    "domains": [],
+    "summary": "BudgetMem trains a compact routing policy to choose among memory-processing budget tiers according to the query and cost target.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "BudgetMem",
+      "Memory Policy",
+      "NEW"
     ],
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"
