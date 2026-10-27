@@ -1,0 +1,99 @@
+---
+layout: null
+permalink: /agentic-rl/zh/update-2026/
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agentic RL 2026 研究全景：学习问题、信用分配、奖励、记忆、工具、Harness、POMDP 与研究选题。">
+  <title>2026 研究全景 · Agentic RL 研究图谱</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/update-2026.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="../"><span aria-hidden="true">◈</span> Agentic RL 研究图谱</a>
+      <nav aria-label="主导航"><a href="/">博客</a><a href="../">图谱首页</a><a href="../#papers">论文库</a><a href="../#problems">研究问题</a></nav>
+    </header>
+    <main id="main">
+      <section class="update-hero" aria-labelledby="update-title">
+        <div class="eyebrow">专题综述 / 2026 年 10 月</div>
+        <h1 id="update-title">Agentic RL<br><em>研究全景更新</em></h1>
+        <p class="lead">从“智能体能做什么”走向“智能体怎样通过交互学习”。这里把能力、强化学习问题、环境和系统放在同一张地图上，并把已有证据与研究设想分开。</p>
+        <div class="hero-actions"><a class="button primary" href="#map">阅读研究地图 ↘</a><a class="button secondary" href="../#papers">打开可筛选论文库 ↗</a></div>
+        <p class="update-note">选择性梳理，截至 2026 年 10 月；不是穷尽检索。论文结果均为作者报告，本站未复现。研究成本为编辑者定性估计。</p>
+      </section>
+      <nav class="chapter-nav" aria-label="本页目录"><a href="#map">概念与分类</a><a href="#credit">信用分配</a><a href="#reward">奖励与探索</a><a href="#capabilities">能力与记忆</a><a href="#systems">环境与系统</a><a href="#belief">POMDP</a><a href="#agenda">研究选题</a></nav>
+
+      <section id="map" class="update-section">
+        <div class="section-kicker">01 / CONCEPTS</div><h2>先分清系统、训练与任务边界</h2>
+        <p>Agent 是与外部环境交互的系统或行为范式；Agentic RL 是利用交互反馈更新策略的训练范式。ReAct 式多轮工具调用本身不代表经过 RL 训练。以固定问题的最终答案作为奖励的 RLVR，也未必涉及外部环境状态的改变。</p>
+        <div class="concept-grid"><div class="concept-card"><span>01</span><h3>能力轴</h3><p>规划、工具使用、记忆、推理、感知、自我演化和协作。它说明 Agent 在做什么。</p></div><div class="concept-card"><span>02</span><h3>学习问题轴</h3><p>策略优化、信用分配、探索、奖励可靠性、信念建模、持续学习与训练效率。它说明行为如何改进。</p></div><div class="concept-card"><span>03</span><h3>应用与环境轴</h3><p>代码、搜索、网页、GUI、具身和多智能体任务。它决定可观测性、动作空间、验证方式和成本。</p></div></div>
+        <div class="callout"><strong>建模边界</strong><p>在 token 粒度下，普通文本生成也可以是多步 MDP；Agentic RL 的关键在于动作对外部状态和后续观测的影响。工具结果随机不等于环境非平稳；只有转移或奖励规律随时间变化时，才需要非平稳建模。POMDP、可变时长工具动作的 SMDP，以及兼顾任务完成与信息获取的 dual control，是有用的理论视角。</p></div>
+        <p class="source-line">基础索引：<a href="https://arxiv.org/abs/2509.02547" target="_blank" rel="noopener noreferrer">Zhang 等，arXiv:2509.02547（2026 年 4 月 v5）↗</a>。该综述采用能力与应用分类；本页增加学习问题轴，属于本站编辑性整理。</p>
+      </section>
+
+      <section id="credit" class="update-section">
+        <div class="section-kicker">02 / ALGORITHMS</div><h2>长程信用分配：谁真正推动了任务？</h2>
+        <p>终局失败不表示之前每一步都无效。信用分配需要决定估计粒度（token、步骤、工具回合、里程碑或团队成员）和估计方法，并考虑部分可观测、无法精确重放与过程验证成本。</p>
+        <div class="fact-strip"><div><strong>69</strong><span>篇相关论文</span></div><div><strong>56</strong><span>篇核心方法</span></div><p>来自 <a href="https://arxiv.org/abs/2604.09459" target="_blank" rel="noopener noreferrer">信用分配综述 arXiv:2604.09459 v3 ↗</a> 的作者统计；附件中的“47 种方法”与当前摘要不一致，此处采用当前版本数字。</p></div>
+        <div class="research-grid">
+          <article><span class="paper-label">ICML 2026 · PMLR 306</span><h3>BEACON</h3><p>在里程碑处切分轨迹，并在局部与整体尺度估计优势。作者报告 ALFWorld 长程任务成功率为 92.9%，其 GRPO 对照为 53.5%；这不是本站复现实验。</p><a href="https://proceedings.mlr.press/v306/wang26jm.html" target="_blank" rel="noopener noreferrer">Wang 等，PMLR:wang26jm ↗</a></article>
+          <article><span class="paper-label">AAAI 2026 · DOI:10.1609/aaai.v40i28.39570</span><h3>SHADOW</h3><p>按状态转移动态分组，再做局部优势估计，减少不一致状态之间的动作比较。</p><a href="https://ojs.aaai.org/index.php/AAAI/article/view/39570" target="_blank" rel="noopener noreferrer">Liu 等，AAAI 2026 ↗</a></article>
+          <article><span class="paper-label">ICML 2026 · PMLR 306</span><h3>ΔBelief-RL</h3><p>以模型对目标答案概率的变化评价中间动作的信息价值，连接信息获取与信用分配。</p><a href="https://proceedings.mlr.press/v306/auzina26a.html" target="_blank" rel="noopener noreferrer">Auzina 等，PMLR:auzina26a ↗</a></article>
+          <article><span class="paper-label">预印本 · arXiv:2607.13988</span><h3>TRACE</h3><p>在工具调用边界构造状态价值变化，用冻结参考模型估计逐轮 TD 奖励，无需额外训练 critic。</p><a href="https://arxiv.org/abs/2607.13988" target="_blank" rel="noopener noreferrer">Tao 等，arXiv:2607.13988 ↗</a></article>
+          <article><span class="paper-label">预印本 · arXiv:2605.20061</span><h3>ReBel</h3><p>显式维护结构化 belief，以预测信念与观察反馈的一致性构造训练信号，并比较相似信念轨迹。</p><a href="https://arxiv.org/abs/2605.20061" target="_blank" rel="noopener noreferrer">Tang 等，arXiv:2605.20061 ↗</a></article>
+        </div>
+        <div class="question-box"><strong>值得实验的问题</strong><ul><li>能否只在关键决策点使用细粒度奖励，把其余轨迹交给较便宜的终局奖励？</li><li>工具结果有噪声、信念估计不准时，优势估计应如何表达不确定性？</li><li>额外评价预算有限时，优先评估哪些状态？</li></ul><p>这些是本站提出的实验设想；反事实贡献需要可重放或可干预环境才能较可靠地估计。</p></div>
+      </section>
+
+      <section id="reward" class="update-section">
+        <div class="section-kicker">03 / SIGNALS</div><h2>奖励可靠性与探索应单独研究</h2>
+        <p>结果奖励容易自动化但稀疏；过程和进展奖励更细，却可能引入标注或 verifier 偏差；内在奖励能支持信息收集，也可能偏离最终任务。研究开放式任务时，应同时记录奖励来源、成本、失败类型和可验证范围。</p>
+        <div class="matrix"><div><b>结果</b><span>任务是否完成</span><small>易核验，但延迟</small></div><div><b>过程</b><span>局部动作是否合理</span><small>细粒度，成本高</small></div><div><b>信息</b><span>是否减少不确定性</span><small>利于探索，可能偏题</small></div><div><b>成本</b><span>token、工具、延迟</span><small>贴近部署，需明确权衡</small></div></div>
+        <div class="callout"><strong>安全约束不能只靠加权奖励</strong><p>成功率、延迟与工具费用可以展示 Pareto 权衡；越权或危险操作应另设硬约束、动作屏蔽与独立验证。Reward Modeling 关注信号是否可信；Credit Assignment 关注怎样把信号分配给动作。</p></div>
+      </section>
+
+      <section id="capabilities" class="update-section">
+        <div class="section-kicker">04 / CAPABILITIES</div><h2>规划、工具、记忆与多轮交互</h2>
+        <div class="capability-list"><article><h3>规划：何时重新规划？</h3><p>区分推理时搜索、RL 训练的规划策略、分层子目标和基于环境模型的规划。搜索成本与计划失效是现实约束。研究问题是学习何时规划、何时执行，以及能否复用可迁移的子目标。</p></article><article><h3>工具：多步、多轮、多会话</h3><p>多步指一次任务内多次决策；多轮指 Agent 与环境或用户反复交互；多会话指独立任务间持续积累经验。一个回合可包含零个、一个或多个工具调用，工具组合与回合数是不同维度。</p></article><article><h3>记忆：从存储走向决策</h3><p>区分上下文、情节、语义、程序性记忆，以及由策略控制的写入、读取、更新和丢弃。关键评价是记忆能否改善后续动作，而不只是回答回忆题。</p></article><article><h3>自我演化与感知</h3><p>语言自我纠错、外部经验或技能更新、参数级策略改进是不同过程。多模态 Agent 还需学习何时重新观察环境，以及如何避免感知误差向规划传播。</p></article></div>
+        <div class="research-grid memory-grid">
+          <article><span class="paper-label">ACL 2026 · DOI:10.18653/v1/2026.acl-long.981</span><h3>AgeMem</h3><p>把多种长短期记忆管理操作纳入 Agent 策略，并用渐进式 RL 训练。</p><a href="https://aclanthology.org/2026.acl-long.981/" target="_blank" rel="noopener noreferrer">Yu 等，ACL 2026 ↗</a></article>
+          <article><span class="paper-label">ICML 2026 · PMLR 306</span><h3>MemoryArena</h3><p>用相互依赖的跨会话任务评测记忆是否指导后续行动。</p><a href="https://proceedings.mlr.press/v306/he26am.html" target="_blank" rel="noopener noreferrer">He 等，PMLR:he26am ↗</a></article>
+          <article><span class="paper-label">ICML 2026 · PMLR 306</span><h3>AMA-Bench</h3><p>评测长轨迹记忆，并检查因果与任务目标信息是否在检索中保留。</p><a href="https://proceedings.mlr.press/v306/zhao26bs.html" target="_blank" rel="noopener noreferrer">Zhao 等，PMLR:zhao26bs ↗</a></article>
+          <article><span class="paper-label">ACL 2026 · DOI:10.18653/v1/2026.acl-long.370</span><h3>Mem2ActBench</h3><p>从能否主动选择工具、填写参数来评测长期记忆利用。</p><a href="https://aclanthology.org/2026.acl-long.370/" target="_blank" rel="noopener noreferrer">Shen 等，ACL 2026 ↗</a></article>
+          <article><span class="paper-label">ICML 2026 · PMLR 306</span><h3>H-EPM</h3><p>结合情节摘要与程序性工具图，并用历史成功的工具转移引导 RL 探索。</p><a href="https://proceedings.mlr.press/v306/li26bn.html" target="_blank" rel="noopener noreferrer">Li 等，PMLR:li26bn ↗</a></article>
+        </div>
+      </section>
+
+      <section id="systems" class="update-section">
+        <div class="section-kicker">05 / SYSTEMS</div><h2>环境、Harness 与训练器是三层系统</h2>
+        <div class="stack"><div><span>TRAINER</span><h3>策略更新</h3><p>优势估计、梯度计算、数据复用与异步训练。例：verl、SkyRL。</p></div><div><span>HARNESS</span><h3>交互控制</h3><p>上下文压缩、工具编排、错误恢复与子任务执行。</p></div><div><span>ENVIRONMENT + VERIFIER</span><h3>状态与反馈</h3><p>状态转移、观测、工具结果及可验证奖励。例：ALFWorld、τ-bench。</p></div></div>
+        <p><a href="https://arxiv.org/abs/2608.17528" target="_blank" rel="noopener noreferrer">Agent Lightning v1.0（He 等，arXiv:2608.17528）↗</a> 将部署时的 Harness 纳入 RL 训练：Harness 负责交互循环，训练器观察 LLM 请求与响应。这带来重分词、样本合并、优势计算、损失归一化和后端调度问题。论文报告 Qwen3.5-9B 在其特定 SWE-bench Verified 实验中的 Pass@1 从 41.8% 提升到 56.4%；不能外推为普遍收益。</p>
+        <p><a href="https://arxiv.org/abs/2608.10357" target="_blank" rel="noopener noreferrer">SINKFLEX-RL（Cheng 等，arXiv:2608.10357）↗</a> 则将环境接口、训练数据流和注意力内存优化放在一起，展示长程工具任务中系统成本也是研究对象。其结果来自论文所述配置，未在本站验证。</p>
+        <div class="question-box"><strong>系统研究检查点</strong><p>记录训练与部署时的工具版本、上下文处理、采样策略、环境失败率及 verifier 成本。比较方法时对齐交互预算，避免把更多环境调用误认为算法改进。</p></div>
+      </section>
+
+      <section id="belief" class="update-section">
+        <div class="section-kicker">06 / PARTIAL OBSERVABILITY</div><h2>把 POMDP 与信念状态提升为研究主线</h2>
+        <p>网页、工具和多用户环境中，Agent 往往只能看到局部页面或过期的工具结果。理论上的信念状态是 <code>bₜ(s)=P(sₜ=s|hₜ)</code>；实践中可以用自然语言摘要、结构化状态或潜表示近似。核心问题是这些近似能否被校准，是否真的支持信息获取与后续行动。</p>
+        <div class="concept-grid"><div class="concept-card"><span>P1</span><h3>表示</h3><p>自然语言、结构化图、潜状态，哪种表示更能保留可行动信息？</p></div><div class="concept-card"><span>P2</span><h3>主动获取信息</h3><p>何时继续执行，何时先搜索、观察或询问以减少不确定性？</p></div><div class="concept-card"><span>P3</span><h3>校准与变化</h3><p>如何区分观测噪声与环境规则变化，并检测模型的过度自信？</p></div></div>
+        <p class="source-line">相关已核对工作：<a href="https://arxiv.org/abs/2605.20061" target="_blank" rel="noopener noreferrer">ReBel · arXiv:2605.20061 ↗</a> 关注信念一致性；<a href="https://proceedings.mlr.press/v306/auzina26a.html" target="_blank" rel="noopener noreferrer">ΔBelief-RL · PMLR:auzina26a ↗</a> 关注信息获取带来的目标概率变化。</p>
+      </section>
+
+      <section id="agenda" class="update-section">
+        <div class="section-kicker">07 / RESEARCH AGENDA</div><h2>选题判断：先做可证伪的小实验</h2>
+        <p>以下优先级与成本均为本站编辑判断。假设采用 1.5B–7B 开源模型、LoRA/QLoRA 和 ALFWorld、WebShop 或小型自建环境；分值仅表示相对实验门槛，不是 GPU 预算或论文客观排名。</p>
+        <div class="agenda-table" role="table" aria-label="研究方向与定性成本"><div role="row" class="agenda-head"><span role="columnheader">方向</span><span role="columnheader">首个可检验问题</span><span role="columnheader">相对成本</span></div><div role="row"><span role="cell">自适应信用分配</span><span role="cell">同预算下，关键步骤细粒度评价是否优于全程评价？</span><span role="cell">2 / 5</span></div><div role="row"><span role="cell">成本感知工具 RL</span><span role="cell">成功率不降时能否减少工具与 token 消耗？</span><span role="cell">2 / 5</span></div><div role="row"><span role="cell">记忆引导探索</span><span role="cell">成功经验是否提高新任务的有效轨迹比例？</span><span role="cell">3 / 5</span></div><div role="row"><span role="cell">信念感知 RL</span><span role="cell">校准后的信念奖励能否抵抗错误观测？</span><span role="cell">3 / 5</span></div><div role="row"><span role="cell">非平稳 Agent RL</span><span role="cell">工具变更后能否恢复而不遗忘旧任务？</span><span role="cell">3 / 5</span></div><div role="row"><span role="cell">Harnessed RL</span><span role="cell">调用合并和损失归一化怎样影响训练稳定性？</span><span role="cell">4 / 5</span></div><div role="row"><span role="cell">多智能体信用分配</span><span role="cell">团队奖励能否追溯到各 Agent 的反事实贡献？</span><span role="cell">4 / 5</span></div><div role="row"><span role="cell">多模态 Agent RL</span><span role="cell">何时重新观察环境最有价值？</span><span role="cell">5 / 5</span></div></div>
+        <div class="closing-links"><a class="button primary" href="../#problems">浏览可追溯的开放问题 ↗</a><a class="button secondary" href="../#papers">筛选 2026 年论文 ↗</a></div>
+      </section>
+      <section class="update-section evidence-note"><h2>证据与维护说明</h2><p>本页的“现有工作”均连接到已读摘要的原始论文页面；论文中的性能数字明确标为作者报告。概念框架、研究问题、优先级和成本是编辑性分析，尚无本站实验数据支持。论文库保留未核验旧记录并明确标记；新收录来源的元数据与摘要核对日期为 2026-10-27。</p><p>欢迎从 <a href="../#papers">论文库</a> 检索原始来源，再通过 <a href="https://github.com/JinChengYing/JinChengYing.github.io/blob/main/agentic-rl/README.md" target="_blank" rel="noopener noreferrer">数据维护说明</a> 修订记录。</p></section>
+    </main>
+    <footer>JinChengYing 整理 · <a href="../">返回图谱首页</a> · <a href="/">返回博客</a></footer>
+  </div>
+</body>
+</html>

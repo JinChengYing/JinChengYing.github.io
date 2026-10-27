@@ -17,6 +17,13 @@ jobs:
           python-version: '3.12'
       - name: Check new posts
         run: python scripts/posts.py check
+      - name: Validate research atlas data
+        run: python agentic-rl/tools/validate_data.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check research atlas filters
+        run: node agentic-rl/tools/test_filters.js
       - name: Build Jekyll site
         uses: actions/jekyll-build-pages@v1
         with:

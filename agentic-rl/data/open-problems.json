@@ -202,5 +202,136 @@
     "risks": [
       "Observability controls may be hard to standardize."
     ]
+  },
+  {
+    "id": "tool-failure-recovery",
+    "title": "Learning recovery from tool failures",
+    "definition": "How should an agent adapt when tools time out, return bad data or change schema?",
+    "motivation": "Real tool environments fail in ways fixed benchmarks may underrepresent.",
+    "related_paper_ids": [
+      "arxiv-2607.13988",
+      "entry-22"
+    ],
+    "existing_limitations": "Reliable training examples with controlled failure modes are scarce.",
+    "possible_approaches": [
+      "Inject reversible tool failures and compare recovery under equal rollout budgets."
+    ],
+    "suggested_benchmark_ids": [
+      "taubench"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "A policy may learn benchmark-specific retries rather than general recovery."
+    ]
+  },
+  {
+    "id": "cost-aware-tools",
+    "title": "Cost-aware tool scheduling",
+    "definition": "Can a policy choose tools under success, token, API and latency budgets?",
+    "motivation": "Real deployment requires more than maximizing task success alone.",
+    "related_paper_ids": [
+      "arxiv-2608.10357"
+    ],
+    "existing_limitations": "A single weighted score can hide severe trade-offs.",
+    "possible_approaches": [
+      "Report success-cost Pareto curves with explicit hard constraints."
+    ],
+    "suggested_benchmark_ids": [
+      "taubench"
+    ],
+    "estimated_experimental_cost": "Low",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "Pricing and latency may vary across deployment settings."
+    ]
+  },
+  {
+    "id": "belief-calibration",
+    "title": "Belief calibration under partial observability",
+    "definition": "Do agent confidence estimates match the actual state of the environment?",
+    "motivation": "Belief-based rewards can fail when the agent is confidently wrong.",
+    "related_paper_ids": [
+      "arxiv-2605.20061",
+      "pmlr-auzina26a"
+    ],
+    "existing_limitations": "Current belief proxies may be self-referential and uncalibrated.",
+    "possible_approaches": [
+      "Compare predicted state confidence with held-out observations and interventions."
+    ],
+    "suggested_benchmark_ids": [
+      "alfworld",
+      "webshop"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "State labels may not be available in real environments."
+    ]
+  },
+  {
+    "id": "harnessed-trajectory",
+    "title": "Trajectory reconstruction in harnessed RL",
+    "definition": "How can separate LLM calls become consistent training trajectories?",
+    "motivation": "Real harnesses control tools, context compression and branching.",
+    "related_paper_ids": [
+      "arxiv-2608.17528",
+      "arxiv-2508.03680"
+    ],
+    "existing_limitations": "Retokenization, merged samples and policy staleness can distort updates.",
+    "possible_approaches": [
+      "Record call boundaries and compare loss-normalization schemes at equal budget."
+    ],
+    "suggested_benchmark_ids": [
+      "swebench"
+    ],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "Training and deployment harnesses may diverge."
+    ]
+  },
+  {
+    "id": "memory-context-budget",
+    "title": "Memory and context budget optimization",
+    "definition": "What should an agent retrieve, retain or discard under a fixed context window?",
+    "motivation": "Memory management is itself a long-horizon action policy.",
+    "related_paper_ids": [
+      "entry-18",
+      "entry-19",
+      "entry-21"
+    ],
+    "existing_limitations": "Retrieval similarity does not measure downstream decision value.",
+    "possible_approaches": [
+      "Evaluate memory actions on cross-session task success at fixed token budget."
+    ],
+    "suggested_benchmark_ids": [
+      "memoryarena",
+      "mem2actbench"
+    ],
+    "estimated_experimental_cost": "Medium",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "Benchmark-specific memory traces may not transfer."
+    ]
+  },
+  {
+    "id": "multi-agent-credit",
+    "title": "Credit assignment in agent teams",
+    "definition": "How should a team outcome be attributed to cooperating agents?",
+    "motivation": "Subagents may contribute unequally and at different times.",
+    "related_paper_ids": [
+      "arxiv-2604.09459"
+    ],
+    "existing_limitations": "Team rewards obscure individual counterfactual contributions.",
+    "possible_approaches": [
+      "Use controlled ablations of agent roles with fixed team budgets."
+    ],
+    "suggested_benchmark_ids": [],
+    "estimated_experimental_cost": "High",
+    "cost_note": "Curator estimate for small-model experiments; not measured.",
+    "risks": [
+      "Ablating one agent may change other agents’ behavior."
+    ]
   }
 ]

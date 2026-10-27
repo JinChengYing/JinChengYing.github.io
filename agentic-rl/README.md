@@ -1,8 +1,8 @@
 # Agentic RL Atlas
 
-A static research section of the existing JinChengYing GitHub Pages site. The public path remains `/agentic-rl/`. HTML, CSS, JavaScript and JSON live entirely in this directory; no root Jekyll templates or blog files need changes.
+A static research section of the existing JinChengYing GitHub Pages site. The public path remains `/agentic-rl/`. The blog homepage links to the atlas and its 2026 research update.
 
-The Chinese version is at `/agentic-rl/zh/`. Both language versions share the same research records and rendering code. `data/zh.json` supplies Chinese summaries for checked papers, benchmark descriptions, taxonomy labels and open-problem text. Original paper titles and source URLs remain unchanged.
+The Chinese version is at `/agentic-rl/zh/`, with a longer editorial update at `/agentic-rl/zh/update-2026/`. Both atlas index versions share the same research records and rendering code. `data/zh.json` supplies Chinese summaries for checked papers, benchmark and framework descriptions, taxonomy labels and open-problem text. Original paper titles and source URLs remain unchanged.
 
 ## Data model and evidence
 
@@ -14,7 +14,7 @@ The Chinese version is at `/agentic-rl/zh/`. Both language versions share the sa
 
 A `source_checked` paper has a primary abstract or proceedings page reviewed for the displayed title, authors where populated, date where populated, venue where populated, and summary. The `verified_at` date records this review. A `unverified` record was migrated from the original page; its earlier description is retained as `legacy_note` for future review and is not shown as a scientific claim. `source_link_only` on benchmarks means the link is retained but detailed metadata has not been fully audited. Topic labels and open-problem sketches are editorial interpretations.
 
-The verified source set at this revision includes [the landscape survey](https://arxiv.org/abs/2509.02547), [ReAct](https://arxiv.org/abs/2210.03629), [Tree of Thoughts](https://arxiv.org/abs/2305.10601), [τ-bench](https://arxiv.org/abs/2406.12045), [the credit assignment survey](https://arxiv.org/abs/2604.09459), [BEACON](https://proceedings.mlr.press/v306/wang26jm.html), [GiGPO](https://arxiv.org/abs/2505.10978), and [Agent Lightning](https://arxiv.org/abs/2508.03680). Scientific results in those sources are reported by their authors; this atlas has not reproduced them.
+The verified source set now also includes [SHADOW](https://ojs.aaai.org/index.php/AAAI/article/view/39570), [ΔBelief-RL](https://proceedings.mlr.press/v306/auzina26a.html), [TRACE](https://arxiv.org/abs/2607.13988), [ReBel](https://arxiv.org/abs/2605.20061), [AgeMem](https://aclanthology.org/2026.acl-long.981/), [MemoryArena](https://proceedings.mlr.press/v306/he26am.html), [AMA-Bench](https://proceedings.mlr.press/v306/zhao26bs.html), [Mem2ActBench](https://aclanthology.org/2026.acl-long.370/), [H-EPM](https://proceedings.mlr.press/v306/li26bn.html), [SINKFLEX-RL](https://arxiv.org/abs/2608.10357), and [Agent Lightning v1.0](https://arxiv.org/abs/2608.17528). Scientific results in those sources are reported by their authors; this atlas has not reproduced them. The 2026 credit-assignment survey's current arXiv v3 abstract reports 69 related papers, including 56 core methods. Earlier counts should not be presented as current.
 
 ## Add or revise a paper
 
@@ -36,9 +36,9 @@ python -m http.server 8000
 
 Open `http://localhost:8000/agentic-rl/`. Opening `index.html` directly as a file may block JSON `fetch` calls. A full Jekyll build is useful for final site integration, but the atlas itself has no build dependencies and uses relative asset URLs.
 
-The Chinese preview is `http://localhost:8000/agentic-rl/zh/`.
+The Chinese preview is `http://localhost:8000/agentic-rl/zh/`. The editorial update is `http://localhost:8000/agentic-rl/zh/update-2026/`. When previewing without Jekyll, the front matter will appear above the HTML; GitHub Pages removes it at build time.
 
 ## Current limits
 
-The original page had 24 mixed paper/project entries; this revision retains all of them as 20 paper records and 4 software records, and adds 2 source-checked papers. Most migrated records and most benchmark properties still need source audits. Search is client-side and intentionally small-scale. Link validity has not been checked for every external URL. The local workspace used for this change did not contain a checkout of the complete personal-site repository, so a full Jekyll integration build has not been run here.
+The atlas remains a curated selection, not an exhaustive literature search. Some migrated records and benchmark properties still need source audits. Open problems, research priorities and cost labels are editorial analysis. Search is client-side and intentionally small-scale. External links were verified selectively, not exhaustively. The local workspace does not contain a checkout of the complete personal-site repository, so the full Jekyll build must be verified by GitHub Pages after publication.
 

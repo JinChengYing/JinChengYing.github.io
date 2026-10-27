@@ -115,7 +115,10 @@ function drawFrameworks() {
   const grid = byId("framework-grid");
   frameworks.forEach(f => {
     const card = el("article","benchmark-card");
-    add(card,el("span","badge pending",t("Pending verification","待核验")),el("h3",null,f.title),el("p",null,t("Project description pending source verification.","项目描述待来源核验。")));
+    const checked = f.verification_status === "source_checked";
+    add(card,el("span","badge" + (checked ? "" : " pending"),checked ? t("Project source checked","项目来源已核对") : t("Pending verification","待核验")),el("h3",null,f.title));
+    if (f.layer && checked) add(card,el("small","framework-layer",f.layer));
+    add(card,el("p",null,checked ? f.description : t("Project description pending source verification.","项目描述待来源核验。")));
     add(card,safeLink(f.source_url,t("Source / project ↗","来源／项目 ↗")));
     add(grid,card);
   });
@@ -164,6 +167,7 @@ async function load() {
       search_terms: [...p.capabilities,...p.rl_topics,...p.domains].map(term).join(" ")
     }));
     benchmarks = benchmarks.map(b => ({...b,...localization.benchmarks[b.id]}));
+    frameworks = frameworks.map(f => ({...f,...localization.frameworks?.[f.id]}));
     problems = problems.map(p => ({
       ...p,...localization.problems[p.id],
       cost_note: "编辑者估计，未经实测。"

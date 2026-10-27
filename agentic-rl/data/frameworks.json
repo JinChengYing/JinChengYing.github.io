@@ -3,11 +3,12 @@
     "id": "entry-10",
     "title": "RAGEN / StarPO",
     "year": 2025,
-    "description": "Training multi-turn RL language agents",
+    "description": "Multi-turn agent RL framework with StarPO.",
     "source_url": "https://github.com/RAGEN-AI/RAGEN",
     "code_url": "https://github.com/RAGEN-AI/RAGEN",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
   },
   {
     "id": "entry-11",
@@ -38,5 +39,38 @@
     "code_url": "https://github.com/ServiceNow/BrowserGym",
     "verification_status": "unverified",
     "verified_at": null
+  },
+  {
+    "id": "verl",
+    "title": "verl",
+    "year": null,
+    "description": "Flexible RL post-training framework for LLMs.",
+    "source_url": "https://github.com/verl-project/verl",
+    "code_url": "https://github.com/verl-project/verl",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
+  },
+  {
+    "id": "skyrl",
+    "title": "SkyRL",
+    "year": null,
+    "description": "Modular full-stack RL library for LLMs.",
+    "source_url": "https://github.com/NovaSky-AI/SkyRL",
+    "code_url": "https://github.com/NovaSky-AI/SkyRL",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
+  },
+  {
+    "id": "agent-lightning-v1",
+    "title": "Agent Lightning v1.0",
+    "year": 2026,
+    "description": "Harnessed agentic RL framework that trains on LLM calls emitted by an independent agent harness.",
+    "source_url": "https://github.com/microsoft/agent-lightning",
+    "code_url": "https://github.com/microsoft/agent-lightning",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer / Harness bridge"
   }
 ]

@@ -289,7 +289,33 @@
   {
     "id": "arxiv-2509.02547",
     "title": "The Landscape of Agentic Reinforcement Learning for LLMs: A Survey",
-    "authors": [],
+    "authors": [
+      "Guibin Zhang",
+      "Hejia Geng",
+      "Xiaohang Yu",
+      "Zhenfei Yin",
+      "Zaibin Zhang",
+      "Zelin Tan",
+      "Heng Zhou",
+      "Zhongzhi Li",
+      "Xiangyuan Xue",
+      "Yijiang Li",
+      "Yifan Zhou",
+      "Yang Chen",
+      "Chen Zhang",
+      "Yutao Fan",
+      "Zihu Wang",
+      "Songtao Huang",
+      "Francisco Piedrahita-Velez",
+      "Yue Liao",
+      "Hongru Wang",
+      "Mengyue Yang",
+      "Heng Ji",
+      "Jun Wang",
+      "Shuicheng Yan",
+      "Philip Torr",
+      "Lei Bai"
+    ],
     "year": 2025,
     "date": "2025-09-02",
     "venue": "Transactions on Machine Learning Research",
@@ -301,7 +327,7 @@
     "capabilities": [],
     "rl_topics": [],
     "domains": [],
-    "summary": "Surveys agentic RL through temporally extended, partially observable interaction and a capability-oriented taxonomy.",
+    "summary": "Surveys agentic RL as temporally extended, partially observable interaction, with capability and application taxonomies; arXiv v5 was revised in April 2026.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
@@ -331,7 +357,7 @@
       "Credit Assignment"
     ],
     "domains": [],
-    "summary": "Surveys credit assignment from reasoning to agentic RL, including sparse rewards and heterogeneous actions.",
+    "summary": "Updated v3 surveys 69 papers through July 2026, including 56 core credit-assignment methods, and examines identification limits and evaluation controls for agentic RL.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
@@ -385,67 +411,101 @@
   {
     "id": "arxiv-2607.13988",
     "title": "TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents",
-    "authors": [],
+    "authors": [
+      "Leitian Tao",
+      "Baolin Peng",
+      "Wenlin Yao",
+      "Tao Ge",
+      "Hao Cheng",
+      "Mike Hang Wang",
+      "Jianfeng Gao",
+      "Sharon Li"
+    ],
     "year": 2026,
-    "date": null,
+    "date": "2026-07-15",
     "venue": null,
-    "publication_status": "unverified",
+    "publication_status": "preprint",
     "arxiv_id": "2607.13988",
     "paper_url": "https://arxiv.org/abs/2607.13988",
     "code_url": null,
     "project_url": null,
-    "capabilities": [],
-    "rl_topics": [
-      "Credit Assignment"
+    "capabilities": [
+      "Tool Use"
     ],
-    "domains": [],
-    "summary": null,
+    "rl_topics": [
+      "Credit Assignment",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Derives turn-level temporal-difference rewards from frozen-reference answer probabilities at tool-call boundaries, without training a separate critic.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Credit Assignment"
+      "Credit Assignment",
+      "Tool Use"
     ],
     "legacy_note": "Turn-level reward attribution",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2605.20061",
     "title": "Rewarding Beliefs, Not Actions: Consistency-Guided Credit Assignment for Long-Horizon Agents",
-    "authors": [],
+    "authors": [
+      "Wenjie Tang",
+      "Minne Li",
+      "Sijie Huang",
+      "Liquan Xiao",
+      "Yuan Zhou"
+    ],
     "year": 2026,
-    "date": null,
+    "date": "2026-05-19",
     "venue": null,
-    "publication_status": "unverified",
+    "publication_status": "preprint",
     "arxiv_id": "2605.20061",
     "paper_url": "https://arxiv.org/abs/2605.20061",
     "code_url": "https://github.com/Fateyetian/Rebel",
     "project_url": null,
     "capabilities": [],
     "rl_topics": [
-      "Credit Assignment"
+      "Credit Assignment",
+      "POMDP / Belief Modeling",
+      "Long-Horizon RL"
     ],
-    "domains": [],
-    "summary": null,
+    "domains": [
+      "Embodied Agents"
+    ],
+    "summary": "ReBel uses structured beliefs, belief-consistency supervision and belief-aware trajectory grouping for long-horizon agent training.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
+      "Belief",
       "Credit Assignment"
     ],
     "legacy_note": "Belief-aware credit assignment",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "entry-18",
     "title": "Agentic Memory: Learning Unified Long-Term and Short-Term Memory Management for Large Language Model Agents",
-    "authors": [],
+    "authors": [
+      "Yi Yu",
+      "Liuyi Yao",
+      "Yuexiang Xie",
+      "Qingquan Tan",
+      "Jiaqi Feng",
+      "Yaliang Li",
+      "Libing Wu"
+    ],
     "year": 2026,
     "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "venue": "ACL 2026",
+    "publication_status": "peer_reviewed",
     "arxiv_id": null,
     "paper_url": "https://aclanthology.org/2026.acl-long.981/",
     "code_url": null,
@@ -453,9 +513,12 @@
     "capabilities": [
       "Memory"
     ],
-    "rl_topics": [],
+    "rl_topics": [
+      "Policy Optimization",
+      "Long-Horizon RL"
+    ],
     "domains": [],
-    "summary": null,
+    "summary": "AgeMem treats storing, retrieving, updating, summarizing and discarding memory as policy actions, trained with progressive RL and step-wise GRPO.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
@@ -463,17 +526,32 @@
       "Memory"
     ],
     "legacy_note": "RL for memory read, write, summarize and discard",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "entry-19",
     "title": "Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks",
-    "authors": [],
+    "authors": [
+      "Zexue He",
+      "Yu Wang",
+      "Churan Zhi",
+      "Yuanzhe Hu",
+      "Tzu-Ping Chen",
+      "Lang Yin",
+      "Ze Chen",
+      "Tong Arthur Wu",
+      "Siru Ouyang",
+      "Zihan Wang",
+      "Jiaxin Pei",
+      "Julian Mcauley",
+      "Yejin Choi",
+      "Alex Pentland"
+    ],
     "year": 2026,
     "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
     "arxiv_id": null,
     "paper_url": "https://proceedings.mlr.press/v306/he26am.html",
     "code_url": null,
@@ -482,129 +560,177 @@
       "Memory"
     ],
     "rl_topics": [],
-    "domains": [],
-    "summary": null,
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "MemoryArena evaluates whether agents use earlier interactions and feedback to solve later, interdependent tasks across sessions.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Memory"
+      "Memory",
+      "Benchmark"
     ],
     "legacy_note": "Memory across interdependent sessions",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "entry-20",
-    "title": "AMA-Bench",
-    "authors": [],
+    "title": "AMA-Bench: Evaluating Long-Horizon Memory for Agentic Applications",
+    "authors": [
+      "Yujie Zhao",
+      "Boqin Yuan",
+      "Junbo Huang",
+      "Haocheng Yuan",
+      "Zhongming Yu",
+      "Haozhou Xu",
+      "Lanxiang Hu",
+      "Abhilash Shankarampeta",
+      "Zimeng Huang",
+      "Wentao Ni",
+      "Yuandong Tian",
+      "Jishen Zhao"
+    ],
     "year": 2026,
     "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
     "arxiv_id": null,
     "paper_url": "https://proceedings.mlr.press/v306/zhao26bs.html",
-    "code_url": "https://ama-bench.github.io/",
-    "project_url": null,
+    "code_url": null,
+    "project_url": "https://ama-bench.github.io/",
     "capabilities": [
       "Memory"
     ],
     "rl_topics": [],
     "domains": [],
-    "summary": null,
+    "summary": "AMA-Bench evaluates memory over long agent-environment trajectories; its authors also propose causality-graph memory retrieval.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Memory"
+      "Memory",
+      "Benchmark"
     ],
     "legacy_note": "Long-horizon memory evaluation",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "entry-21",
     "title": "Mem2ActBench: A Benchmark for Evaluating Long-Term Memory Utilization in Task-Oriented Autonomous Agents",
-    "authors": [],
+    "authors": [
+      "Yiting Shen",
+      "Kun Li",
+      "Wei Zhou",
+      "Songlin Hu"
+    ],
     "year": 2026,
     "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "venue": "ACL 2026",
+    "publication_status": "peer_reviewed",
     "arxiv_id": null,
     "paper_url": "https://aclanthology.org/2026.acl-long.370/",
     "code_url": "https://github.com/Cantaloupe-M/Mem2ActBench",
     "project_url": null,
     "capabilities": [
-      "Memory"
+      "Memory",
+      "Tool Use"
     ],
     "rl_topics": [],
     "domains": [],
-    "summary": null,
+    "summary": "Tests whether agents proactively apply long-term memory to tool selection and parameter grounding in task-oriented interactions.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Memory"
+      "Memory",
+      "Benchmark"
     ],
     "legacy_note": "Long-term memory use in agent actions",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "entry-22",
     "title": "Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic–Procedural Memory",
-    "authors": [],
+    "authors": [
+      "Sijia Li",
+      "Yuchen Huang",
+      "Zifan Liu",
+      "Zijian Li",
+      "Jingjing Fu",
+      "Lei Song",
+      "Jiang Bian",
+      "Jun Zhang",
+      "Rui Wang"
+    ],
     "year": 2026,
     "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
     "arxiv_id": null,
     "paper_url": "https://proceedings.mlr.press/v306/li26bn.html",
     "code_url": "https://github.com/LISijia-dev/H-EPM",
     "project_url": null,
     "capabilities": [
-      "Memory"
+      "Memory",
+      "Tool Use"
     ],
-    "rl_topics": [],
+    "rl_topics": [
+      "Exploration",
+      "Multi-Turn RL"
+    ],
     "domains": [],
-    "summary": null,
+    "summary": "H-EPM combines episodic summaries with a procedural tool graph and uses successful tool transitions to guide RL exploration.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Memory"
+      "Memory",
+      "Tool Use"
     ],
     "legacy_note": "Hybrid episodic and procedural memory",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2608.10357",
     "title": "Efficient Reinforcement Learning for Long-Horizon Tool-Use Agentic Tasks",
-    "authors": [],
+    "authors": [
+      "Zelei Cheng",
+      "Amritansh Mishra",
+      "Sambit Sahu",
+      "William Campbell"
+    ],
     "year": 2026,
-    "date": null,
-    "venue": null,
-    "publication_status": "unverified",
+    "date": "2026-08-11",
+    "venue": "COLM 2026 Workshop on Efficient Reasoning",
+    "publication_status": "preprint",
     "arxiv_id": "2608.10357",
     "paper_url": "https://arxiv.org/abs/2608.10357",
     "code_url": null,
     "project_url": null,
-    "capabilities": [],
+    "capabilities": [
+      "Tool Use"
+    ],
     "rl_topics": [
-      "Efficient Training"
+      "Efficient Training",
+      "Long-Horizon RL"
     ],
     "domains": [],
-    "summary": null,
+    "summary": "SINKFLEX-RL combines a tool-use environment wrapper, rollout dataflow and sink-aware FlexAttention for memory-feasible long-horizon training.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Efficiency"
+      "Efficiency",
+      "Tool Use"
     ],
     "legacy_note": "Efficient long-horizon tool-use RL",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2505.10978",
@@ -688,6 +814,120 @@
     "open_questions": [],
     "tags": [
       "Frameworks"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "aaai-39570",
+    "year": 2026,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "title": "SHADOW: Dynamic-Aware Credit Assignment Against Long-Horizon Tasks",
+    "authors": [
+      "Yuze Liu",
+      "Chaochao Lu",
+      "Chao Yang"
+    ],
+    "date": "2026-03-14",
+    "venue": "AAAI 2026",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": null,
+    "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/39570",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Long-Horizon RL"
+    ],
+    "domains": [
+      "Embodied Agents"
+    ],
+    "summary": "Groups dynamically consistent states and uses a local dynamics-aware advantage estimator for long-horizon agent credit assignment.",
+    "tags": [
+      "Credit Assignment"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "pmlr-auzina26a",
+    "year": 2026,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "title": "Intrinsic Credit Assignment for Long Horizon Interaction",
+    "authors": [
+      "Ilze Amanda Auzina",
+      "Joschka Strüber",
+      "Sergio Hernández-Gutiérrez",
+      "Shashwat Goel",
+      "Ameya Prabhu",
+      "Matthias Bethge"
+    ],
+    "date": null,
+    "venue": "ICML 2026 (PMLR 306)",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": null,
+    "paper_url": "https://proceedings.mlr.press/v306/auzina26a.html",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Credit Assignment",
+      "Exploration",
+      "POMDP / Belief Modeling"
+    ],
+    "domains": [],
+    "summary": "ΔBelief-RL rewards changes in an agent’s probability assigned to the target solution, providing intermediate credit for information-seeking actions.",
+    "tags": [
+      "Belief",
+      "Credit Assignment"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2608.17528",
+    "year": 2026,
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+    "authors": [
+      "Zhiyuan He",
+      "Siwei Zhang",
+      "Zhiwen Zhou",
+      "Yuqing Yang",
+      "Yu Kang",
+      "Yuge Zhang",
+      "Luna K. Qiu",
+      "Tin Yan Tsui",
+      "Jiahang Xu",
+      "Chong Luo"
+    ],
+    "date": "2026-08-18",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2608.17528",
+    "paper_url": "https://arxiv.org/abs/2608.17528",
+    "code_url": "https://github.com/microsoft/agent-lightning",
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [
+      "Policy Optimization",
+      "Efficient Training",
+      "Multi-Turn RL"
+    ],
+    "domains": [
+      "Code Agents"
+    ],
+    "summary": "Lets an agent harness own the interaction loop while RL training observes LLM request-response pairs; studies retokenization, sample merging, advantage and loss normalization.",
+    "tags": [
+      "Harnessed RL",
+      "Systems"
     ],
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"

@@ -39,10 +39,10 @@
       "summary": "通过模拟用户对话、API 工具与领域规则评测智能体，并比较最终数据库状态与目标状态。"
     },
     "arxiv-2509.02547": {
-      "summary": "从跨时间、部分可观测的交互视角梳理 Agentic RL，并提出以能力为核心的分类。"
+      "summary": "以跨时间、部分可观测的交互刻画 Agentic RL，并梳理能力与应用分类；arXiv v5 更新于 2026 年 4 月。"
     },
     "arxiv-2604.09459": {
-      "summary": "综述从推理任务到 Agentic RL 的信用分配问题，包括稀疏奖励与异构动作。"
+      "summary": "2026 年 8 月 v3 版综述纳入 69 篇相关论文（其中 56 篇核心信用分配方法），并讨论可识别性与评估控制。"
     },
     "entry-15": {
       "summary": "利用里程碑边界、片段内奖励塑形与双尺度优势估计训练长时程智能体。"
@@ -52,6 +52,39 @@
     },
     "arxiv-2508.03680": {
       "summary": "提出将智能体执行与强化学习训练分离的接口，并把交互轨迹拆解为训练转移。"
+    },
+    "aaai-39570": {
+      "summary": "按状态转移动态分组，并估计局部优势，以减少长程任务中不合理的动作比较。"
+    },
+    "pmlr-auzina26a": {
+      "summary": "ΔBelief-RL 使用智能体对目标答案的概率变化作为中间奖励，鼓励有信息价值的交互。"
+    },
+    "arxiv-2607.13988": {
+      "summary": "在工具调用边界利用冻结参考模型的答案概率推导逐轮 TD 奖励，无需另训 critic。"
+    },
+    "arxiv-2605.20061": {
+      "summary": "ReBel 结合结构化信念状态、信念一致性监督和相似信念轨迹分组，改善长程交互的训练信号。"
+    },
+    "entry-18": {
+      "summary": "AgeMem 把存储、检索、更新、总结和丢弃记忆作为策略动作，并用渐进式 RL 与逐步 GRPO 训练。"
+    },
+    "entry-19": {
+      "summary": "MemoryArena 评测智能体能否把前期交互与反馈积累为记忆，并用于之后相互依赖的任务。"
+    },
+    "entry-20": {
+      "summary": "AMA-Bench 评测长程智能体交互轨迹中的记忆，并提出基于因果图的记忆检索方案。"
+    },
+    "entry-21": {
+      "summary": "评测智能体能否主动把长期记忆用于任务中的工具选择和参数填写。"
+    },
+    "entry-22": {
+      "summary": "H-EPM 将情境摘要与程序性工具图结合，并用历史成功工具转移引导 RL 探索。"
+    },
+    "arxiv-2608.10357": {
+      "summary": "SINKFLEX-RL 结合工具环境接口、训练数据流和 sink-aware FlexAttention，降低长程训练的显存压力。"
+    },
+    "arxiv-2608.17528": {
+      "summary": "让真实 Agent Harness 保持交互控制，训练器处理 LLM 请求与响应记录；讨论重分词、样本合并、优势与损失归一化。"
     }
   },
   "benchmarks": {
@@ -99,6 +132,24 @@
       "modality": "对话与 API 调用",
       "task_horizon": "多轮（具体轮数因任务而异）",
       "evaluation": "最终数据库状态与标注目标状态的比较"
+    },
+    "memoryarena": {
+      "environment_type": "跨会话相互依赖任务",
+      "modality": "工具与文本交互",
+      "task_horizon": "多个会话",
+      "evaluation": "利用先前经验完成后续任务"
+    },
+    "ama-bench": {
+      "environment_type": "长程智能体环境轨迹",
+      "modality": "状态、动作、观测与工具输出",
+      "task_horizon": "长轨迹",
+      "evaluation": "专家设计及规则生成的问答"
+    },
+    "mem2actbench": {
+      "environment_type": "持续使用的任务型助理交互",
+      "modality": "对话与工具动作",
+      "task_horizon": "跨会话",
+      "evaluation": "基于记忆的工具选择与参数填写"
     }
   },
   "problems": {
@@ -209,6 +260,96 @@
       "risks": [
         "可观测性控制可能难以标准化。"
       ]
+    },
+    "tool-failure-recovery": {
+      "title": "工具故障恢复",
+      "definition": "工具超时、返回错误数据或接口变化时，智能体如何调整行为？",
+      "motivation": "真实工具环境会发生故障，而固定基准覆盖可能不足。",
+      "existing_limitations": "可控且可复现的故障训练样本有限。",
+      "possible_approaches": [
+        "在可重放环境中注入工具故障，并在相同交互预算下比较恢复能力。"
+      ],
+      "risks": [
+        "策略可能只学到针对特定基准的重试模板。"
+      ]
+    },
+    "cost-aware-tools": {
+      "title": "成本约束下的工具调度",
+      "definition": "能否同时考虑成功率、token、API 费用和延迟来选择工具？",
+      "motivation": "部署场景要求同时管理效果与成本。",
+      "existing_limitations": "单一加权分数可能掩盖严重权衡。",
+      "possible_approaches": [
+        "绘制成功率与成本的 Pareto 曲线，并明确不可违反的约束。"
+      ],
+      "risks": [
+        "价格与延迟会随部署环境变化。"
+      ]
+    },
+    "belief-calibration": {
+      "title": "部分可观测环境中的信念校准",
+      "definition": "模型对环境状态的置信度是否与真实正确率一致？",
+      "motivation": "若模型自信但判断错误，信念奖励可能失效。",
+      "existing_limitations": "现有信念近似可能依赖模型自身且未经校准。",
+      "possible_approaches": [
+        "用保留观测和可控干预比较状态预测置信度与真实结果。"
+      ],
+      "risks": [
+        "真实环境可能缺少状态真值标注。"
+      ]
+    },
+    "harnessed-trajectory": {
+      "title": "真实 Harness 下的轨迹重建",
+      "definition": "如何把多个独立 LLM 调用重建为一致的训练轨迹？",
+      "motivation": "真实 Harness 管理工具、上下文压缩与执行分支。",
+      "existing_limitations": "重分词、样本合并和策略滞后可能扭曲更新。",
+      "possible_approaches": [
+        "记录调用边界，并在相同预算下比较不同损失归一化方法。"
+      ],
+      "risks": [
+        "训练与部署的 Harness 可能不一致。"
+      ]
+    },
+    "memory-context-budget": {
+      "title": "记忆与上下文预算优化",
+      "definition": "上下文长度固定时应检索、保留或丢弃哪些信息？",
+      "motivation": "记忆管理本身是长程动作策略。",
+      "existing_limitations": "检索相似度不能直接衡量对后续决策的价值。",
+      "possible_approaches": [
+        "在固定 token 预算下，以跨会话任务成功率评估记忆动作。"
+      ],
+      "risks": [
+        "针对单一基准的记忆策略可能缺乏迁移性。"
+      ]
+    },
+    "multi-agent-credit": {
+      "title": "多智能体团队中的信用分配",
+      "definition": "协作任务的结果应如何分配给不同智能体？",
+      "motivation": "子智能体可能在不同时间贡献不同。",
+      "existing_limitations": "团队总奖励遮蔽了个体的反事实贡献。",
+      "possible_approaches": [
+        "在固定团队预算下对智能体角色做可控消融。"
+      ],
+      "risks": [
+        "移除一个智能体可能改变其他成员的行为。"
+      ]
+    }
+  },
+  "frameworks": {
+    "entry-10": {
+      "description": "支持多轮语言智能体强化学习与 StarPO 的训练项目。",
+      "layer": "训练器"
+    },
+    "verl": {
+      "description": "面向语言模型强化学习后训练的灵活框架。",
+      "layer": "训练器"
+    },
+    "skyrl": {
+      "description": "模块化的语言模型强化学习训练库。",
+      "layer": "训练器"
+    },
+    "agent-lightning-v1": {
+      "description": "把独立 Agent Harness 产生的 LLM 调用接入强化学习训练。",
+      "layer": "训练器／Harness 桥接"
     }
   }
 }

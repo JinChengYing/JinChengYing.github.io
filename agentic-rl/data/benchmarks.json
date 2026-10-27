@@ -107,5 +107,44 @@
     "code_url": "https://github.com/sierra-research/tau-bench",
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"
+  },
+  {
+    "id": "memoryarena",
+    "name": "MemoryArena",
+    "environment_type": "Interdependent multi-session tasks",
+    "modality": "Tool and text interaction",
+    "task_horizon": "Multiple sessions",
+    "stateful": true,
+    "evaluation": "Later actions using earlier experience",
+    "source_url": "https://proceedings.mlr.press/v306/he26am.html",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "ama-bench",
+    "name": "AMA-Bench",
+    "environment_type": "Long agent-environment trajectories",
+    "modality": "States, actions, observations and tool outputs",
+    "task_horizon": "Long trajectories",
+    "stateful": true,
+    "evaluation": "Expert-curated and rule-based QA",
+    "source_url": "https://proceedings.mlr.press/v306/zhao26bs.html",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "mem2actbench",
+    "name": "Mem2ActBench",
+    "environment_type": "Persistent task-oriented assistant interactions",
+    "modality": "Conversation and tool actions",
+    "task_horizon": "Cross-session",
+    "stateful": true,
+    "evaluation": "Memory-based tool choice and parameter grounding",
+    "source_url": "https://aclanthology.org/2026.acl-long.370/",
+    "code_url": "https://github.com/Cantaloupe-M/Mem2ActBench",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   }
 ]
