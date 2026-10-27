@@ -26,6 +26,7 @@ taxonomy = read("taxonomy.json")
 papers = read("papers.json")
 benchmarks = read("benchmarks.json")
 frameworks = read("frameworks.json")
+candidates = read("candidates.json")
 problems = read("open-problems.json")
 zh = read("zh.json")
 ids: set[str] = set()
@@ -80,6 +81,20 @@ for index, item in enumerate(frameworks):
     if not item.get("id") or not item.get("source_url"):
         fail(f"frameworks[{index}]: id and source required")
     valid_url(item.get("source_url"), f"frameworks[{index}].source_url")
+    valid_url(item.get("code_url"), f"frameworks[{index}].code_url")
+for kind in ("papers", "benchmarks", "frameworks"):
+    if kind not in candidates or not isinstance(candidates[kind], list):
+        fail(f"candidates.{kind}: missing list")
+        continue
+    for index, group in enumerate(candidates[kind]):
+        where = f"candidates.{kind}[{index}]"
+        if not group.get("area_en") or not group.get("area_zh"):
+            fail(f"{where}: bilingual area labels required")
+        names = group.get("names")
+        if not isinstance(names, list) or not names or any(not isinstance(name, str) or not name.strip() for name in names):
+            fail(f"{where}: nonempty candidate names required")
+        elif len(names) != len(set(names)):
+            fail(f"{where}: duplicate candidate name")
 benchmark_ids = {item["id"] for item in benchmarks}
 for index, problem in enumerate(problems):
     where = f"open-problems[{index}]"

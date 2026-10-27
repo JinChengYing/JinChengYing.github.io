@@ -72,5 +72,71 @@
     "verification_status": "source_checked",
     "verified_at": "2026-10-27",
     "layer": "Trainer / Harness bridge"
+  },
+  {
+    "id": "openrlhf",
+    "title": "OpenRLHF",
+    "year": null,
+    "description": "Open-source framework for scalable RLHF and agentic RL training.",
+    "source_url": "https://github.com/OpenRLHF/OpenRLHF",
+    "code_url": "https://github.com/OpenRLHF/OpenRLHF",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
+  },
+  {
+    "id": "trl",
+    "title": "TRL",
+    "year": null,
+    "description": "Hugging Face library for transformer post-training with reinforcement and preference-learning methods.",
+    "source_url": "https://github.com/huggingface/trl",
+    "code_url": "https://github.com/huggingface/trl",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
+  },
+  {
+    "id": "trlx",
+    "title": "trlX",
+    "year": null,
+    "description": "Distributed language-model reinforcement learning from human feedback toolkit.",
+    "source_url": "https://github.com/CarperAI/trlx",
+    "code_url": "https://github.com/CarperAI/trlx",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "Trainer"
+  },
+  {
+    "id": "rllib",
+    "title": "Ray RLlib",
+    "year": null,
+    "description": "General reinforcement-learning library in Ray; an infrastructure baseline rather than an agent-specific trainer.",
+    "source_url": "https://docs.ray.io/en/latest/rllib/",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "General RL library"
+  },
+  {
+    "id": "tianshou",
+    "title": "Tianshou",
+    "year": null,
+    "description": "PyTorch deep reinforcement-learning library.",
+    "source_url": "https://github.com/thu-ml/tianshou",
+    "code_url": "https://github.com/thu-ml/tianshou",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "General RL library"
+  },
+  {
+    "id": "stable-baselines3",
+    "title": "Stable-Baselines3",
+    "year": null,
+    "description": "PyTorch implementations of common reinforcement-learning algorithms.",
+    "source_url": "https://github.com/DLR-RM/stable-baselines3",
+    "code_url": "https://github.com/DLR-RM/stable-baselines3",
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27",
+    "layer": "General RL library"
   }
 ]

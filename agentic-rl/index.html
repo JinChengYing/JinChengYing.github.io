@@ -10,9 +10,9 @@ permalink: /agentic-rl/
   <meta name="description" content="A source-aware research atlas for reinforcement learning in language agents.">
   <link rel="alternate" hreflang="zh-CN" href="zh/">
   <title>Agentic RL Atlas · JinChengYing</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=20261027c">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261027d">
   <script src="assets/js/filters.js?v=20261027b" defer></script>
-  <script src="assets/js/app.js?v=20261027e" defer></script>
+  <script src="assets/js/app.js?v=20261027f" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@ permalink: /agentic-rl/
     <header class="site-header">
       <a class="brand" href="./" aria-label="Agentic RL Atlas home"><span aria-hidden="true">◈</span> Agentic RL Atlas</a>
       <nav aria-label="Main navigation">
-        <a href="/">Back to blog</a><a href="zh/update-2026/" lang="zh-CN">2026 update (中文)</a><a href="zh/survey-checklist-2026/" lang="zh-CN">Survey checklist (中文)</a><a href="#start">Start here</a><a href="#papers">Papers</a><a href="#taxonomy">Taxonomy</a><a href="#benchmarks">Benchmarks</a><a href="#problems">Open problems</a><a href="zh/" lang="zh-CN">中文</a>
+        <a href="/">Back to blog</a><a href="zh/update-2026/" lang="zh-CN">2026 update (中文)</a><a href="#start">Start here</a><a href="#papers">Papers</a><a href="#taxonomy">Taxonomy</a><a href="#frameworks">Frameworks</a><a href="#benchmarks">Benchmarks</a><a href="#problems">Open problems</a><a href="zh/" lang="zh-CN">中文</a>
       </nav>
     </header>
     <main id="main">
@@ -45,7 +45,7 @@ permalink: /agentic-rl/
         </div>
       </section>
       <section id="papers" class="section" aria-labelledby="papers-title">
-        <div class="section-heading"><div><span class="eyebrow">02 / RESEARCH LIBRARY</span><h2 id="papers-title">Paper explorer</h2></div><p>A growing curated index, not an exhaustive search. Jump to surveys or credit assignment, then refine with the filters below.</p></div>
+        <div class="section-heading"><div><span class="eyebrow">02 / RESEARCH LIBRARY</span><h2 id="papers-title">Paper explorer</h2></div><p>Filter source-checked papers by capability, RL problem and domain. Names without a checked source remain in the candidate panel below.</p></div>
         <div class="filter-panel">
           <div class="collection-shortcuts" aria-label="Collection shortcuts"><button type="button" data-collection="surveys" aria-pressed="false">Surveys only</button><button type="button" data-collection="credit" aria-pressed="false">Credit assignment only</button></div>
           <label class="search-label" for="query">Search papers</label>
@@ -59,6 +59,7 @@ permalink: /agentic-rl/
           </div>
           <div class="filter-foot"><span id="result-count" role="status" aria-live="polite">Loading library…</span><button type="button" id="reset-filters">Clear filters</button></div>
         </div>
+        <details id="papers-candidates" class="candidate-panel"></details>
         <div id="paper-grid" class="paper-grid"></div>
       </section>
       <section id="taxonomy" class="section" aria-labelledby="taxonomy-title">
@@ -66,11 +67,13 @@ permalink: /agentic-rl/
         <div id="taxonomy-grid" class="taxonomy-grid"></div>
       </section>
       <section id="frameworks" class="section" aria-labelledby="frameworks-title">
-        <div class="section-heading"><div><span class="eyebrow">RESEARCH SOFTWARE</span><h2 id="frameworks-title">Frameworks & projects</h2></div><p>Project links migrated from the original atlas. Their descriptions and ownership await verification.</p></div>
+        <div class="section-heading"><div><span class="eyebrow">RESEARCH SOFTWARE</span><h2 id="frameworks-title">Frameworks & projects</h2></div><p>Agent trainers, general RL libraries and environment interfaces are identified separately. Source-less names remain candidates.</p></div>
+        <details id="frameworks-candidates" class="candidate-panel"></details>
         <div id="framework-grid" class="benchmark-grid"></div>
       </section>
       <section id="benchmarks" class="section" aria-labelledby="benchmarks-title">
-        <div class="section-heading"><div><span class="eyebrow">04 / EVALUATION</span><h2 id="benchmarks-title">Benchmarks & environments</h2></div><p>Representative environments from the earlier atlas, with unknown properties left blank or labeled. Source links remain available for review.</p></div>
+        <div class="section-heading"><div><span class="eyebrow">04 / EVALUATION</span><h2 id="benchmarks-title">Benchmarks & environments</h2></div><p>Web, GUI, code, memory and tool tasks, with unknown properties left undocumented and source-less names shown as candidates.</p></div>
+        <details id="benchmarks-candidates" class="candidate-panel"></details>
         <div id="benchmark-grid" class="benchmark-grid"></div>
       </section>
       <section id="problems" class="section" aria-labelledby="problems-title">

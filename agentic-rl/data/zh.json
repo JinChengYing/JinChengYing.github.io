@@ -148,6 +148,72 @@
     },
     "pmlr-zhang26ic": {
       "summary": "BudgetMem 训练轻量路由策略，按查询与成本目标选择记忆处理模块的预算档位。"
+    },
+    "arxiv-2501.12948": {
+      "summary": "通过强化学习在可验证任务中激发推理模式；作为推理 RL 背景，不据此认定存在外部智能体环境交互。"
+    },
+    "arxiv-2503.14476": {
+      "summary": "提出 DAPO 算法与开放训练系统，用于大规模推理型语言模型强化学习。"
+    },
+    "arxiv-2310.08560": {
+      "summary": "通过记忆层级间的数据移动管理有限上下文，用于文档分析和跨会话对话；属于记忆机制背景工作。"
+    },
+    "arxiv-2405.14831": {
+      "summary": "结合知识图谱与 Personalized PageRank 检索积累的信息；不应视为经 RL 训练的记忆策略。"
+    },
+    "arxiv-2303.17651": {
+      "summary": "用同一个模型反复生成、反馈和修订输出；原论文明确不需要强化学习或额外训练。"
+    },
+    "arxiv-2305.11738": {
+      "summary": "借助外部工具核查模型初始输出，并通过迭代批评与修订完成自我纠错。"
+    },
+    "arxiv-2505.03335": {
+      "summary": "让模型自行提出并求解代码推理任务，使用代码执行器提供可验证的自博弈奖励。"
+    },
+    "arxiv-1706.02275": {
+      "summary": "在 actor-critic 学习中考虑其他智能体策略，以处理多智能体协作与竞争；属于传统 MARL 背景。"
+    },
+    "arxiv-1705.08926": {
+      "summary": "COMA 使用集中式 critic 和反事实基线，为合作式 MARL 中各智能体分配信用。"
+    },
+    "arxiv-1803.11485": {
+      "summary": "通过单调混合个体价值估计联合动作价值，支持集中训练与分散执行。"
+    },
+    "arxiv-2103.01955": {
+      "summary": "在合作式多智能体基准中研究 PPO 类方法，作者报告其在较少调参下有较强表现。"
+    },
+    "arxiv-2207.01206": {
+      "summary": "提出模拟购物网站环境，智能体需根据商品需求在网页间导航并执行购买相关动作。"
+    },
+    "arxiv-2307.13854": {
+      "summary": "构建可复现的功能性网站和任务，用于评估网页智能体的任务完成能力。"
+    },
+    "arxiv-2306.06070": {
+      "summary": "提供跨真实网站的网页指令任务与动作序列，用于通用网页智能体评估。"
+    },
+    "arxiv-2401.13649": {
+      "summary": "提出视觉定位的网页任务，评估同时处理图像和文本输入的多模态智能体。"
+    },
+    "arxiv-2410.07095": {
+      "summary": "整理机器学习工程竞赛任务，评估智能体准备数据、训练模型和运行实验的能力。"
+    },
+    "arxiv-2311.12983": {
+      "summary": "提出结合推理、多模态处理、网页浏览与工具使用的通用助理问题集。"
+    },
+    "arxiv-2310.06770": {
+      "summary": "从真实 GitHub 仓库收集软件工程问题，评估模型修改代码库以解决 issue 的能力。"
+    },
+    "arxiv-2302.04761": {
+      "summary": "通过自监督 API 调用示例训练模型决定何时及如何使用外部工具；不是在线 Agentic RL。"
+    },
+    "arxiv-2307.16789": {
+      "summary": "提出 ToolLLM 与 ToolBench，覆盖真实 API 场景下的工具使用数据构建、训练和评估。"
+    },
+    "arxiv-2303.11366": {
+      "summary": "借助语言反思和情节文本缓冲区改善后续尝试，不更新模型权重。"
+    },
+    "arxiv-2305.16291": {
+      "summary": "通过自动课程、可执行技能库和迭代提示在 Minecraft 中自主探索，不进行模型参数微调。"
     }
   },
   "benchmarks": {
@@ -213,6 +279,33 @@
       "modality": "对话与工具动作",
       "task_horizon": "跨会话",
       "evaluation": "基于记忆的工具选择与参数填写"
+    },
+    "mind2web": {
+      "environment_type": "网页动作数据集",
+      "modality": "HTML 与网页动作",
+      "evaluation": "网页动作预测"
+    },
+    "visualwebarena": {
+      "environment_type": "视觉网页任务",
+      "modality": "图文网页交互",
+      "evaluation": "任务完成"
+    },
+    "androidworld": {
+      "environment_type": "Android 应用环境",
+      "modality": "移动端 GUI 交互"
+    },
+    "swegym": {
+      "environment_type": "软件工程训练环境",
+      "modality": "代码与仓库交互"
+    },
+    "textworld": {
+      "environment_type": "文本游戏环境",
+      "modality": "文本动作"
+    },
+    "mlebench": {
+      "environment_type": "机器学习工程基准",
+      "modality": "代码、数据与实验",
+      "evaluation": "竞赛式任务评测"
     }
   },
   "problems": {
@@ -413,6 +506,30 @@
     "agent-lightning-v1": {
       "description": "把独立 Agent Harness 产生的 LLM 调用接入强化学习训练。",
       "layer": "训练器／Harness 桥接"
+    },
+    "openrlhf": {
+      "description": "用于可扩展 RLHF 与 Agentic RL 训练的开源框架。",
+      "layer": "训练器"
+    },
+    "trl": {
+      "description": "Hugging Face 的 Transformer 强化学习与偏好学习训练库。",
+      "layer": "训练器"
+    },
+    "trlx": {
+      "description": "用于语言模型 RLHF 的分布式训练工具。",
+      "layer": "训练器"
+    },
+    "rllib": {
+      "description": "Ray 的通用强化学习库，可作基建对照，并非 Agentic RL 专用训练器。",
+      "layer": "通用 RL 库"
+    },
+    "tianshou": {
+      "description": "基于 PyTorch 的通用深度强化学习库。",
+      "layer": "通用 RL 库"
+    },
+    "stable-baselines3": {
+      "description": "常用强化学习算法的 PyTorch 实现库。",
+      "layer": "通用 RL 库"
     }
   }
 }

@@ -103,9 +103,7 @@
       "Planning",
       "Reasoning"
     ],
-    "rl_topics": [
-      "Exploration"
-    ],
+    "rl_topics": [],
     "domains": [],
     "summary": "LATS combines language-model value estimates and self-reflection with Monte Carlo tree search and environment feedback.",
     "key_contributions": [],
@@ -123,9 +121,18 @@
   {
     "id": "arxiv-2302.04761",
     "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-    "authors": [],
+    "authors": [
+      "Timo Schick",
+      "Jane Dwivedi-Yu",
+      "Roberto Dessì",
+      "Roberta Raileanu",
+      "Maria Lomeli",
+      "Luke Zettlemoyer",
+      "Nicola Cancedda",
+      "Thomas Scialom"
+    ],
     "year": 2023,
-    "date": null,
+    "date": "2023-02-09",
     "venue": null,
     "publication_status": "unverified",
     "arxiv_id": "2302.04761",
@@ -137,23 +144,24 @@
     ],
     "rl_topics": [],
     "domains": [],
-    "summary": null,
+    "summary": "Trains a model with self-supervised API-call examples to decide when and how to use external tools.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Tool Use"
+      "Background",
+      "Toolformer"
     ],
     "legacy_note": "Self-supervised external API use",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2307.16789",
     "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
     "authors": [],
     "year": 2023,
-    "date": null,
+    "date": "2023-07-31",
     "venue": null,
     "publication_status": "unverified",
     "arxiv_id": "2307.16789",
@@ -165,16 +173,17 @@
     ],
     "rl_topics": [],
     "domains": [],
-    "summary": null,
+    "summary": "Introduces ToolLLM and ToolBench, covering tool-use data construction, model training and evaluation over real APIs.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Tool Use"
+      "Background",
+      "ToolBench"
     ],
     "legacy_note": "Large-scale tools dataset and evaluation",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2406.12045",
@@ -218,7 +227,7 @@
     "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
     "authors": [],
     "year": 2023,
-    "date": null,
+    "date": "2023-03-20",
     "venue": null,
     "publication_status": "unverified",
     "arxiv_id": "2303.11366",
@@ -226,27 +235,38 @@
     "code_url": "https://github.com/noahshinn/reflexion",
     "project_url": null,
     "capabilities": [
-      "Self-Evolution"
+      "Self-Evolution",
+      "Memory"
     ],
     "rl_topics": [],
     "domains": [],
-    "summary": null,
+    "summary": "Uses verbal reflection and an episodic text buffer to improve later trials without updating model weights.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Self-Evolution"
+      "Background",
+      "Reflexion"
     ],
     "legacy_note": "Verbal self-reflection and feedback",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2305.16291",
     "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
-    "authors": [],
+    "authors": [
+      "Guanzhi Wang",
+      "Yuqi Xie",
+      "Yunfan Jiang",
+      "Ajay Mandlekar",
+      "Chaowei Xiao",
+      "Yuke Zhu",
+      "Linxi Fan",
+      "Anima Anandkumar"
+    ],
     "year": 2023,
-    "date": null,
+    "date": "2023-05-25",
     "venue": null,
     "publication_status": "unverified",
     "arxiv_id": "2305.16291",
@@ -254,20 +274,24 @@
     "code_url": "https://github.com/MineDojo/Voyager",
     "project_url": null,
     "capabilities": [
-      "Self-Evolution"
+      "Self-Evolution",
+      "Planning"
     ],
     "rl_topics": [],
-    "domains": [],
-    "summary": null,
+    "domains": [
+      "Embodied Agents"
+    ],
+    "summary": "Uses an automatic curriculum, executable skill library and iterative prompting for open-ended Minecraft exploration, without parameter fine-tuning.",
     "key_contributions": [],
     "limitations": [],
     "open_questions": [],
     "tags": [
-      "Self-Evolution"
+      "Background",
+      "Voyager"
     ],
     "legacy_note": "Embodied agent skill learning",
-    "verification_status": "unverified",
-    "verified_at": null
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   },
   {
     "id": "arxiv-2401.10020",
@@ -1582,9 +1606,7 @@
       "Planning",
       "Reasoning"
     ],
-    "rl_topics": [
-      "Model-Based RL"
-    ],
+    "rl_topics": [],
     "domains": [],
     "summary": "RAP uses an LLM as both a reasoning agent and an approximate world model, with tree search guiding planning.",
     "key_contributions": [],
@@ -1722,6 +1744,634 @@
       "BudgetMem",
       "Memory Policy",
       "NEW"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2501.12948",
+    "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+    "authors": [],
+    "year": 2025,
+    "date": "2025-01-22",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2501.12948",
+    "paper_url": "https://arxiv.org/abs/2501.12948",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Mathematical Reasoning"
+    ],
+    "summary": "Uses reinforcement learning to elicit reasoning patterns on verifiable tasks; background for reasoning RL rather than evidence of external agent interaction.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "RLVR"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2503.14476",
+    "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+    "authors": [],
+    "year": 2025,
+    "date": "2025-03-18",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2503.14476",
+    "paper_url": "https://arxiv.org/abs/2503.14476",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Efficient Training"
+    ],
+    "domains": [],
+    "summary": "Introduces DAPO and an open training system for large-scale reasoning-oriented LLM reinforcement learning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "DAPO",
+      "Background"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2310.08560",
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": [
+      "Charles Packer",
+      "Sarah Wooders",
+      "Kevin Lin",
+      "Vivian Fang",
+      "Shishir G. Patil",
+      "Ion Stoica",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "date": "2023-10-12",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2310.08560",
+    "paper_url": "https://arxiv.org/abs/2310.08560",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Introduces virtual context management across memory tiers for document analysis and multi-session chat; it is a memory-system background work.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "Memory"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2405.14831",
+    "title": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "authors": [
+      "Bernal Jiménez Gutiérrez",
+      "Yiheng Shu",
+      "Yu Gu",
+      "Michihiro Yasunaga",
+      "Yu Su"
+    ],
+    "year": 2024,
+    "date": "2024-05-23",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2405.14831",
+    "paper_url": "https://arxiv.org/abs/2405.14831",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Memory"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Uses knowledge graphs and Personalized PageRank for long-term retrieval over accumulated information; not an RL-trained memory policy.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "Retrieval"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2303.17651",
+    "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+    "authors": [],
+    "year": 2023,
+    "date": "2023-03-30",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2303.17651",
+    "paper_url": "https://arxiv.org/abs/2303.17651",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Self-Evolution",
+      "Reasoning"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Iteratively generates, critiques and revises outputs with one LLM, without reinforcement learning or additional training.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "Self-Correction"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2305.11738",
+    "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+    "authors": [
+      "Zhibin Gou",
+      "Zhihong Shao",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Yujiu Yang",
+      "Nan Duan",
+      "Weizhu Chen"
+    ],
+    "year": 2023,
+    "date": "2023-05-19",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2305.11738",
+    "paper_url": "https://arxiv.org/abs/2305.11738",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Self-Evolution",
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [],
+    "summary": "Uses external tools to validate and revise an LLM's initial output through iterative critiquing.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "Self-Correction"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2505.03335",
+    "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+    "authors": [],
+    "year": 2025,
+    "date": "2025-05-06",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2505.03335",
+    "paper_url": "https://arxiv.org/abs/2505.03335",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Self-Evolution",
+      "Reasoning"
+    ],
+    "rl_topics": [
+      "Policy Optimization",
+      "Exploration"
+    ],
+    "domains": [
+      "Code Agents",
+      "Mathematical Reasoning"
+    ],
+    "summary": "Trains a model to propose and solve code-reasoning tasks, using a code executor for verifiable self-play rewards.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Self-Training",
+      "RLVR"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-1706.02275",
+    "title": "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments",
+    "authors": [
+      "Ryan Lowe",
+      "Yi Wu",
+      "Aviv Tamar",
+      "Jean Harb",
+      "Pieter Abbeel",
+      "Igor Mordatch"
+    ],
+    "year": 2017,
+    "date": "2017-06-07",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "1706.02275",
+    "paper_url": "https://arxiv.org/abs/1706.02275",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Multi-Agent Systems"
+    ],
+    "summary": "Adapts actor-critic learning to multi-agent settings by accounting for other agents' policies; classical MARL background.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "MADDPG"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-1705.08926",
+    "title": "Counterfactual Multi-Agent Policy Gradients",
+    "authors": [
+      "Jakob Foerster",
+      "Gregory Farquhar",
+      "Triantafyllos Afouras",
+      "Nantas Nardelli",
+      "Shimon Whiteson"
+    ],
+    "year": 2017,
+    "date": "2017-05-24",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "1705.08926",
+    "paper_url": "https://arxiv.org/abs/1705.08926",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Credit Assignment"
+    ],
+    "domains": [
+      "Multi-Agent Systems"
+    ],
+    "summary": "COMA uses a centralized critic and a counterfactual baseline to assign credit to individual agents in cooperative MARL.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "COMA"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-1803.11485",
+    "title": "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning",
+    "authors": [
+      "Tabish Rashid",
+      "Mikayel Samvelyan",
+      "Christian Schroeder de Witt",
+      "Gregory Farquhar",
+      "Jakob Foerster",
+      "Shimon Whiteson"
+    ],
+    "year": 2018,
+    "date": "2018-03-30",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "1803.11485",
+    "paper_url": "https://arxiv.org/abs/1803.11485",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Multi-Agent Systems"
+    ],
+    "summary": "Combines per-agent values into a monotonic joint action-value for centralized training and decentralized execution.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "QMIX"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2103.01955",
+    "title": "The Surprising Effectiveness of PPO in Cooperative, Multi-Agent Games",
+    "authors": [
+      "Chao Yu",
+      "Akash Velu",
+      "Eugene Vinitsky",
+      "Jiaxuan Gao",
+      "Yu Wang",
+      "Alexandre Bayen",
+      "Yi Wu"
+    ],
+    "year": 2021,
+    "date": "2021-03-02",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2103.01955",
+    "paper_url": "https://arxiv.org/abs/2103.01955",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Multi-Agent Collaboration"
+    ],
+    "rl_topics": [
+      "Policy Optimization"
+    ],
+    "domains": [
+      "Multi-Agent Systems"
+    ],
+    "summary": "Studies PPO-based methods on cooperative multi-agent benchmarks and reports strong performance with modest tuning.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Background",
+      "MAPPO"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2207.01206",
+    "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+    "authors": [
+      "Shunyu Yao",
+      "Howard Chen",
+      "John Yang",
+      "Karthik Narasimhan"
+    ],
+    "year": 2022,
+    "date": "2022-07-04",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2207.01206",
+    "paper_url": "https://arxiv.org/abs/2207.01206",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Introduces a simulated shopping website where agents navigate pages and act on product-search instructions.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "WebShop"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2307.13854",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "authors": [],
+    "year": 2023,
+    "date": "2023-07-25",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2307.13854",
+    "paper_url": "https://arxiv.org/abs/2307.13854",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Introduces reproducible functional websites and tasks for evaluating web agents' task completion.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "WebArena"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2306.06070",
+    "title": "Mind2Web: Towards a Generalist Agent for the Web",
+    "authors": [
+      "Xiang Deng",
+      "Yu Gu",
+      "Boyuan Zheng",
+      "Shijie Chen",
+      "Samuel Stevens",
+      "Boshi Wang",
+      "Huan Sun",
+      "Yu Su"
+    ],
+    "year": 2023,
+    "date": "2023-06-09",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2306.06070",
+    "paper_url": "https://arxiv.org/abs/2306.06070",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Provides web-instruction tasks and action sequences collected across diverse real websites for generalist web-agent evaluation.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "Mind2Web"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2401.13649",
+    "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks",
+    "authors": [],
+    "year": 2024,
+    "date": "2024-01-24",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2401.13649",
+    "paper_url": "https://arxiv.org/abs/2401.13649",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Perception / Multimodal",
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Web / GUI Agents"
+    ],
+    "summary": "Introduces visually grounded web tasks for evaluating multimodal agents that process image and text inputs.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "VisualWebArena"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2410.07095",
+    "title": "MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering",
+    "authors": [],
+    "year": 2024,
+    "date": "2024-10-09",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2410.07095",
+    "paper_url": "https://arxiv.org/abs/2410.07095",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [],
+    "domains": [
+      "Code Agents",
+      "Scientific Agents"
+    ],
+    "summary": "Curates machine-learning engineering competition tasks to evaluate agents that prepare data, train models and run experiments.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "MLE-bench"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2311.12983",
+    "title": "GAIA: a benchmark for General AI Assistants",
+    "authors": [
+      "Grégoire Mialon",
+      "Clémentine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun",
+      "Thomas Scialom"
+    ],
+    "year": 2023,
+    "date": "2023-11-21",
+    "venue": null,
+    "publication_status": "preprint",
+    "arxiv_id": "2311.12983",
+    "paper_url": "https://arxiv.org/abs/2311.12983",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [
+      "Reasoning",
+      "Tool Use"
+    ],
+    "rl_topics": [],
+    "domains": [
+      "Search and Deep Research Agents"
+    ],
+    "summary": "Introduces assistant questions combining reasoning, multimodal handling, web browsing and tool use.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "GAIA"
+    ],
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "arxiv-2310.06770",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Kexin Pei",
+      "Ofir Press",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "date": "2023-10-10",
+    "venue": "ICLR 2024",
+    "publication_status": "peer_reviewed",
+    "arxiv_id": "2310.06770",
+    "paper_url": "https://arxiv.org/abs/2310.06770",
+    "code_url": null,
+    "project_url": null,
+    "capabilities": [],
+    "rl_topics": [],
+    "domains": [
+      "Code Agents"
+    ],
+    "summary": "Introduces software-engineering issues from real GitHub repositories for evaluating repository-level code edits.",
+    "key_contributions": [],
+    "limitations": [],
+    "open_questions": [],
+    "tags": [
+      "Benchmark",
+      "SWE-bench"
     ],
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"

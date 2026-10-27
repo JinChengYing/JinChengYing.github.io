@@ -19,7 +19,7 @@ const matched = filterPapers(papers, { capability: "Tool Use", rlTopic: "Credit 
 assert(matched.some(p => p.id === "arxiv-2505.10978"));
 assert(matched.every(p => p.capabilities.includes("Tool Use") && p.rl_topics.includes("Credit Assignment") && p.year === 2025));
 const oldest = filterPapers(papers, { sort: "oldest" });
-assert.equal(oldest[0].id, "arxiv-1707.06347");
+assert(oldest.every((p, i) => i === 0 || (oldest[i-1].date || String(oldest[i-1].year)) <= (p.date || String(p.year))));
 const alphabetic = filterPapers(papers, { sort: "title" });
 assert(alphabetic.every((p, i) => i === 0 || alphabetic[i-1].title.localeCompare(p.title) <= 0));
 const zh = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/zh.json"), "utf8"));

@@ -67,7 +67,7 @@ const sourceLinks = item => {
 const add = (parent, ...children) => children.filter(Boolean).forEach(child => parent.append(child));
 const shown = value => value === null || value === undefined || value === "" ? t("Not documented","未记录") : String(value);
 const labelStatus = item => item.verification_status === "source_checked" ? t("Source checked","来源已核对") : t("Pending verification","待核验");
-let papers = [], benchmarks = [], problems = [], taxonomy = {}, frameworks = [];
+let papers = [], benchmarks = [], problems = [], taxonomy = {}, frameworks = [], candidates = {};
 let activeCollection = "";
 function options(id, values, translate = false) {
   const select = byId(id);
@@ -129,6 +129,32 @@ function drawPapers() {
   if (list.length) list.forEach(p => grid.append(paperCard(p)));
   else add(grid,el("p","empty",t("No papers match these filters. Clear filters or try a broader term.","没有符合条件的论文。请清除筛选条件或使用更宽泛的关键词。")));
   byId("result-count").textContent = isZh ? `显示 ${list.length} / ${papers.length} 篇论文` : list.length + " of " + papers.length + " paper records";
+  drawCandidates("papers", byId("query").value);
+}
+function drawCandidates(kind, query = "") {
+  const panel = byId(kind + "-candidates");
+  if (!panel) return;
+  const needle = query.trim().toLocaleLowerCase();
+  const groups = (candidates[kind] || []).map(group => ({
+    ...group,
+    names: group.names.filter(name => !needle || name.toLocaleLowerCase().includes(needle) ||
+      (isZh ? group.area_zh : group.area_en).toLocaleLowerCase().includes(needle))
+  })).filter(group => group.names.length);
+  const count = groups.reduce((sum, group) => sum + group.names.length, 0);
+  panel.replaceChildren();
+  if (!count) { panel.hidden = true; return; }
+  panel.hidden = false;
+  const noun = kind === "papers" ? t("paper/method", "论文／方法") : kind === "benchmarks" ? t("benchmark", "基准") : t("framework", "框架");
+  add(panel, el("summary", null, t("Unverified", "待核验") + ` ${noun} ` + t("candidates", "候选") + ` · ${count}`),
+    el("p", "candidate-note", t("Names from the supplied reading outline. Primary sources and metadata have not been checked; these are not counted as verified records.",
+      "来自所附阅读提纲的名称，原始来源和元数据尚未核对；不计入已核对记录。")));
+  groups.forEach(group => {
+    const section = el("div", "candidate-group");
+    add(section, el("h3", null, isZh ? group.area_zh : group.area_en));
+    const names = el("div", "candidate-names");
+    group.names.forEach(name => add(names, el("span", "candidate-name", name)));
+    add(section, names); add(panel, section);
+  });
 }
 function drawTaxonomy() {
   const grid = byId("taxonomy-grid");
@@ -161,6 +187,7 @@ function drawBenchmarks() {
     add(card,dl,sourceLinks(b));
     add(grid,card);
   });
+  drawCandidates("benchmarks");
 }
 function drawFrameworks() {
   const grid = byId("framework-grid");
@@ -173,6 +200,7 @@ function drawFrameworks() {
     add(card,sourceLinks(f));
     add(grid,card);
   });
+  drawCandidates("frameworks");
 }
 function drawProblems() {
   const grid = byId("problem-grid");
@@ -202,13 +230,13 @@ function drawProblems() {
   });
 }
 async function load() {
-  const files = ["papers","benchmarks","open-problems","taxonomy","frameworks"];
+  const files = ["papers","benchmarks","open-problems","taxonomy","frameworks","candidates"];
   const data = await Promise.all(files.map(async name => {
     const response = await fetch(dataUrl(name));
     if (!response.ok) throw new Error(name + ": HTTP " + response.status);
     return response.json();
   }));
-  [papers,benchmarks,problems,taxonomy,frameworks] = data;
+  [papers,benchmarks,problems,taxonomy,frameworks,candidates] = data;
   if (isZh) {
     const response = await fetch(dataUrl("zh"));
     if (!response.ok) throw new Error("zh: HTTP " + response.status);

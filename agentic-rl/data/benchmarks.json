@@ -148,5 +148,80 @@
     "code_url": "https://github.com/Cantaloupe-M/Mem2ActBench",
     "verification_status": "source_checked",
     "verified_at": "2026-10-27"
+  },
+  {
+    "id": "mind2web",
+    "name": "Mind2Web",
+    "environment_type": "Web action dataset",
+    "modality": "HTML and web actions",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": "Web action prediction",
+    "source_url": "https://arxiv.org/abs/2306.06070",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "visualwebarena",
+    "name": "VisualWebArena",
+    "environment_type": "Visual web tasks",
+    "modality": "Image and text web interaction",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": "Task completion",
+    "source_url": "https://arxiv.org/abs/2401.13649",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
+  },
+  {
+    "id": "androidworld",
+    "name": "AndroidWorld",
+    "environment_type": "Android app environment",
+    "modality": "Mobile GUI interaction",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": null,
+    "source_url": "https://github.com/google-research/android_world",
+    "code_url": "https://github.com/google-research/android_world",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "swegym",
+    "name": "SWE-Gym",
+    "environment_type": "Software engineering training environment",
+    "modality": "Code and repository interaction",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": null,
+    "source_url": "https://github.com/SWE-Gym/SWE-Gym",
+    "code_url": "https://github.com/SWE-Gym/SWE-Gym",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "textworld",
+    "name": "TextWorld",
+    "environment_type": "Text-game environment",
+    "modality": "Text actions",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": null,
+    "source_url": "https://github.com/microsoft/TextWorld",
+    "code_url": "https://github.com/microsoft/TextWorld",
+    "verification_status": "source_link_only"
+  },
+  {
+    "id": "mlebench",
+    "name": "MLE-bench",
+    "environment_type": "Machine learning engineering benchmark",
+    "modality": "Code, data and experiments",
+    "task_horizon": null,
+    "stateful": null,
+    "evaluation": "Competition-style task evaluation",
+    "source_url": "https://arxiv.org/abs/2410.07095",
+    "code_url": null,
+    "verification_status": "source_checked",
+    "verified_at": "2026-10-27"
   }
 ]

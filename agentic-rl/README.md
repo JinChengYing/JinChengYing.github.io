@@ -4,13 +4,14 @@ A static research section of the existing JinChengYing GitHub Pages site. The pu
 
 The Chinese version is at `/agentic-rl/zh/`, with a longer editorial update at `/agentic-rl/zh/update-2026/`. Both atlas index versions share the same research records and rendering code. `data/zh.json` supplies Chinese summaries for checked papers, benchmark and framework descriptions, taxonomy labels and open-problem text. Original paper titles and source URLs remain unchanged.
 
-The 2026 survey-writing checklist is at `/agentic-rl/zh/survey-checklist-2026/`. It organizes the user's supplied outline into foundations, capabilities, tasks, infrastructure, challenges and writing steps. Linked core sources have been checked against original abstracts or proceedings pages; unlinked method names remain explicitly marked as candidates. The supplied text had two crossed arXiv links: Voyager is 2305.16291 (not the DPO paper 2305.18290), and LATS is 2310.04406 (not the SWE-bench paper 2310.06770).
+The 2026 user-supplied outline is integrated into the atlas datasets, not published as a separate checklist. Source-checked papers belong in `data/papers.json`, environments in `data/benchmarks.json`, software in `data/frameworks.json`, and source-less names in `data/candidates.json`. The candidate panels live inside the respective library sections and do not inflate verified-record counts. The supplied text had two crossed arXiv links: Voyager is 2305.16291 (not the DPO paper 2305.18290), and LATS is 2310.04406 (not the SWE-bench paper 2310.06770).
 
 ## Data model and evidence
 
 - `data/papers.json`: paper records with bibliographic fields, three independent taxonomy axes, source URLs, and verification state.
 - `data/frameworks.json`: project and software links migrated from the original page.
 - `data/benchmarks.json`: environments with explicit unknown values for undocumented properties.
+- `data/candidates.json`: method, benchmark, and software names from the supplied outline that still lack a checked primary source. These are displayed as candidates within each library section, not as source-checked records.
 - `data/open-problems.json`: editorial research questions, linked by paper and benchmark IDs. Cost labels are curator estimates, not measured resource requirements.
 - `data/taxonomy.json`: allowed capability, RL problem and domain labels.
 
@@ -20,7 +21,7 @@ The verified source set now also includes [SHADOW](https://ojs.aaai.org/index.ph
 
 On 2026-10-27 the library expanded from 25 to 39 records with four further surveys and ten credit-assignment methods. The source-reviewed batch and its Chinese summaries are recorded in `tools/expand_literature_2026_10.py`; each arXiv identifier links to the abstract used for the displayed metadata and short summary. The added October preprints are not independently reproduced or treated as peer-reviewed. The page offers exact shortcuts for survey records and the `Credit Assignment` RL topic.
 
-The survey checklist adds five source-checked background papers (PPO, DPO, RAP, an LLM-agent survey, and DeepSeekMath), BudgetMem, and an abstract-checked update to the existing LATS record. The reproducible import is `tools/import_survey_core_2026.py`; it only inserts missing records and does not promote the wider candidate list into verified bibliography entries. The atlas now has 45 records.
+The 2026 outline adds 24 source-checked paper records (including PPO, DPO, RAP, DeepSeekMath, BudgetMem, MARL foundations, and source papers for several web/code benchmarks), upgrades five existing records after abstract review, adds six benchmark entries and six framework entries. The idempotent imports are `tools/import_survey_core_2026.py` and `tools/import_survey_infrastructure_2026.py`. The atlas now has 63 papers, 18 benchmarks and 13 frameworks. The wider method-name set remains in the candidate panels pending source checks; no source-less name is represented as a verified publication.
 
 ## Add or revise a paper
 
