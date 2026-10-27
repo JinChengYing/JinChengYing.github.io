@@ -62,7 +62,8 @@ function paperCard(p) {
   const description = p.summary || t("Summary pending source verification.","摘要待来源核验。");
   add(card,el("p","description",description));
   const tags = el("div","tag-list");
-  [...p.tags,...p.capabilities,...p.rl_topics,...p.domains].forEach(tag => add(tags,el("span","tag",tag === "Surveys" ? t("Survey","综述") : term(tag))));
+  [...new Set([...p.tags,...p.capabilities,...p.rl_topics,...p.domains]
+    .map(tag => tag === "Surveys" ? t("Survey","综述") : term(tag)))].forEach(tag => add(tags,el("span","tag",tag)));
   add(card,tags);
   const details = el("details");
   const detailText = p.verification_status === "source_checked"
