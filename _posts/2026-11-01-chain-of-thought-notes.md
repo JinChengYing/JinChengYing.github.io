@@ -85,7 +85,7 @@ _输出：_
 |**示例构建**|**Automate-CoT**|从带答案标签的数据生成推理链，依据标签筛选，再优化提示中的示例组合。|**[2] Shum et al., 2023，Findings of EMNLP**。([ACL Anthology](https://aclanthology.org/2023.findings-emnlp.811/ "Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data"))|
 |**示例构建**|**Synthetic Prompting**|从少量人工示例出发，交替生成问题与解答，扩充并筛选 CoT 示例。|**[3] Shao et al., 2023，ICML**。([proceedings.mlr.press](https://proceedings.mlr.press/v202/shao23a.html "Synthetic Prompting: Generating Chain-of-Thought Demonstrations for Large Language Models"))|
 |**示例选择**|**Active-Prompt**|根据模型预测的不确定性选择值得标注的问题，再由人工编写其 CoT 示例。|**[4] Diao et al., 2024，ACL**。([ACL Anthology](https://aclanthology.org/2024.acl-long.73/ "Active Prompting with Chain-of-Thought for Large Language Models"))|
-|**示例选择**|**Complexity-Based Prompting**|优先选择推理步骤较多的复杂示例；还将复杂度用于输出推理链的筛选。|**[5] Fu et al., 2023，ICLR**。([openreview.net](https://openreview.net/pdf?id=yf1icZHC-l9&utm_source=chatgpt.com "Published as a conference paper at ICLR 2023"))|
+|**示例选择**|**Complexity-Based Prompting**|优先选择推理步骤较多的复杂示例；还将复杂度用于输出推理链的筛选。|**[5] Fu et al., 2023，ICLR**。([openreview.net](https://openreview.net/pdf?id=yf1icZHC-l9 "Published as a conference paper at ICLR 2023"))|
 |**示例内容**|**Contrastive CoT**|同时提供明确区分的有效与无效推理示例，引导模型学习正确推导并避免错误模式。|**[6] Chia et al., 2023，arXiv**。([arxiv.org](https://arxiv.org/abs/2311.09277 "Contrastive Chain-of-Thought Prompting"))|
 |**推导表达**|**Tab-CoT**|用表格组织中间推导，利用行与列的结构表达推理步骤及其关联。|**[7] Jin and Lu, 2023，Findings of ACL**。([aclanthology.org](https://aclanthology.org/2023.findings-acl.651.pdf "https://aclanthology.org/2023.findings-acl.651.pdf"))|
 |**输入模态**|**Multimodal-CoT**|融合图像与文本信息，采用“解释生成—答案预测”的两阶段模型框架。|**[8] Zhang et al., 2024，TMLR**。([arxiv.org](https://arxiv.org/pdf/2302.00923 "https://arxiv.org/pdf/2302.00923"))|。 
@@ -99,10 +99,10 @@ _输出：_
 
 **[4]** Shizhe Diao, Pengcheng Wang, Yong Lin, Rui Pan, Xiang Liu, and Tong Zhang. 2024. **[Active Prompting with Chain-of-Thought for Large Language Models](https://aclanthology.org/2024.acl-long.73/)**. _Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics（Volume 1: Long Papers）_, pp. 1330–1350.
 
-**[5]** Yao Fu, Hao Peng, Ashish Sabharwal, Peter Clark, and Tushar Khot. 2023. **[Complexity-Based Prompting for Multi-Step Reasoning](https://openreview.net/forum?id=yf1icZHC-l9&utm_source=chatgpt.com)**. _The Eleventh International Conference on Learning Representations（ICLR 2023）_.
+**[5]** Yao Fu, Hao Peng, Ashish Sabharwal, Peter Clark, and Tushar Khot. 2023. **[Complexity-Based Prompting for Multi-Step Reasoning](https://openreview.net/forum?id=yf1icZHC-l9)**. _The Eleventh International Conference on Learning Representations（ICLR 2023）_.
 
 **[6]** Yew Ken Chia, Guizhen Chen, Luu Anh Tuan, Soujanya Poria, and Lidong Bing. 2023. **[Contrastive Chain-of-Thought Prompting](https://arxiv.org/abs/2311.09277)**. _arXiv preprint_, arXiv:2311.09277.
 
 **[7]** Ziqi Jin and Wei Lu. 2023. **[Tab-CoT: Zero-shot Tabular Chain of Thought](https://aclanthology.org/2023.findings-acl.651.pdf)**. _Findings of the Association for Computational Linguistics: ACL 2023_, pp. 10259–10277.
 
-**[8]** Zhuosheng Zhang, Aston Zhang, Mu Li, Hai Zhao, George Karypis, and Alex Smola. 2024. **[Multimodal Chain-of-Thought Reasoning in Language Models](https://openreview.net/forum?id=y1pPWFVfvR&utm_source=chatgpt.com)**. _Transactions on Machine Learning Research（TMLR）_.
+**[8]** Zhuosheng Zhang, Aston Zhang, Mu Li, Hai Zhao, George Karypis, and Alex Smola. 2024. **[Multimodal Chain-of-Thought Reasoning in Language Models](https://openreview.net/forum?id=y1pPWFVfvR)**. _Transactions on Machine Learning Research（TMLR）_.
