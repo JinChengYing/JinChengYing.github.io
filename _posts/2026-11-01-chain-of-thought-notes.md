@@ -55,11 +55,14 @@ _输出：_
 ## Auto-CoT自动思维链
 目标: 消除人工次优提示 
 
-| 方法                       | 基本做法                 | 示例从哪里来      |
-| ------------------------ | -------------------- | ----------- |
-| **Zero-Shot-CoT**，零样本思维链 | 在问题后加入“让我们一步一步思考”等提示 | 不提供例题       |
-| **Manual-CoT**，人工思维链提示   | 先展示几道带解题过程的例题，再提出新问题 | 人工编写        |
-| **Auto-CoT**，自动思维链       | 自动选取例题、生成解题过程，再组成提示  | 程序选题，模型生成解答 |
+<table>
+<thead><tr><th>方法</th><th>基本做法</th><th>示例从哪里来</th></tr></thead>
+<tbody>
+<tr><td><strong>Zero-Shot-CoT</strong>，零样本思维链</td><td>在问题后加入“让我们一步一步思考”等提示</td><td>不提供例题</td></tr>
+<tr><td><strong>Manual-CoT</strong>，人工思维链提示</td><td>先展示几道带解题过程的例题，再提出新问题</td><td>人工编写</td></tr>
+<tr><td><strong>Auto-CoT</strong>，自动思维链</td><td>自动选取例题、生成解题过程，再组成提示</td><td>程序选题，模型生成解答</td></tr>
+</tbody>
+</table>
 **环节：**
 1. 准备目标任务相关的候选问题作为候选示例
 2. 将问题编码为向量，聚类相似问题为一组
@@ -79,16 +82,19 @@ _输出：_
 
 
 ## 相关工作梳理
-|改动对象|方法|更准确的定位|参考文献|
-|---|---|---|---|
-|**示例构建**|**Auto-CoT**|对候选问题聚类，选取具有多样性的代表问题，自动生成并筛选 CoT 示例。|**[1] Zhang et al., 2023，ICLR**。([arxiv.org](https://arxiv.org/pdf/2210.03493 "https://arxiv.org/pdf/2210.03493"))|
-|**示例构建**|**Automate-CoT**|从带答案标签的数据生成推理链，依据标签筛选，再优化提示中的示例组合。|**[2] Shum et al., 2023，Findings of EMNLP**。([ACL Anthology](https://aclanthology.org/2023.findings-emnlp.811/ "Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data"))|
-|**示例构建**|**Synthetic Prompting**|从少量人工示例出发，交替生成问题与解答，扩充并筛选 CoT 示例。|**[3] Shao et al., 2023，ICML**。([proceedings.mlr.press](https://proceedings.mlr.press/v202/shao23a.html "Synthetic Prompting: Generating Chain-of-Thought Demonstrations for Large Language Models"))|
-|**示例选择**|**Active-Prompt**|根据模型预测的不确定性选择值得标注的问题，再由人工编写其 CoT 示例。|**[4] Diao et al., 2024，ACL**。([ACL Anthology](https://aclanthology.org/2024.acl-long.73/ "Active Prompting with Chain-of-Thought for Large Language Models"))|
-|**示例选择**|**Complexity-Based Prompting**|优先选择推理步骤较多的复杂示例；还将复杂度用于输出推理链的筛选。|**[5] Fu et al., 2023，ICLR**。([openreview.net](https://openreview.net/pdf?id=yf1icZHC-l9 "Published as a conference paper at ICLR 2023"))|
-|**示例内容**|**Contrastive CoT**|同时提供明确区分的有效与无效推理示例，引导模型学习正确推导并避免错误模式。|**[6] Chia et al., 2023，arXiv**。([arxiv.org](https://arxiv.org/abs/2311.09277 "Contrastive Chain-of-Thought Prompting"))|
-|**推导表达**|**Tab-CoT**|用表格组织中间推导，利用行与列的结构表达推理步骤及其关联。|**[7] Jin and Lu, 2023，Findings of ACL**。([aclanthology.org](https://aclanthology.org/2023.findings-acl.651.pdf "https://aclanthology.org/2023.findings-acl.651.pdf"))|
-|**输入模态**|**Multimodal-CoT**|融合图像与文本信息，采用“解释生成—答案预测”的两阶段模型框架。|**[8] Zhang et al., 2024，TMLR**。([arxiv.org](https://arxiv.org/pdf/2302.00923 "https://arxiv.org/pdf/2302.00923"))|。 
+<table>
+<thead><tr><th>改动对象</th><th>方法</th><th>更准确的定位</th><th>参考文献</th></tr></thead>
+<tbody>
+<tr><td><strong>示例构建</strong></td><td><strong>Auto-CoT</strong></td><td>对候选问题聚类，选取具有多样性的代表问题，自动生成并筛选 CoT 示例。</td><td><strong>[1] Zhang et al., 2023，ICLR</strong>。(<a href="https://arxiv.org/pdf/2210.03493" title="https://arxiv.org/pdf/2210.03493">arxiv.org</a>)</td></tr>
+<tr><td><strong>示例构建</strong></td><td><strong>Automate-CoT</strong></td><td>从带答案标签的数据生成推理链，依据标签筛选，再优化提示中的示例组合。</td><td><strong>[2] Shum et al., 2023，Findings of EMNLP</strong>。(<a href="https://aclanthology.org/2023.findings-emnlp.811/" title="Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data">ACL Anthology</a>)</td></tr>
+<tr><td><strong>示例构建</strong></td><td><strong>Synthetic Prompting</strong></td><td>从少量人工示例出发，交替生成问题与解答，扩充并筛选 CoT 示例。</td><td><strong>[3] Shao et al., 2023，ICML</strong>。(<a href="https://proceedings.mlr.press/v202/shao23a.html" title="Synthetic Prompting: Generating Chain-of-Thought Demonstrations for Large Language Models">proceedings.mlr.press</a>)</td></tr>
+<tr><td><strong>示例选择</strong></td><td><strong>Active-Prompt</strong></td><td>根据模型预测的不确定性选择值得标注的问题，再由人工编写其 CoT 示例。</td><td><strong>[4] Diao et al., 2024，ACL</strong>。(<a href="https://aclanthology.org/2024.acl-long.73/" title="Active Prompting with Chain-of-Thought for Large Language Models">ACL Anthology</a>)</td></tr>
+<tr><td><strong>示例选择</strong></td><td><strong>Complexity-Based Prompting</strong></td><td>优先选择推理步骤较多的复杂示例；还将复杂度用于输出推理链的筛选。</td><td><strong>[5] Fu et al., 2023，ICLR</strong>。(<a href="https://openreview.net/pdf?id=yf1icZHC-l9" title="Published as a conference paper at ICLR 2023">openreview.net</a>)</td></tr>
+<tr><td><strong>示例内容</strong></td><td><strong>Contrastive CoT</strong></td><td>同时提供明确区分的有效与无效推理示例，引导模型学习正确推导并避免错误模式。</td><td><strong>[6] Chia et al., 2023，arXiv</strong>。(<a href="https://arxiv.org/abs/2311.09277" title="Contrastive Chain-of-Thought Prompting">arxiv.org</a>)</td></tr>
+<tr><td><strong>推导表达</strong></td><td><strong>Tab-CoT</strong></td><td>用表格组织中间推导，利用行与列的结构表达推理步骤及其关联。</td><td><strong>[7] Jin and Lu, 2023，Findings of ACL</strong>。(<a href="https://aclanthology.org/2023.findings-acl.651.pdf" title="https://aclanthology.org/2023.findings-acl.651.pdf">aclanthology.org</a>)</td></tr>
+<tr><td><strong>输入模态</strong></td><td><strong>Multimodal-CoT</strong></td><td>融合图像与文本信息，采用“解释生成—答案预测”的两阶段模型框架。</td><td><strong>[8] Zhang et al., 2024，TMLR</strong>。(<a href="https://arxiv.org/pdf/2302.00923" title="https://arxiv.org/pdf/2302.00923">arxiv.org</a>)</td></tr>
+</tbody>
+</table>。
 ## 对应参考文献
 
 **[1]** Zhuosheng Zhang, Aston Zhang, Mu Li, and Alex Smola. 2023. **[Automatic Chain of Thought Prompting in Large Language Models](https://openreview.net/forum?id=5NTt8GFjUHkr)**. _The Eleventh International Conference on Learning Representations（ICLR 2023）_.
